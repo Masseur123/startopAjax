@@ -1,0 +1,81 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.container_routing'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'container_tracking_list'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('container_routing_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card">
+
+                <table class="table conrouting table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th></th>
+                            <th>{{ 'date'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'container_number'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'source'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'destination'|trans([],'transit')|upper }}</th>
+                            <th class="text-center">{{ 'actions'|trans([],'base')|upper }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for containerRouting in containerRoutings %}
+                            <tr>
+                                <td></td>
+                                <td><span class="badge badge-flat border-success text-success">{{ containerRouting.trackAt is empty ? "" : containerRouting.trackAt|date("m/d/Y") }}</td>
+                                <td>
+									{% if not containerRouting.containers.empty %}
+										{% for container in containerRouting.containers %}
+											<span class="badge badge-flat border-success text-success">{{ container.reference }}</span>
+											{% if not loop.last %} {% endif %}
+										{% endfor %}
+									{% endif %}
+								</td>
+                                <td>{{ containerRouting.sources.name }}</td>
+                                <td>{{ containerRouting.destination }}</td>
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        <a href="{{ path('container_routing_edit', {id:containerRouting.id}) }}" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body" class="list-icons-item form-icon text-primary-600">
+                                            <i class="icon-pencil7"></i>
+                                        </a>
+                                        <a href="{{ path('container_routing_delete', {id:containerRouting.id}) }}" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')" class="list-icons-item text-danger-600">
+                                            <i class="icon-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+	<script src="{{ asset('global_assets/js/plugins/forms/selects/bootstrap_multiselect.js') }}"></script>
+	<script src="{{ asset('global_assets/js/demo_pages/form_multiselect.js') }}"></script>
+{% endblock %}

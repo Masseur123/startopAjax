@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.bank_expense_validated'|trans([],'treasury') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'bank_expense_validated'|trans([],'treasury') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('bank_expense_payment') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'bank_expense_payment'|trans([],'treasury')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div
+			class="col-md-12">
+			<!-- HTML sourced data -->
+			<div class="card">
+			
+				<!-- <div class="card-body"></div> -->
+				<table class="table datatable-responsive table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th>{{ 'date'|trans([],'treasury') }}</th>
+							<th>{{ 'cost_center'|trans([],'treasury') }}</th>
+							<th>{{ 'amount'|trans([],'treasury') }}</th>
+							<th>{{ 'tax_amount'|trans([],'treasury') }}</th>
+							<th>{{ 'tax'|trans([],'treasury') }}</th>
+							<th class="text-center">{{ 'actions'|trans([],'base') }}</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for costCenterHist in costCenterHists %}
+							<tr>
+								<td>{{ costCenterHist.doingAt is empty ? "" : costCenterHist.doingAt|date("Y/m/d") }}</td>
+								<td>{{ costCenterHist.costcenter.title }}</td>
+								<td>
+									{{ costCenterHist.amount }}
+									{% if costCenterHist.cashpay %}
+										<span class="badge badge-flat border-success text-success-600">
+											{{ costCenterHist.currency.code }}</span>
+										{% else %}
+										<span class="badge badge-flat border-danger text-danger-600">
+											{{ costCenterHist.currency.code }}</span>
+									{% endif %}
+								</td>
+								<td>{{ costCenterHist.taxamount }}</td>
+								<td>{{ costCenterHist.tax is empty ? "" : costCenterHist.tax.rate }}</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<a href="{{ path('expense_bank', {id:costCenterHist.id}) }}" class="btn btn-info">{{ 'details'|trans([],'treasury') }}</a>
+									</div>
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<!-- /HTML sourced data -->
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+{% endblock %}

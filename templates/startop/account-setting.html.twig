@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'page.title.account_setting'|trans([],'base') }}
+{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block user %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex d-flex-startop">
+        <h3>
+            <i class="icon-arrow-left52 mr-2"></i>
+            <span class="font-weight-bold">{{ 'welcome'|trans([],'base') }}, {{ app.user.fullname }}!</span>
+        </h3>
+        <!-- <a class="header-elements-toggle text-default d-md-none" href="#">
+            <i class="icon-more"></i>
+        </a> -->
+    </div>
+{% endblock %}
+
+{% block main_sidebar_main_navigation %}
+    <!-- Main navigation -->
+    <div class="card card-sidebar-mobile">
+        <ul class="nav nav-sidebar" data-nav-type="accordion" style="color: #233647 !important;">
+
+            <!-- Main -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('user_profile_update') }}">
+                    <i class="icon-user-plus"></i>
+                    <span>{{ 'update_profile'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('user_password_update') }}">
+                    <i class="icon-lock2"></i>
+                    <span>{{ 'update_password'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('account_setting') }}">
+                    <i class="icon-cog5"></i>
+                    <span>{{ 'account_setting'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ path('starTop_logout') }}" class="nav-link">
+                    <i class="icon-switch2"></i>
+                    <span>{{ 'logout'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <!-- /main -->
+
+        </ul>
+    </div>
+    <!-- /main navigation -->
+{% endblock %}
+
+{% block content %}
+
+	<div class="row">
+
+        {% for userComponent in userComponents %}
+            <div class="component">
+
+                <a href="{{ path('component_loading', {id:userComponent.id}) }}" class="btn bg-blue-600 btn-block btn-float">
+                    <i class="{{ userComponent.icon }} icon-2x"></i>
+                    <span>{{ userComponent.name }}</span>
+                </a>
+
+            </div>
+        {% endfor %}
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

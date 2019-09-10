@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="RY_OHGk" resname="log_procurement">
+        <source>log_procurement</source>
+        <target>Log Procurement</target>
+      </trans-unit>
+      <trans-unit id="Bot_bJf" resname="transit">
+        <source>transit</source>
+        <target>Transit</target>
+      </trans-unit>
+      <trans-unit id="cb_Qk1." resname="Reference">
+        <source>Reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="EMmbfPD" resname="consignment note">
+        <source>consignment note</source>
+        <target>Consignment Note</target>
+      </trans-unit>
+      <trans-unit id="Qc9nlLp" resname="source">
+        <source>source</source>
+        <target>Source</target>
+      </trans-unit>
+      <trans-unit id="tcdVqqs" resname="destination">
+        <source>destination</source>
+        <target>Destination</target>
+      </trans-unit>
+      <trans-unit id="GnswjY3" resname="quantity">
+        <source>quantity</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="YtemsSE" resname="volume">
+        <source>volume</source>
+        <target>Volume</target>
+      </trans-unit>
+      <trans-unit id="Unn4nX9" resname="bying_at">
+        <source>bying_at</source>
+        <target>Date of Purchase</target>
+      </trans-unit>
+      <trans-unit id="mfeFXre" resname="wood">
+        <source>wood</source>
+        <target>Wood</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>SAVE</target>
+      </trans-unit>
+      <trans-unit id="g2.xhOe" resname="log">
+        <source>log</source>
+        <target>Log</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="ND08jyV" resname="wood type">
+        <source>wood type</source>
+        <target>Wood Type</target>
+      </trans-unit>
+      <trans-unit id="zeDnU9w" resname="dm">
+        <source>dm</source>
+        <target>DM</target>
+      </trans-unit>
+      <trans-unit id="C0BygXa" resname="gb">
+        <source>gb</source>
+        <target>GB</target>
+      </trans-unit>
+      <trans-unit id="MxX0TaS" resname="pb">
+        <source>pb</source>
+        <target>PB</target>
+      </trans-unit>
+      <trans-unit id="02zvFA." resname="log.length">
+        <source>log.length</source>
+        <target>Log Length</target>
+      </trans-unit>
+      <trans-unit id="EX0hRDq" resname="page.title.log_procurement">
+        <source>page.title.log_procurement</source>
+        <target>Log Procurement</target>
+      </trans-unit>
+      <trans-unit id="iJZ5KLO" resname="page.title.log">
+        <source>page.title.log</source>
+        <target>Log</target>
+      </trans-unit>
+      <trans-unit id="8Ev3enk" resname="log_procurement_list">
+        <source>log_procurement_list</source>
+        <target>Log Procurement List</target>
+      </trans-unit>
+      <trans-unit id="MGgaWp5" resname="consignment_note">
+        <source>consignment_note</source>
+        <target>Consignment Note</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="578qoNE" resname="log_list">
+        <source>log_list</source>
+        <target>Log List</target>
+      </trans-unit>
+      <trans-unit id="bBUOk5g" resname="log_length">
+        <source>log_length</source>
+        <target>Log Length</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>Do you confirm your action ?</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

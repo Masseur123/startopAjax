@@ -1,0 +1,33 @@
+	{% if (app.request.getLocale()) == 'en' %}
+		<li class="nav-item dropdown">
+			<a href="#" class="navbar-nav-link dropdown-toggle text-white" data-toggle="dropdown">
+				<img src="{{ asset('global_assets/images/lang/gb.png') }}" class="img-flag mr-2" alt="{{ 'english'|trans([],'base') }}">
+				{{ 'english'|trans([],'base') }}
+			</a>
+			<div class="dropdown-menu dropdown-menu-right">
+				<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale':'en'})) }}" class="dropdown-item english active">
+					<img src="{{ asset('global_assets/images/lang/gb.png') }}" class="img-flag" alt="{{ 'english'|trans([],'base') }}">
+					{{ 'english'|trans([],'base') }}</a>
+				<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale':'fr'})) }}" class="dropdown-item french">
+					<img src="{{ asset('global_assets/images/lang/fr.png') }}" class="img-flag" alt="{{ 'français'|trans([],'base') }}">
+					{{ 'français'|trans([],'base') }}</a>
+			</div>
+		</li>
+	{% endif %}
+
+	{% if (app.request.getLocale()) == 'fr' %}
+		<li class="nav-item dropdown">
+			<a href="#" class="navbar-nav-link dropdown-toggle text-white" data-toggle="dropdown">
+				<img src="{{ asset('global_assets/images/lang/drapeau-fr.png') }}" class="img-flag mr-2" alt="{{ 'français'|trans([],'base') }}">
+				{{ 'français'|trans([],'base') }}
+			</a>
+			<div class="dropdown-menu dropdown-menu-right">
+				<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale':'en'})) }}" class="dropdown-item english">
+					<img src="{{ asset('global_assets/images/lang/gb.png') }}" class="img-flag" alt="{{ 'english'|trans([],'base') }}">
+					{{ 'english'|trans([],'base') }}</a>
+				<a href="{{ path(app.request.get('_route'), app.request.get('_route_params')|merge({'_locale':'fr'})) }}" class="dropdown-item french active">
+				<img src="{{ asset('global_assets/images/lang/drapeau-fr.png') }}" class="img-flag" alt="{{ 'français'|trans([],'base') }}">
+					{{ 'français'|trans([],'base') }}</a>
+			</div>
+		</li>
+	{% endif %}

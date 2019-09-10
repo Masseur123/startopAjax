@@ -1,0 +1,59 @@
+security:
+    encoders:
+        # Our user class and the algorithm we'll use to encode passwords
+        # https://symfony.com/doc/current/security.html#c-encoding-the-user-s-password
+        App\Entity\User: bcrypt
+
+    # https://symfony.com/doc/current/security.html#where-do-users-come-from-user-providers
+    providers:
+        database_users:
+            entity: { class: App\Entity\User, property: username }
+
+    firewalls:
+        dev:
+            pattern: ^/(_(profiler|wdt)|css|images|js)/
+            security: false
+
+        main:
+            # this firewall applies to all URLs
+            pattern: ^/
+
+            # but the firewall does not require login on every page
+            # denying access is done in access_control or in your controllers
+            anonymous: true
+
+            # activate different ways to authenticate
+
+            # http_basic: true
+            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+
+            # form_login: true
+            # https://symfony.com/doc/current/security/form_login_setup.html
+
+            # This allows the user to login by submitting a username and password
+            # Reference: https://symfony.com/doc/current/security/form_login_setup.html
+            form_login:
+                # The route name that the login form submits to
+                check_path: starTop_login
+                # The name of the route where the login form lives
+                # When the user tries to access a protected page, they are redirected here
+                login_path: starTop_login
+                # Secure the login form against CSRF
+                # Reference: https://symfony.com/doc/current/security/csrf_in_login_form.html
+                csrf_token_generator: security.csrf.token_manager
+                # The page users are redirect to when there is no previous page stored in the
+                # session (for example when the users access directly to the login page).
+                default_target_path: account_setting
+
+            logout:
+                # The route name the user can go to in order to logout
+                path: starTop_logout
+                # The name of the route to redirect to after logging out
+                target: starTop_login
+
+    # Easy way to control access for large sections of your site
+    # Note: Only the *first* access control that matches will be used
+    access_control:
+        # - { path: ^/admin, roles: ROLE_ADMIN }
+        # - { path: ^/profile, roles: ROLE_USER }
+        # - { path: '^/(%app_locales%)/setting', roles: ROLE_SETTING }

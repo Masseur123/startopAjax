@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.log_loading'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'loading_list'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('loading_log_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card">
+                <table class="table datatable-responsive table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th>{{ 'date'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'reference'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'wood'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'nbr_of_log'|trans([],'transit')|upper }}</th>
+							<th>{{ 'stock'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'volume'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'transit'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'container'|trans([],'transit')|upper }}</th>
+                            <th class="text-center">{{ 'actions'|trans([],'base')|upper }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for loading in loadings %}
+                            <tr>
+                                <td><span class="badge badge-flat border-success text-success">{{ loading.loadAt is empty ? "" : loading.loadAt|date("m/d/Y") }}</td>
+								<td><span class="badge badge-flat border-success text-success">{{ loading.reference }}</td>
+                                <td><span class="badge badge-flat border-danger text-danger">{{ loading.wood.name }}</td>
+                                <td>{{ loading.nbrofpiece }}</td>
+								<td>
+									{% if (loading.nbrofpiece == loading.quantityToDelever) %}
+										<span class="badge badge-flat border-success text-success">{{ loading.quantityToDelever }}
+										{% else %}
+										<span class="badge badge-flat border-danger text-danger">{{ loading.quantityToDelever }}
+									{% endif %}
+								</td>
+                                <td>{{ loading.volume }}</td>
+                                <td>{{ loading.transit is empty ? "" : loading.transit.reference }}</td>
+                                <td>{{ loading.container is empty ? "" : loading.container.reference }}</td>
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        <a href="{{ path('loading_log_edit', {id:loading.id}) }}" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body" class="list-icons-item form-icon text-primary-600">
+                                            <i class="icon-pencil7"></i>
+                                        </a>
+                                        <a href="{{ path('loading_log_delete', {id:loading.id}) }}" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')" class="list-icons-item text-danger-600">
+                                            <i class="icon-trash"></i>
+                                        </a>
+										
+										<a href="{{ path('loading_log_remove_stock', {id:loading.id}) }}" data-popup="tooltip" title="{{ 'remove_stock'|trans([],'base') }}" data-container="body" class="list-icons-item form-icon text-primary-600">
+                                            <i class="icon-subtract"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

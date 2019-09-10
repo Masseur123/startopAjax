@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="o4zWCPU" resname="page.title.bank.to.bank">
+        <source>page.title.bank.to.bank</source>
+        <target>Bank to Bank transfer Management</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="Kj6nsjJ" resname="bank_to_bank">
+        <source>bank_to_bank</source>
+        <target>Bank to Bank</target>
+      </trans-unit>
+      <trans-unit id="loAOGm8" resname="bank_source">
+        <source>bank_source</source>
+        <target>Bank source</target>
+      </trans-unit>
+      <trans-unit id="HXHrxWw" resname="bank_destination">
+        <source>bank_destination</source>
+        <target>Bank destination</target>
+      </trans-unit>
+      <trans-unit id="zzjZXJx" resname="amount">
+        <source>amount</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="RrszTuM" resname="bank_to_bank_list">
+        <source>bank_to_bank_list</source>
+        <target>List of bank to bank transfer</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="Qc9nlLp" resname="source">
+        <source>source</source>
+        <target>Source</target>
+      </trans-unit>
+      <trans-unit id="tcdVqqs" resname="destination">
+        <source>destination</source>
+        <target>Destination</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>Do you confirm your action?</target>
+      </trans-unit>
+      <trans-unit id="EzyOuGz" resname="validate">
+        <source>validate</source>
+        <target>Validate</target>
+      </trans-unit>
+      <trans-unit id="5MA.91h" resname="page.title.bank.to.cash">
+        <source>page.title.bank.to.cash</source>
+        <target>Bank to Cash transfer Management</target>
+      </trans-unit>
+      <trans-unit id="dCG42kY" resname="bank_to_cash">
+        <source>bank_to_cash</source>
+        <target>Bank to Cash</target>
+      </trans-unit>
+      <trans-unit id="Q4HcKrF" resname="bank">
+        <source>bank</source>
+        <target>Bank</target>
+      </trans-unit>
+      <trans-unit id="26_0.am" resname="cashdesk">
+        <source>cashdesk</source>
+        <target>Cashier</target>
+      </trans-unit>
+      <trans-unit id="F006GyS" resname="bank_to_cash_list">
+        <source>bank_to_cash_list</source>
+        <target>List of bank to cash transfer</target>
+      </trans-unit>
+      <trans-unit id="r9Jb4XR" resname="page.title.cash.to.bank">
+        <source>page.title.cash.to.bank</source>
+        <target>Cash to Bank transfer Management</target>
+      </trans-unit>
+      <trans-unit id="jVZX3za" resname="cash_to_bank">
+        <source>cash_to_bank</source>
+        <target>Cash to Bank</target>
+      </trans-unit>
+      <trans-unit id="Hu3iq1o" resname="cash_to_bank_list">
+        <source>cash_to_bank_list</source>
+        <target>List of cash to bank transfer</target>
+      </trans-unit>
+      <trans-unit id="MBn9rTi" resname="page.title.cash.to.cash">
+        <source>page.title.cash.to.cash</source>
+        <target>Cash to Cash Transfer Management</target>
+      </trans-unit>
+      <trans-unit id="VLAQ54l" resname="cash_to_cash">
+        <source>cash_to_cash</source>
+        <target>Cash to Cash</target>
+      </trans-unit>
+      <trans-unit id="9UVg.58" resname="cashdesk_source">
+        <source>cashdesk_source</source>
+        <target>Cashier source</target>
+      </trans-unit>
+      <trans-unit id="kyEJyqw" resname="cashdesk_destination">
+        <source>cashdesk_destination</source>
+        <target>Cashier destination</target>
+      </trans-unit>
+      <trans-unit id="EMqEbA0" resname="cash_to_cash_list">
+        <source>cash_to_cash_list</source>
+        <target>List of cash to cash transfer</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>__reference</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

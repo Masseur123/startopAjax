@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="FOSdsE." resname="page.title.user">
+        <source>page.title.user</source>
+        <target>__page.title.user</target>
+      </trans-unit>
+      <trans-unit id="BPiZbad" resname="user">
+        <source>user</source>
+        <target>__user</target>
+      </trans-unit>
+      <trans-unit id="ckS0ZjJ" resname="fullname">
+        <source>fullname</source>
+        <target>__fullname</target>
+      </trans-unit>
+      <trans-unit id="FveKfWM" resname="username">
+        <source>username</source>
+        <target>__username</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>__email</target>
+      </trans-unit>
+      <trans-unit id="84x2TIq" resname="branch">
+        <source>branch</source>
+        <target>__branch</target>
+      </trans-unit>
+      <trans-unit id="TtN51Bi" resname="groups">
+        <source>groups</source>
+        <target>__groups</target>
+      </trans-unit>
+      <trans-unit id="X5BGmLb" resname="page.title.user_group">
+        <source>page.title.user_group</source>
+        <target>__page.title.user_group</target>
+      </trans-unit>
+      <trans-unit id="mSrp.RG" resname="user_group">
+        <source>user_group</source>
+        <target>__user_group</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="exK_Q.6" resname="components">
+        <source>components</source>
+        <target>__components</target>
+      </trans-unit>
+      <trans-unit id="0moubWD" resname="page.title.update_password">
+        <source>page.title.update_password</source>
+        <target>__page.title.update_password</target>
+      </trans-unit>
+      <trans-unit id="yPShcbN" resname="update_password">
+        <source>update_password</source>
+        <target>__update_password</target>
+      </trans-unit>
+      <trans-unit id="WproAJI" resname="current_password">
+        <source>current_password</source>
+        <target>__current_password</target>
+      </trans-unit>
+      <trans-unit id="ALnmYiM" resname="new_password">
+        <source>new_password</source>
+        <target>__new_password</target>
+      </trans-unit>
+      <trans-unit id="ohWx.nh" resname="repeat_password">
+        <source>repeat_password</source>
+        <target>__repeat_password</target>
+      </trans-unit>
+      <trans-unit id="rwb3oXw" resname="page.title.update_user_profile">
+        <source>page.title.update_user_profile</source>
+        <target>__page.title.update_user_profile</target>
+      </trans-unit>
+      <trans-unit id="_x2He8M" resname="user_profile">
+        <source>user_profile</source>
+        <target>__user_profile</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>__phone</target>
+      </trans-unit>
+      <trans-unit id="BzwWNMS" resname="status">
+        <source>status</source>
+        <target>__status</target>
+      </trans-unit>
+      <trans-unit id="6XFmtUU" resname="enable">
+        <source>enable</source>
+        <target>__enable</target>
+      </trans-unit>
+      <trans-unit id="rZNvy_1" resname="group">
+        <source>group</source>
+        <target>__group</target>
+      </trans-unit>
+      <trans-unit id="YkFIMqw" resname="user_list">
+        <source>user_list</source>
+        <target>__user_list</target>
+      </trans-unit>
+      <trans-unit id="AIxAXXQ" resname="user_group_list">
+        <source>user_group_list</source>
+        <target>__user_group_list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

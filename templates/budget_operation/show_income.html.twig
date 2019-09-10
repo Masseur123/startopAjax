@@ -1,0 +1,116 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.budget_incomes'|trans([],'budget') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'budget_incomes'|trans([],'budget') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('income_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card form-header">
+                <table class="table datatable-responsive table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                    <tr>
+                        <th>{{ 'date'|trans([],'budget')|upper }}</th>
+                        <th>{{ 'cost_center'|trans([],'budget')|upper }}</th>
+                        <th>{{ 'amount'|trans([],'budget')|upper }}</th>
+                        <th>{{ 'tva_amount'|trans([],'budget')|upper }}</th>
+                        <th>{{ 'total_amount'|trans([],'budget')|upper }}</th>
+                        <th>{{ 'description'|trans([],'budget')|upper }}</th>
+                        <th>{{ 'status'|trans([],'budget')|upper }}</th>
+                        <th class="text-center">{{ 'actions'|trans([],'base')|upper }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for costCenterHist in costCenterHists %}
+                        <tr>
+                            <td><span class="badge badge-flat border-success text-success font-size-xl">{{ costCenterHist.doingAt is empty ? "" : costCenterHist.doingAt|date("Y/m/d") }}</td>
+                            <td>{{ costCenterHist.costcenter.title }}</td>
+                            <td>
+                                {{ costCenterHist.amount|number_format(2, '.', ',') }}
+                                {% if costCenterHist.cashpay %}
+                                    <span class="badge badge-flat border-success text-success-600">{{ costCenterHist.currency.code }}</span>
+                                {% else %}
+                                    <span class="badge badge-flat border-warning text-warning-600">{{ costCenterHist.currency.code }}</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ costCenterHist.taxamount|number_format(2, '.', ',') }}</td>
+                            <td>{{ (costCenterHist.amount + costCenterHist.taxamount)|number_format(2, '.', ',') }}</td>
+                            <td>{{ costCenterHist.description }}</td>
+                            <td>
+                                {% if costCenterHist.status == "BUDGETED" %}
+                                    <span class="badge badge-flat border-info text-info-600">{{ 'BUDGETED'|trans([],'budget') }}</span>
+                                {% elseif costCenterHist.status == "VALIDATED" %}
+                                    <span class="badge badge-flat border-success text-success-600">{{ 'VALIDATED'|trans([],'budget') }}</span>
+                                {% elseif costCenterHist.status == "PAID" %}
+                                    <span class="badge badge-flat border-success text-success-600">{{ 'PAID'|trans([],'budget') }}</span>
+                                {% else %}
+                                    <span class="badge badge-flat border-danger text-danger-600">{{ 'NOT_VALIDATED'|trans([],'budget') }}</span>
+                                {% endif %}
+                            </td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    {% if (costCenterHist.status == "BUDGETED") or (costCenterHist.status == "VALIDATED") or (costCenterHist.status == "NOT VALIDATED") %}
+                                        <div class="dropdown">
+                                            <a class="list-icons-item dropdown-toggle" data-toggle="dropdown" href="#">
+                                                <i class="icon-cog6"></i>
+                                            </a>
+                                            <div class="dropdown-menu">
+                                                <div class="dropdown-header">{{ 'actions'|trans([],'base')|upper }}</div>
+                                                {% if costCenterHist.status == "BUDGETED" %}
+                                                    <a class="dropdown-item text-primary-600" href="{{ path('income_edit', {id:costCenterHist.id}) }}">
+                                                        <i class="icon-pencil7"> {{ 'modify'|trans([],'base') }}</i>
+                                                    </a>
+                                                    <a class="dropdown-item text-danger-600" href="{{ path('income_delete', {id:costCenterHist.id}) }}" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                                        <i class="icon-trash"> {{ 'delete'|trans([],'base') }}</i>
+                                                    </a>
+                                                    <a class="dropdown-item text-success-600" href="{{ path('income_validate', {id:costCenterHist.id}) }}" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                                        <i class="icon-checkmark4"> {{ 'validate'|trans([],'base') }}</i>
+                                                    </a>
+                                                    <a class="dropdown-item text-warning-600" href="{{ path('income_invalidate', {id:costCenterHist.id}) }}" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                                        <i class="icon-cross2"> {{ 'invalidate'|trans([],'base') }}</i>
+                                                    </a>
+                                                {% endif %}
+                                                {% if (costCenterHist.status == "VALIDATED") or (costCenterHist.status == "NOT VALIDATED") %}
+                                                    <a class="dropdown-item text-warning-600" href="{{ path('income_cancel', {id:costCenterHist.id}) }}" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                                        <i class="icon-cancel-circle2"> {{ 'cancel'|trans([],'base') }}</i>
+                                                    </a>
+                                                {% endif %}
+                                            </div>
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+
+{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+    {% endblock %}

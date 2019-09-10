@@ -1,0 +1,86 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block mainbtn %}
+    <div class="text-center">
+        <a href="{{ path('supply_request_new') }}" class="btn btn-primary btn-labeled btn-labeled-left btn-lg"><b><i class="icon-pin-alt"></i></b> {{ 'a.new_supply_request'|trans([],'article') }}</a>
+        <a href="{{ path('supply_request') }}" class="btn btn-primary btn-labeled btn-labeled-left btn-lg"><b><i class="icon-menu7"></i></b> {{ 'a.supply_request_list'|trans([],'article') }}</a>
+    </div>
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="{{ path('home') }}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> {{ 'dashboard'|trans([],'article') }}</a>
+                <span class="breadcrumb-item active"> {{ 'supply_request'|trans([],'article') }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+            {{ form_start(form) }}
+            <div class="card border-teal-400">
+                <div class="card-header bg-teal-400 text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.form'|trans([],'article') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>{{ 'reference'|trans([],'article') }} <span class="text-danger">*</span></label>
+                        {{ form_widget(form.reference) }}
+                    </div>
+
+
+                    <div class="form-group">
+                        <div class="col-md-13">
+                            <label>{{ 'date'|trans([],'article') }} <span class="text-danger">*</span></label>
+                            <div>
+                                <div class="input-group">
+                                    <span class="input-group-prepend">
+                                        <span class="input-group-text"><i class="icon-calendar3"></i></span>
+                                    </span>
+                                    {{ form_widget(form.date, {'attr':{'class':"form-control", 'id':"anytime-month-numeric"}}) }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'origin'|trans([],'article') }}<span class="text-danger">*</span></label>
+                        {{ form_widget(form.origin) }}
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'btn.save'|trans([],'article') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <!-- /basic layout -->
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+
+{% endblock %}

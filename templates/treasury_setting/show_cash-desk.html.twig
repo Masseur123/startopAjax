@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.cash_desk'|trans([],'treasury') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'cash_desk'|trans([],'treasury') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('cash_desk_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-8">
+            <!-- HTML sourced data -->
+            <div class="card">
+
+                <table class="table datatable-responsive table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                    <tr>
+                        <th>{{ 'code'|trans([],'treasury') }}</th>
+                        <th>{{ 'balance'|trans([],'treasury') }}</th>
+                        <th>{{ 'account'|trans([],'treasury') }}</th>
+                        <th>{{ 'journal'|trans([],'treasury') }}</th>
+                        <th>{{ 'operator'|trans([],'treasury') }}</th>
+                        <th class="text-center">{{ 'actions'|trans([],'treasury') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for cashDesk in CashDesks %}
+                        <tr>
+                            <td>
+                                {% if cashDesk.ismain %}<i class="icon-home"></i>{% endif %}
+
+                                {% if cashDesk.isopen %}
+                                <span class="badge badge-flat border-success text-success-600">
+                                        {% else %}
+                                            <span class="badge badge-flat border-danger text-danger-600">
+                                        {% endif %}
+                                                {{ cashDesk.code }}</span>
+                                </span>
+                            </td>
+                            <td>{{ cashDesk.balance }}</td>
+                            <td>{{ cashDesk.account is empty ? "" : cashDesk.account.number }}</td>
+                            <td>{{ cashDesk.journal is empty ? "" : cashDesk.journal.code }}</td>
+                            <td>{{ cashDesk.operator is empty ? "" : cashDesk.operator.fullname }}</td>
+
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('cash_desk_edit', {id:cashDesk.id}) }}" class="list-icons-item form-icon text-primary-600" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body">
+                                        <i class="icon-pencil7"></i>
+                                    </a>
+                                    <a href="{{ path('cash_desk_delete', {id:cashDesk.id}) }}" class="list-icons-item text-danger-600" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                    {% if cashDesk.isopen == 1 %}
+                                        <a href="{{ path('cash_desk_close', {id:cashDesk.id}) }}" class="list-icons-item text-warning-600" data-popup="tooltip" title="{{ 'close'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                            <i class="icon-menu-close"></i>
+                                        </a>
+                                    {% else %}
+                                        <a href="{{ path('cash_desk_open', {id:cashDesk.id}) }}" class="list-icons-item text-success-600" data-popup="tooltip" title="{{ 'open'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                            <i class="icon-menu-open"></i>
+                                        </a>
+                                    {% endif %}
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+
+
+{% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+    {% endblock %}

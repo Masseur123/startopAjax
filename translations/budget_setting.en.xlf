@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>__dashboard</target>
+      </trans-unit>
+      <trans-unit id="IX0_r6T" resname="cost_center">
+        <source>cost_center</source>
+        <target>__cost_center</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>__code</target>
+      </trans-unit>
+      <trans-unit id="qvIyBkY" resname="title">
+        <source>title</source>
+        <target>__title</target>
+      </trans-unit>
+      <trans-unit id="fhsNVkH" resname="Account">
+        <source>Account</source>
+        <target>__Account</target>
+      </trans-unit>
+      <trans-unit id="_5z3Vga" resname="enabled">
+        <source>enabled</source>
+        <target>__enabled</target>
+      </trans-unit>
+      <trans-unit id="5H1yyh4" resname="has_control">
+        <source>has_control</source>
+        <target>__has_control</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="RGsr0ZZ" resname="cost_center_variation">
+        <source>cost_center_variation</source>
+        <target>__cost_center_variation</target>
+      </trans-unit>
+      <trans-unit id="TLTqJVg" resname="year">
+        <source>year</source>
+        <target>__year</target>
+      </trans-unit>
+      <trans-unit id="zzjZXJx" resname="amount">
+        <source>amount</source>
+        <target>__amount</target>
+      </trans-unit>
+      <trans-unit id="VL8nCjA" resname="param_cost_center">
+        <source>param_cost_center</source>
+        <target>__param_cost_center</target>
+      </trans-unit>
+      <trans-unit id="GLly4L0" resname="page.title.cost_center_expense">
+        <source>page.title.cost_center_expense</source>
+        <target>__page.title.cost_center_expense</target>
+      </trans-unit>
+      <trans-unit id="bvSM_Ev" resname="cost_center_expense">
+        <source>cost_center_expense</source>
+        <target>__cost_center_expense</target>
+      </trans-unit>
+      <trans-unit id="_PO3HhO" resname="cost_center_list">
+        <source>cost_center_list</source>
+        <target>__cost_center_list</target>
+      </trans-unit>
+      <trans-unit id="mvIRMps" resname="account">
+        <source>account</source>
+        <target>__account</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>__actions</target>
+      </trans-unit>
+      <trans-unit id="04C9odw" resname="page.title.cost_center_variation">
+        <source>page.title.cost_center_variation</source>
+        <target>__page.title.cost_center_variation</target>
+      </trans-unit>
+      <trans-unit id="d4GFAIX" resname="cost_center_variation_list">
+        <source>cost_center_variation_list</source>
+        <target>__cost_center_variation_list</target>
+      </trans-unit>
+      <trans-unit id="RR1qztb" resname="page.title.param_cost_center">
+        <source>page.title.param_cost_center</source>
+        <target>__page.title.param_cost_center</target>
+      </trans-unit>
+      <trans-unit id="pozAzqZ" resname="param_cost_center_list">
+        <source>param_cost_center_list</source>
+        <target>__param_cost_center_list</target>
+      </trans-unit>
+      <trans-unit id="bIzSAFW" resname="is_increase">
+        <source>is_increase</source>
+        <target>__is_increase</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>__cancel</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>__new</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>__modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>__delete</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>__please_confirm_your_action</target>
+      </trans-unit>
+      <trans-unit id="rTCxCT0" resname="page.title.cost_center_income">
+        <source>page.title.cost_center_income</source>
+        <target>__page.title.cost_center_income</target>
+      </trans-unit>
+      <trans-unit id="kaSxiQA" resname="cost_center_income">
+        <source>cost_center_income</source>
+        <target>__cost_center_income</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

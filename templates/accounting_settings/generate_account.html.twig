@@ -1,0 +1,96 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.generate_account'|trans([],'accounting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'generate_account'|trans([],'accounting') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('account') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'accounting_plan'|trans([],'accounting')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+	 <div class="row">
+		<div class="col-md-4">
+			<!-- Basic layout-->
+			<div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold"> {{ 'form'|trans([],'base')|upper }}</span></h5>
+				</div>
+				<div class="card-body">
+					{{ form_start(form) }}
+					<div class="form-group">
+						<label>
+							{{ 'code'|trans([],'accounting') }}
+							<span class="text-danger">*</span>
+						</label>
+						{{ form_widget(form.number) }}
+						<span class="text-danger">
+							{{ form_errors(form.number) }}</span>
+					</div>
+					<div class="text-right">
+						<button class="btn btn-primary form-btn" type="submit">
+							{{ 'generate'|trans([],'accounting')|upper }}
+							<i class="icon-paperplane ml-2"></i>
+						</button>
+					</div>
+					{{ form_end(form) }}
+				</div>
+			</div>
+			<!-- /basic layout -->
+		</div>
+		<div class="col-md-8">
+			<!-- HTML sourced data -->
+			<div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold"> {{ 'account_generate_list'|trans([],'accounting')|upper }}</span></h5>
+				</div>
+				<table class="table length table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th></th>
+							<th>{{ 'code'|trans([],'accounting')|upper }}</th>
+							<th></th>
+							<th></th>
+							<th></th>
+							<th class="text-center">{{ 'actions'|trans([],'base')|upper }}</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for tmpAccount in tmpAccounts %}
+							<tr>
+								<td>{{ tmpAccount.id }}</td>
+								<td>{{ tmpAccount.number }}</td>
+								<td></td>
+								<td></td>
+								<td></td>
+								<td class="text-center">
+									<div class="list-icons">
+										<a href="{{ path('account_validate', {id:tmpAccount.id}) }}" class="list-icons-item form-icon text-primary-600" data-popup="tooltip" title="{{ 'validate'|trans([],'accounting') }}" data-container="body">
+											<i class="icon-pencil7"></i>
+										</a>
+									</div>
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<!-- /HTML sourced data -->
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

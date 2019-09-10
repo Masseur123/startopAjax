@@ -1,0 +1,281 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.article'|trans([],'article') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'article_list'|trans([],'article') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('article') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'article_list'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                        <h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+                    </div>
+                <div class="card-body">
+                    {{ form_start(form) }}
+
+                    <div class="row">
+                        <div class="col-md-3">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Personal</legend> -->
+                                <div class="form-group">
+                                    <label>{{ 'type'|trans([],'article') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.type) }}
+                                    <span class="text-danger">{{ form_errors(form.type) }}</span>
+                                </div>
+                                <div class="form-group">
+                                    <label>{{ 'name'|trans([],'article') }}</label>
+                                    {{ form_widget(form.name) }}
+                                    <span class="text-danger">{{ form_errors(form.name) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'pua'|trans([],'article') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.pua) }}
+                                    <span class="text-danger">{{ form_errors(form.pua) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'account'|trans([],'article') }}</label>
+                                    {{ form_widget(form.account) }}
+                                    <span class="text-danger">{{ form_errors(form.account) }}</span>
+                                </div>
+
+                                <div class="form-group">
+
+                                    <div class="col-lg-13">
+                                        <div class="row">
+                                            <div class="col-md-5 form-row">
+                                                <div class="form-check form-check-inline form-check-right">
+                                                    <label class="form-check-label">
+                                                        {{ 'is_storable'|trans([],'article') }} {{ form_widget(form.is_storable) }}
+                                                        <span class="text-danger">{{ form_errors(form.is_storable) }}</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-7">
+                                                <div class="form-group">
+                                                    <label>{{ 'stock_alert'|trans([],'article') }}</label>
+                                                    {{ form_widget(form.stockAlert) }}
+                                                    <span class="text-danger">{{ form_errors(form.stockAlert) }}</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-3">
+                            <fieldset>
+
+                                <div class="form-group">
+                                    <label>{{ 'family'|trans([],'article') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.family) }}
+                                    <span class="text-danger">{{ form_errors(form.family) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'symbol'|trans([],'article') }}</label>
+                                    {{ form_widget(form.symbol) }}
+                                    <span class="text-danger">{{ form_errors(form.symbol) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'puv'|trans([],'article') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.puv) }}
+                                    <span class="text-danger">{{ form_errors(form.puv) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'account_sale'|trans([],'article') }}</label>
+                                    {{ form_widget(form.account_sale) }}
+                                    <span class="text-danger">{{ form_errors(form.account_sale) }}</span>
+                                </div>
+
+
+                                <div class="form-group">
+
+                                    <div class="col-lg-13">
+                                        <div class="row">
+                                            <div class="col-md-4 form-row">
+                                                <div class="form-check form-check-inline form-check-right">
+                                                    <label class="form-check-label">
+                                                        {{ 'is_lost'|trans([],'article') }}
+                                                    </label>
+                                                    {{ form_widget(form.is_lost) }}
+                                                    <span class="text-danger">{{ form_errors(form.is_lost) }}</span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-8">
+                                                <label>{{ 'lost_at'|trans([],'article') }}</label>
+                                                <div>
+                                                    <div class="input-group">
+                                                        <span class="input-group-prepend">
+                                                            <span class="input-group-text"><i class="icon-calendar3"></i></span>
+                                                        </span>
+                                                        {{ form_widget(form.lostAt, {'attr':{'class':"form-control", 'id':"anytime-month-numeric"}}) }}
+                                                        <span class="text-danger">{{ form_errors(form.lostAt) }}</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-3">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Localization</legend> -->
+
+                                <div class="form-group">
+                                    <label>{{ 'unity'|trans([],'article') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.unity) }}
+                                    <span class="text-danger">{{ form_errors(form.unity) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'weight'|trans([],'article') }}</label>
+                                    {{ form_widget(form.weight) }}
+                                    <span class="text-danger">{{ form_errors(form.weight) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'puv_min'|trans([],'article') }}</label>
+                                    {{ form_widget(form.puvmin) }}
+                                    <span class="text-danger">{{ form_errors(form.puvmin) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'account_pur'|trans([],'article') }}</label>
+                                    {{ form_widget(form.account_pur) }}
+                                    <span class="text-danger">{{ form_errors(form.account_pur) }}</span>
+                                </div>
+
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-3">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Personal</legend> -->
+
+                                <div class="form-group">
+                                    <label>{{ 'reference'|trans([],'article') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.reference) }}
+                                    <span class="text-danger">{{ form_errors(form.reference) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'dimensions'|trans([],'article') }}</label>
+                                    {{ form_widget(form.dimensions, {'attr':{'class':"form-control"}}) }}
+                                    <span class="text-danger">{{ form_errors(form.dimensions) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'puv_max'|trans([],'article') }}</label>
+                                    {{ form_widget(form.puvmax) }}
+                                    <span class="text-danger">{{ form_errors(form.puvmax) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'account_var'|trans([],'article') }}</label>
+                                    {{ form_widget(form.account_var) }}
+                                    <span class="text-danger">{{ form_errors(form.account_var) }}</span>
+                                </div>
+
+
+                            </fieldset>
+                        </div>
+
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-light" type="reset">
+                            {{ 'cancel'|trans([],'base')|upper }}
+                        </button>
+
+                        <div>
+                            {{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+                            <button class="btn btn-primary form-btn" type="submit">
+                                {{ 'save'|trans([],'base')|upper }}
+                                <i class="icon-paperplane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/ui/moment/moment.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/pickers/daterangepicker.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/pickers/anytime.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/picker.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/picker.date.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/picker.time.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/legacy.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/notifications/jgrowl.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/picker_date.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+
+{% endblock %}

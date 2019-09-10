@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.component'|trans([],'system') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'component'|trans([],'system') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('component') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'component_list'|trans([],'system')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+	
+{% block content %}
+	<div class="row">
+		<div class="col-md-12">
+			<div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+				</div>
+				<div class="card-body">
+					{{ form_start(form) }}
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>
+									{{ 'name'|trans([],'system') }}
+									<span class="text-danger">*</span>
+								</label>
+								{{ form_widget(form.name) }}
+								<span class="text-danger">
+									{{ form_errors(form.name) }}</span>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>
+									{{ 'name_en'|trans([],'system') }}
+									<span class="text-danger">*</span>
+								</label>
+								{{ form_widget(form.nameEn) }}
+								<span class="text-danger">
+									{{ form_errors(form.nameEn) }}</span>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>
+									{{ 'name_fr'|trans([],'system') }}
+								</label>
+								{{ form_widget(form.nameFr) }}
+							</div>
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>
+									{{ 'icon'|trans([],'system') }}
+									<span class="text-danger">*</span>
+								</label>
+								{{ form_widget(form.icon) }}
+								<span class="text-danger">
+									{{ form_errors(form.icon) }}</span>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>
+									{{ 'route'|trans([],'system') }}
+									<span class="text-danger">*</span>
+								</label>
+								{{ form_widget(form.route) }}
+								<span class="text-danger">
+									{{ form_errors(form.route) }}</span>
+							</div>
+						</div>
+						<div class="col-md-4">
+							<div class="form-group">
+								<label>
+									{{ 'position'|trans([],'system') }}
+								</label>
+								{{ form_widget(form.position) }}
+							</div>
+						</div>
+					</div>
+					<div class="d-flex justify-content-between align-items-center">
+						<button class="btn btn-light" type="reset">
+							{{ 'cancel'|trans([],'base')|upper }}
+						</button>
+						<div>
+							{{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+							<button class="btn btn-primary form-btn" type="submit">
+								{{ 'save'|trans([],'base')|upper }}
+								<i class="icon-paperplane ml-2"></i>
+							</button>
+						</div>
+						 
+					</div>
+					{{ form_end(form) }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endblock %}
+	
+{% block javascripts %}
+	{{ parent() }}
+{% endblock %}

@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="EohvnQA" resname="number">
+        <source>number</source>
+        <target>Numéro</target>
+      </trans-unit>
+      <trans-unit id="qvIyBkY" resname="title">
+        <source>title</source>
+        <target>Libellé</target>
+      </trans-unit>
+      <trans-unit id="gd1rd1r" resname="journal">
+        <source>journal</source>
+        <target>Journal</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>Code</target>
+      </trans-unit>
+      <trans-unit id="JMrPUAS" resname="generate">
+        <source>generate</source>
+        <target>Généré</target>
+      </trans-unit>
+      <trans-unit id="TLTqJVg" resname="year">
+        <source>year</source>
+        <target>Année</target>
+      </trans-unit>
+      <trans-unit id="84x2TIq" resname="branch">
+        <source>branch</source>
+        <target>Agence</target>
+      </trans-unit>
+      <trans-unit id="pyb2dnD" resname="account_db">
+        <source>account_db</source>
+        <target>Compte débité</target>
+      </trans-unit>
+      <trans-unit id="jntH2gB" resname="account_cr">
+        <source>account_cr</source>
+        <target>Compte crédité</target>
+      </trans-unit>
+      <trans-unit id="zzjZXJx" resname="amount">
+        <source>amount</source>
+        <target>Montant</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>Référence</target>
+      </trans-unit>
+      <trans-unit id="SH2SBbT" resname="page.title.journal">
+        <source>page.title.journal</source>
+        <target>Gestion des journaux</target>
+      </trans-unit>
+      <trans-unit id="vCxWCsz" resname="accounting_plan">
+        <source>accounting_plan</source>
+        <target>Plan comptable</target>
+      </trans-unit>
+      <trans-unit id="dRrPhS." resname="page.title.edit_account">
+        <source>page.title.edit_account</source>
+        <target>Gestion de la validation des comptes générés</target>
+      </trans-unit>
+      <trans-unit id="wTBap4S" resname="journal_list">
+        <source>journal_list</source>
+        <target>Liste des journaux</target>
+      </trans-unit>
+      <trans-unit id="abPHcXH" resname="transaction_number">
+        <source>transaction_number</source>
+        <target>No de transaction</target>
+      </trans-unit>
+      <trans-unit id="ivxVZFq" resname="doing_at">
+        <source>doing_at</source>
+        <target>Date opération</target>
+      </trans-unit>
+      <trans-unit id="UOFr3ZS" resname="debit">
+        <source>debit</source>
+        <target>Débit</target>
+      </trans-unit>
+      <trans-unit id="7MSHOha" resname="credit">
+        <source>credit</source>
+        <target>Crédit</target>
+      </trans-unit>
+      <trans-unit id="9cLGkQQ" resname="account_generate_list">
+        <source>account_generate_list</source>
+        <target>Liste des comptes générés</target>
+      </trans-unit>
+      <trans-unit id="lx6jhxP" resname="page.title.accounting_plan">
+        <source>page.title.accounting_plan</source>
+        <target>Plan comptable</target>
+      </trans-unit>
+      <trans-unit id="mdkUjlu" resname="page.title.accounting_entries">
+        <source>page.title.accounting_entries</source>
+        <target>Gestion des saisis comptables</target>
+      </trans-unit>
+      <trans-unit id="9SAz9vV" resname="accounting_entries">
+        <source>accounting_entries</source>
+        <target>Saisis comptables</target>
+      </trans-unit>
+      <trans-unit id="16CIREL" resname="accounting_entries_list">
+        <source>accounting_entries_list</source>
+        <target>Liste des saisis comptables</target>
+      </trans-unit>
+      <trans-unit id="_ojlU64" resname="verify_then_validate">
+        <source>verify_then_validate</source>
+        <target>Validation</target>
+      </trans-unit>
+      <trans-unit id="mvIRMps" resname="account">
+        <source>account</source>
+        <target>Compte</target>
+      </trans-unit>
+      <trans-unit id="Znhfa0C" resname="page.title.account_validation">
+        <source>page.title.account_validation</source>
+        <target>Gestion de la validation des comptes</target>
+      </trans-unit>
+      <trans-unit id="E3OXhbF" resname="account_validation">
+        <source>account_validation</source>
+        <target>Validation des comptes</target>
+      </trans-unit>
+      <trans-unit id="QSxk37K" resname="page.title.generate_account">
+        <source>page.title.generate_account</source>
+        <target>Gestion de la génération des comptes</target>
+      </trans-unit>
+      <trans-unit id="6Lo3Fsp" resname="generate_account">
+        <source>generate_account</source>
+        <target>Génération des comptes</target>
+      </trans-unit>
+      <trans-unit id="EzyOuGz" resname="validate">
+        <source>validate</source>
+        <target>Validation</target>
+      </trans-unit>
+      <trans-unit id="h.nvV_X" resname="page.title.customer">
+        <source>page.title.customer</source>
+        <target>__page.title.customer</target>
+      </trans-unit>
+      <trans-unit id="tsRYY4d" resname="customer">
+        <source>customer</source>
+        <target>__customer</target>
+      </trans-unit>
+      <trans-unit id="h8fuwZz" resname="customer_list">
+        <source>customer_list</source>
+        <target>__customer_list</target>
+      </trans-unit>
+      <trans-unit id="avJSI_r" resname="page.title.exporter">
+        <source>page.title.exporter</source>
+        <target>__page.title.exporter</target>
+      </trans-unit>
+      <trans-unit id="KbIg1Jz" resname="exporter">
+        <source>exporter</source>
+        <target>__exporter</target>
+      </trans-unit>
+      <trans-unit id="y7lhKm2" resname="exporter_list">
+        <source>exporter_list</source>
+        <target>__exporter_list</target>
+      </trans-unit>
+      <trans-unit id="uiuOWAc" resname="page.title.provider">
+        <source>page.title.provider</source>
+        <target>__page.title.provider</target>
+      </trans-unit>
+      <trans-unit id="XEwZZDQ" resname="provider">
+        <source>provider</source>
+        <target>__provider</target>
+      </trans-unit>
+      <trans-unit id="pcyIVnL" resname="provider_list">
+        <source>provider_list</source>
+        <target>__provider_list</target>
+      </trans-unit>
+      <trans-unit id="Ht3PzOf" resname="page.title.shipping_line">
+        <source>page.title.shipping_line</source>
+        <target>__page.title.shipping_line</target>
+      </trans-unit>
+      <trans-unit id="vNiqHwl" resname="shipping_line">
+        <source>shipping_line</source>
+        <target>__shipping_line</target>
+      </trans-unit>
+      <trans-unit id="yBeaprI" resname="shipping_line_list">
+        <source>shipping_line_list</source>
+        <target>__shipping_line_list</target>
+      </trans-unit>
+      <trans-unit id="TVIaH0J" resname="customer_group_list">
+        <source>customer_group_list</source>
+        <target>__customer_group_list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

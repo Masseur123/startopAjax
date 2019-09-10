@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="ZvZxKVt" resname="titre.langue">
+        <source>titre.langue</source>
+        <target>Language</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="Bzl9Yz8" resname="form">
+        <source>form</source>
+        <target>Form</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>Do you confirm your action ?</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="eHYA6_b" resname="unlock">
+        <source>unlock</source>
+        <target>Unlock</target>
+      </trans-unit>
+      <trans-unit id="DAMFhpR" resname="lock">
+        <source>lock</source>
+        <target>Lock</target>
+      </trans-unit>
+      <trans-unit id="yC_SyTd" resname="update_profile">
+        <source>update_profile</source>
+        <target>Profile</target>
+      </trans-unit>
+      <trans-unit id="yPShcbN" resname="update_password">
+        <source>update_password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="xlp_nIP" resname="account_setting">
+        <source>account_setting</source>
+        <target>Account Setting</target>
+      </trans-unit>
+      <trans-unit id="ACcM9j_" resname="logout">
+        <source>logout</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="_XWmxCK" resname="save_changes">
+        <source>save_changes</source>
+        <target>Save Changes</target>
+      </trans-unit>
+      <trans-unit id="r_zo0qs" resname="starTop_application">
+        <source>starTop_application</source>
+        <target>__starTop_application</target>
+      </trans-unit>
+      <trans-unit id="1w1aeQn" resname="navigation">
+        <source>navigation</source>
+        <target>__navigation</target>
+      </trans-unit>
+      <trans-unit id="AwGETM2" resname="footer">
+        <source>footer</source>
+        <target>Footer</target>
+      </trans-unit>
+      <trans-unit id="Sglo3qN" resname="StarTop">
+        <source>StarTop</source>
+        <target>StarTop</target>
+      </trans-unit>
+      <trans-unit id="p_LSbo0" resname="by">
+        <source>by</source>
+        <target>By</target>
+      </trans-unit>
+      <trans-unit id="A9oap78" resname="better_planning">
+        <source>better_planning</source>
+        <target>Better Planning</target>
+      </trans-unit>
+      <trans-unit id="oYYDCG5" resname="support">
+        <source>support</source>
+        <target>Support</target>
+      </trans-unit>
+      <trans-unit id="RrQrQin" resname="docs">
+        <source>docs</source>
+        <target>Docs</target>
+      </trans-unit>
+      <trans-unit id="cEjciqd" resname="purchase">
+        <source>purchase</source>
+        <target>__purchase</target>
+      </trans-unit>
+      <trans-unit id="EzyOuGz" resname="validate">
+        <source>validate</source>
+        <target>Validate</target>
+      </trans-unit>
+      <trans-unit id="9dTkLTD" resname="invalidate">
+        <source>invalidate</source>
+        <target>Invalidate</target>
+      </trans-unit>
+      <trans-unit id="tiNNLqD" resname="english">
+        <source>english</source>
+        <target>English</target>
+      </trans-unit>
+      <trans-unit id="_2LAwsK" resname="français">
+        <source>français</source>
+        <target>French</target>
+      </trans-unit>
+      <trans-unit id="GQDqtsA" resname="profile">
+        <source>profile</source>
+        <target>Profile</target>
+      </trans-unit>
+      <trans-unit id="XohImNo" resname="password">
+        <source>password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>__th.actions</target>
+      </trans-unit>
+      <trans-unit id="a7pRR4a" resname="page.title.account_setting">
+        <source>page.title.account_setting</source>
+        <target>Account Settings Management</target>
+      </trans-unit>
+      <trans-unit id="KA1Eqx6" resname="welcome">
+        <source>welcome</source>
+        <target>Welcome</target>
+      </trans-unit>
+      <trans-unit id="JMrPUAS" resname="generate">
+        <source>generate</source>
+        <target>Generate</target>
+      </trans-unit>
+      <trans-unit id=".0CFrRV" resname="upload">
+        <source>upload</source>
+        <target>Upload</target>
+      </trans-unit>
+      <trans-unit id="l5NOwYI" resname="add_expense">
+        <source>add_expense</source>
+        <target>Add Expense</target>
+      </trans-unit>
+      <trans-unit id="Qf.Yt2r" resname="details">
+        <source>details</source>
+        <target>Details</target>
+      </trans-unit>
+      <trans-unit id="Rt8mK4u" resname="save_payment">
+        <source>save_payment</source>
+        <target>__save_payment</target>
+      </trans-unit>
+      <trans-unit id="MQ.yABS" resname="close">
+        <source>close</source>
+        <target>Close</target>
+      </trans-unit>
+      <trans-unit id="I0j5mHR" resname="open">
+        <source>open</source>
+        <target>Open</target>
+      </trans-unit>
+      <trans-unit id="rwb3oXw" resname="page.title.update_user_profile">
+        <source>page.title.update_user_profile</source>
+        <target>__page.title.update_user_profile</target>
+      </trans-unit>
+      <trans-unit id="JfMXB80" resname="donwload">
+        <source>donwload</source>
+        <target>__donwload</target>
+      </trans-unit>
+      <trans-unit id="uq8JvCU" resname="journal list">
+        <source>journal list</source>
+        <target>__journal list</target>
+      </trans-unit>
+      <trans-unit id="6XFmtUU" resname="enable">
+        <source>enable</source>
+        <target>__enable</target>
+      </trans-unit>
+      <trans-unit id="SWrKgOT" resname="block">
+        <source>block</source>
+        <target>__block</target>
+      </trans-unit>
+      <trans-unit id="E0UPnPl" resname="add_stock">
+        <source>add_stock</source>
+        <target>__add_stock</target>
+      </trans-unit>
+      <trans-unit id="q_EBL0P" resname="remove_stock">
+        <source>remove_stock</source>
+        <target>__remove_stock</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

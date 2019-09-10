@@ -1,0 +1,84 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'quotation_list'|trans([],'purchase') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'quotation_list'|trans([],'purchase') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('sale_quotation_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+
+            <div class="card">
+                <table class="table conrouting table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                    <tr>
+                        <th></th>
+                        <th>{{ 'th.reference'|trans([],'purchase')|upper }}</th>
+                        <th>{{ 'th.provider'|trans([],'purchase')|upper }}</th>
+                        <th>{{ 'th.date'|trans([],'purchase')|upper }}</th>
+                        <th>{{ 'th.status'|trans([],'purchase')|upper }}</th>
+                        <th class="text-center">{{ 'th.actions'|trans([],'article') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for quotation in quotations %}
+                        <tr>
+                            <td></td>
+                            <td>{{ quotation.reference }}</td>
+                            <td>{{ quotation.provider is empty ? "" : quotation.provider.person.name }}</td>
+                            <td>{{ quotation.date is empty ? "" : quotation.date|date("m/d/Y")  }}</td>
+                            {% if quotation.isvalid is null %}
+                                <td><span class="badge badge-flat border-info text-info-600">{{ 'in_progress'|trans([],'purchase') }}</span></td>
+                            {% elseif quotation.isvalid == 1 %}
+                                <td><span class="badge badge-flat border-success text-success-600">{{ 'validated'|trans([],'purchase') }}</span></td>
+                            {% else %}
+                                <td><span class="badge badge-flat border-warning text-warning-600">{{ 'rejected'|trans([],'purchase') }}</td>
+                            {% endif %}
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    {% if quotation.isvalid is null %}
+                                        <a href="{{ path('sale_quotation_edit', {id:quotation.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                        <a href="{{ path('sale_quotation_delete', {id:quotation.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                        <a href="{{ path('sale_quotation_valid', {id:quotation.id}) }}" onclick="return confirm('do you want to validate?')" class="col-lg-2"> <i class="icon-checkmark4 text-success-600"></i></a>
+                                        <a href="{{ path('sale_quotation_reject', {id:quotation.id}) }}" onclick="return confirm('do you want to reject?')" class="col-lg-2"> <i class="icon-blocked text-warning-600"></i></a>
+                                    {% elseif quotation.isvalid == 1 %}
+                                        <a href="{{ path('sale_quotation_cart', {id:quotation.id}) }}" class="col-lg-2"> <i class="icon-cart-add text-info-600"></i></a>
+                                        <a href="{{ path('sale_quotation_reverse', {id:quotation.id}) }}" onclick="return confirm('do you want to reverse?')" class="col-lg-2"> <i class="icon-reset text-success-600"></i></a>
+
+                                    {% else %}
+                                        <a href="{{ path('sale_quotation_delete', {id:quotation.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600 col-2"><i class="icon-trash"></i></a>
+                                        <a href="{{ path('sale_quotation_reverse', {id:quotation.id}) }}" onclick="return confirm('do you want to reverse?')" class="col-lg-2"> <i class="icon-reset text-success-600"></i></a>
+                                    {% endif %}
+
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        <!-- /HTML sourced data -->
+
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

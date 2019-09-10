@@ -1,0 +1,108 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} ZoZoo - Supply Request {% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="{{ path('home') }}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> {{ 'dashboard'|trans([],'setting') }}</a>
+                <span class="breadcrumb-item active"> {{ 'supply request'|trans([],'setting') }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block mainbtn %}
+    <div class="text-center">
+        <a href="{{ path('supply_request_new') }}" class="btn btn-primary btn-labeled btn-labeled-left btn-lg"><b><i class="icon-pin-alt"></i></b> {{ 'a.new_supply_request'|trans([],'setting') }}</a>
+        <a href="{{ path('supply_request') }}" class="btn btn-primary btn-labeled btn-labeled-left btn-lg"><b><i class="icon-menu7"></i></b> {{ 'a.supply_request_list'|trans([],'setting') }}</a>
+
+    </div>
+    <a href="{{ path('supply_request_article') }}" class="btn btn-primary btn-labeled btn-labeled-left btn-lg"><b><i class="icon-pin-alt"></i></b> {{ 'a.supply_request_article_list'|trans([],'setting') }}</a>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert bg-{{ label }} text-white alert-styled-left alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                <span class="font-weight-semibold">{{ 'span.well_done'|trans([],'setting') }}</span> {{ message }}.
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <!-- HTML sourced data -->
+            <div class="card border-teal-400">
+                <div class="card-header bg-teal-400 text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.supply_request_list'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>{{ '#'|trans([],'article') }}</th>
+                            <th>{{ 'th.date'|trans([],'article') }}</th>
+                            <th>{{ 'th.reference'|trans([],'article') }}</th>
+                            <th>{{ 'origin'|trans ([],'article') }}</th>
+                            <th>{{ 'is_valid'|trans ([],'article') }}</th>
+                            <th class="text-center">{{ 'th.actions'|trans([],'setting') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for supplyRequest in suppliesRequest %}
+                            <tr>
+                                <td>{{ supplyRequest.id }}</td>
+                                <td>{{ supplyRequest.date is empty ? "" : supplyRequest.date|date("m/d/Y") }}</td>
+                                <td>{{ supplyRequest.reference }}</td>
+                                <td>{{ supplyRequest.origin }}</td>
+                                {% if supplyRequest.isvalid == 1 %}
+                                    <td><span class="badge badge-flat border-success text-success-600">{{ 'valid'|trans([],'article') }}</span></td>
+                                {% else %}
+                                    <td><span class="badge badge-flat border-warning text-warning-600">{{ 'invalid'|trans([],'article') }}</td>
+                                {% endif %}
+                                <td class="text-center">
+                                    <div class="list-icons">
+
+
+                                        {% if supplyRequest.isvalid == 1 %}
+                                            <a href="{{ path('supply_request_article_add', {id:supplyRequest.id}) }}" class="col-lg-2"> <i class="icon-basket "></i></a>
+                                            <a href="{{ path('supply_request_invalid', {id:supplyRequest.id}) }}" onclick="return confirm('do you want to invalidate?')" class="col-lg-2"> <i class="icon-blocked text-warning-600"></i></a>
+                                        {% else %}
+                                            <a href="{{ path('supply_request_edit', {id:supplyRequest.id}) }}" class="col-lg-2"><i class="icon-pencil7 text-primary-600"></i></a>
+                                            <a href="{{ path('supply_request_delete', {id:supplyRequest.id}) }}"  onclick="return confirm('are u sure?')" class="col-lg-2"><i class="icon-trash text-danger-600"></i></a>
+                                            <a href="{{ path('supply_request_valid', {id:supplyRequest.id}) }}" onclick="return confirm('do you want to validate?')" class="col-lg-2"> <i class="icon-checkmark4 text-success-600"></i></a>
+                                        {% endif %}
+
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /HTML sourced data -->
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+
+{% endblock %}

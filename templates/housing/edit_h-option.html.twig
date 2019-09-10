@@ -1,0 +1,71 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.housing_option'|trans([],'setting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'housing_option'|trans([],'setting') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('housing_h-option') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'list_of_h-option'|trans([],'setting')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-4">
+        <!-- Basic layout-->
+        <div class="card">
+            <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                <h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+            </div>
+
+            <div class="card-body">
+                {{ form_start(form) }}
+                <div class="form-group">
+                    <label>{{ 'name'|trans([],'setting') }} <span class="text-danger">*</span></label>
+                        {{ form_widget(form.name) }}
+                    <span class="text-danger"> {{ form_errors(form.name) }}</span>
+                </div>
+
+                <div class="form-group">
+                    <label>{{ 'housing_type'|trans([],'setting') }} <span class="text-danger">*</span></label>
+                        {{ form_widget(form.housingtype) }}
+                    <span class="text-danger"> {{ form_errors(form.housingtype) }}</span>
+                </div>
+
+                <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-light" type="reset">
+                        {{ 'cancel'|trans([],'base')|upper }}
+                    </button>
+                    <div>
+                        {{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+                    <button class="btn btn-primary form-btn" type="submit">
+                        {{ 'save'|trans([],'base')|upper }}
+                        <i class="icon-paperplane ml-2"></i>
+                    </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{ form_end(form) }}
+        <!-- /basic layout -->
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+{% endblock %}

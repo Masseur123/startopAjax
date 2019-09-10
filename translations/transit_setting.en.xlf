@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="yquMp2r" resname="document_file">
+        <source>document_file</source>
+        <target>Documents</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>Code</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="M0NZuQ7" resname="#">
+        <source>#</source>
+        <target>#</target>
+      </trans-unit>
+      <trans-unit id="Lg5_MIx" resname="container_length">
+        <source>container_length</source>
+        <target>Container length</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="4NLF6kh" resname="transit_file">
+        <source>transit_file</source>
+        <target>Transit file</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="Jc20bY0" resname="boat">
+        <source>boat</source>
+        <target>Boat</target>
+      </trans-unit>
+      <trans-unit id="GLRhEcj" resname="origin_country">
+        <source>origin_country</source>
+        <target>Origin country</target>
+      </trans-unit>
+      <trans-unit id="6OFSkoq" resname="origin_town">
+        <source>origin_town</source>
+        <target>Origin town</target>
+      </trans-unit>
+      <trans-unit id="cdXOMyH" resname="destination_country">
+        <source>destination_country</source>
+        <target>Dest. country</target>
+      </trans-unit>
+      <trans-unit id="wVMJpax" resname="destination_town">
+        <source>destination_town</source>
+        <target>Dest. town</target>
+      </trans-unit>
+      <trans-unit id="TTlx3mI" resname="park">
+        <source>park</source>
+        <target>Park</target>
+      </trans-unit>
+      <trans-unit id="mfeFXre" resname="wood">
+        <source>wood</source>
+        <target>Wood</target>
+      </trans-unit>
+      <trans-unit id="7Hjx_00" resname="page.title.document_file">
+        <source>page.title.document_file</source>
+        <target>Document file management</target>
+      </trans-unit>
+      <trans-unit id="EK9UkOf" resname="page.title.container_length">
+        <source>page.title.container_length</source>
+        <target>Container length management</target>
+      </trans-unit>
+      <trans-unit id="bb_ssS9" resname="page.title.park">
+        <source>page.title.park</source>
+        <target>Park management</target>
+      </trans-unit>
+      <trans-unit id="2Ayb_RD" resname="address">
+        <source>address</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="G0WXWtR" resname="page.title.transit_file">
+        <source>page.title.transit_file</source>
+        <target>Transit file management</target>
+      </trans-unit>
+      <trans-unit id="tGGpzL6" resname="document_file_list">
+        <source>document_file_list</source>
+        <target>List of documents</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="0S1PN9Z" resname="length_list">
+        <source>length_list</source>
+        <target>List of container length</target>
+      </trans-unit>
+      <trans-unit id="5CtA2WD" resname="park_list">
+        <source>park_list</source>
+        <target>List of park</target>
+      </trans-unit>
+      <trans-unit id="g3kC10u" resname="is_open">
+        <source>is_open</source>
+        <target>Is open?</target>
+      </trans-unit>
+      <trans-unit id="Bj3FJWI" resname="transit_list">
+        <source>transit_list</source>
+        <target>List of transit file</target>
+      </trans-unit>
+      <trans-unit id="ACMGm0j" resname="wood_list">
+        <source>wood_list</source>
+        <target>List of wood</target>
+      </trans-unit>
+      <trans-unit id="KbIg1Jz" resname="exporter">
+        <source>exporter</source>
+        <target>Exporter</target>
+      </trans-unit>
+      <trans-unit id="zdAnIeU" resname="page.title.wood">
+        <source>page.title.wood</source>
+        <target>Wood management</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>Do you confirm your action ?</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="EzyOuGz" resname="validate">
+        <source>validate</source>
+        <target>__validate</target>
+      </trans-unit>
+      <trans-unit id="OfYUUec" resname="page.title.tax">
+        <source>page.title.tax</source>
+        <target>__page.title.tax</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

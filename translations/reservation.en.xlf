@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>__new</target>
+      </trans-unit>
+      <trans-unit id="dUuL2Cg" resname="reservation_group">
+        <source>reservation_group</source>
+        <target>__reservation_group</target>
+      </trans-unit>
+      <trans-unit id="Bzl9Yz8" resname="form">
+        <source>form</source>
+        <target>__form</target>
+      </trans-unit>
+      <trans-unit id="jVOj42c" resname="hotel">
+        <source>hotel</source>
+        <target>__hotel</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="ScS5764" resname="source_of_reservation">
+        <source>source_of_reservation</source>
+        <target>__source_of_reservation</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="AcuaAqd" resname="well_done">
+        <source>well_done</source>
+        <target>__well_done</target>
+      </trans-unit>
+      <trans-unit id="bATHtIU" resname="list_of_reservationgroups">
+        <source>list_of_reservationgroups</source>
+        <target>__list_of_reservationgroups</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>__phone</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>__email</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>__description</target>
+      </trans-unit>
+      <trans-unit id="dChNncv" resname="color">
+        <source>color</source>
+        <target>__color</target>
+      </trans-unit>
+      <trans-unit id="BzwWNMS" resname="status">
+        <source>status</source>
+        <target>__status</target>
+      </trans-unit>
+      <trans-unit id="rR0UfkU" resname="is_not_enabled">
+        <source>is_not_enabled</source>
+        <target>__is_not_enabled</target>
+      </trans-unit>
+      <trans-unit id="7s7AnD2" resname="is_enabled">
+        <source>is_enabled</source>
+        <target>__is_enabled</target>
+      </trans-unit>
+      <trans-unit id="ov8q6Cx" resname="list_of_sourceofreservations">
+        <source>list_of_sourceofreservations</source>
+        <target>__list_of_sourceofreservations</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

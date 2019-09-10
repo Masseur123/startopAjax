@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+
+{% block mainbtn %}
+    <div class="header-elements d-none">
+        <a href="{{ path('equipment_new') }}" class="btn btn-labeled btn-labeled-right bg-primary">{{ 'new'|trans([],'housing') }} {{ 'equipment'|trans([],'housing') }} <b><i class="icon-menu7"></i></b></a>
+    </div>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert bg-{{ label }} text-white alert-styled-left alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                <span class="font-weight-semibold">{{ 'well_done'|trans([],'housing') }}</span> {{ message }}.
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+
+{% block content %} 
+
+<div class="row">
+    <div class="col-md-8">
+        <!-- HTML sourced data -->
+        <div class="card border-teal-400">
+            <div class="card-header bg-teal-400 text-white header-elements-inline">
+                <h5 class="card-title">{{ 'list_of_equipmentcategories'|trans([],'housing') }}</h5>
+            </div>
+
+            <!-- <div class="card-body"></div> -->
+
+            <table class="table datatable-html">
+                <thead>
+                    <tr>
+                        <th>{{ 'hotel'|trans([],'housing') }}</th>
+                        <th>{{ 'equipment_category'|trans([],'housing') }}</th>
+                        <th>{{ 'name'|trans([],'housing') }}</th>
+                        <th>{{ 'status'|trans([],'housing') }}</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for equipment in equipments %}
+                    <tr>
+                        <td>{{ equipment.hotel }}</td>
+                        <td>{{ equipment.equipmentCategory }}</td>
+                        <td><span class="badge badge-info">{{ equipment.name }}</td>
+                        <td>
+                            {% if equipment.isenabled == 0 %}
+                            <span class="badge badge-danger">{{ 'is_not_enabled'|trans([],'housing') }}</span>
+                            {% else %}
+                            <span class="badge badge-primary badge-pill">{{ 'is_enabled'|trans([],'housing') }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <div class="list-icons">
+                                <a href="{{ path('equipment_edit', {id:equipment.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                <a href="{{ path('equipment_delete', {id:equipment.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+
+
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /HTML sourced data -->
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_data_sources.js') }}"></script>
+{% endblock %}

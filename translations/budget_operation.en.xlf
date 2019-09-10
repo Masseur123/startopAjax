@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>__dashboard</target>
+      </trans-unit>
+      <trans-unit id="TLTqJVg" resname="year">
+        <source>year</source>
+        <target>__year</target>
+      </trans-unit>
+      <trans-unit id="Rm5bnNV" resname="currency">
+        <source>currency</source>
+        <target>__currency</target>
+      </trans-unit>
+      <trans-unit id="IX0_r6T" resname="cost_center">
+        <source>cost_center</source>
+        <target>__cost_center</target>
+      </trans-unit>
+      <trans-unit id="H.wEBrm" resname="tax">
+        <source>tax</source>
+        <target>__tax</target>
+      </trans-unit>
+      <trans-unit id="zzjZXJx" resname="amount">
+        <source>amount</source>
+        <target>__amount</target>
+      </trans-unit>
+      <trans-unit id="JNeZuin" resname="cashpay">
+        <source>cashpay</source>
+        <target>__cashpay</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="XncrkFl" resname="expense_operation">
+        <source>expense_operation</source>
+        <target>__expense_operation</target>
+      </trans-unit>
+      <trans-unit id="B_6ntFV" resname="BUDGETED">
+        <source>BUDGETED</source>
+        <target>__BUDGETED</target>
+      </trans-unit>
+      <trans-unit id="PawyLIN" resname="VALIDATED">
+        <source>VALIDATED</source>
+        <target>__VALIDATED</target>
+      </trans-unit>
+      <trans-unit id="CzVyrIW" resname="NOT VALIDATED">
+        <source>NOT VALIDATED</source>
+        <target>__NOT VALIDATED</target>
+      </trans-unit>
+      <trans-unit id="TLiG4o5" resname="cash_expense_operation">
+        <source>cash_expense_operation</source>
+        <target>__cash_expense_operation</target>
+      </trans-unit>
+      <trans-unit id="WwHDxX8" resname="page.title.expense_operation">
+        <source>page.title.expense_operation</source>
+        <target>__page.title.expense_operation</target>
+      </trans-unit>
+      <trans-unit id="vr6AMPw" resname="expense_history">
+        <source>expense_history</source>
+        <target>__expense_history</target>
+      </trans-unit>
+      <trans-unit id="DodjLNR" resname="date">
+        <source>date</source>
+        <target>__date</target>
+      </trans-unit>
+      <trans-unit id="mLT2Xf8" resname="tax_amount">
+        <source>tax_amount</source>
+        <target>__tax_amount</target>
+      </trans-unit>
+      <trans-unit id="BzwWNMS" resname="status">
+        <source>status</source>
+        <target>__status</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>__actions</target>
+      </trans-unit>
+      <trans-unit id="57MJZ_3" resname="page.title.cash_expense_operation">
+        <source>page.title.cash_expense_operation</source>
+        <target>__page.title.cash_expense_operation</target>
+      </trans-unit>
+      <trans-unit id="Pd.THB6" resname="budgeted_expenditure">
+        <source>budgeted_expenditure</source>
+        <target>__budgeted_expenditure</target>
+      </trans-unit>
+      <trans-unit id="FapM5Dw" resname="tva">
+        <source>tva</source>
+        <target>__tva</target>
+      </trans-unit>
+      <trans-unit id="ZnE3isu" resname="tva_amount">
+        <source>tva_amount</source>
+        <target>__tva_amount</target>
+      </trans-unit>
+      <trans-unit id="NcxuF6n" resname="cash_payment">
+        <source>cash_payment</source>
+        <target>__cash_payment</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>__description</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>__reference</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>__cancel</target>
+      </trans-unit>
+      <trans-unit id="AQlI.oq" resname="budgeted_expenditure_list">
+        <source>budgeted_expenditure_list</source>
+        <target>__budgeted_expenditure_list</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>__new</target>
+      </trans-unit>
+      <trans-unit id="sgvwaOW" resname="total_amount">
+        <source>total_amount</source>
+        <target>__total_amount</target>
+      </trans-unit>
+      <trans-unit id="4XlW5mN" resname="PAID">
+        <source>PAID</source>
+        <target>__PAID</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>__modify</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>__please_confirm_your_action</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>__delete</target>
+      </trans-unit>
+      <trans-unit id="EzyOuGz" resname="validate">
+        <source>validate</source>
+        <target>__validate</target>
+      </trans-unit>
+      <trans-unit id="9dTkLTD" resname="invalidate">
+        <source>invalidate</source>
+        <target>__invalidate</target>
+      </trans-unit>
+      <trans-unit id="3iCoXMH" resname="page.title.income_operation">
+        <source>page.title.income_operation</source>
+        <target>__page.title.income_operation</target>
+      </trans-unit>
+      <trans-unit id="fAog31i" resname="income_operation">
+        <source>income_operation</source>
+        <target>__income_operation</target>
+      </trans-unit>
+      <trans-unit id="AM8UH4g" resname="income">
+        <source>income</source>
+        <target>__income</target>
+      </trans-unit>
+      <trans-unit id="5fuYAQw" resname="cash_collection">
+        <source>cash_collection</source>
+        <target>__cash_collection</target>
+      </trans-unit>
+      <trans-unit id="MBsdu4N" resname="income_list">
+        <source>income_list</source>
+        <target>__income_list</target>
+      </trans-unit>
+      <trans-unit id="44QhNYM" resname="NOT_VALIDATED">
+        <source>NOT_VALIDATED</source>
+        <target>__NOT_VALIDATED</target>
+      </trans-unit>
+      <trans-unit id="5vCh_7Q" resname="vault">
+        <source>vault</source>
+        <target>__vault</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

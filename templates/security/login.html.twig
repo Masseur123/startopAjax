@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'login_page'|trans([],'security') }}{% endblock %}
+
+{% block body_class %}{{ 'bg-slate-800' }}{% endblock %}
+
+{% block main_navbar %}{% endblock %}
+
+{% block main_sidebar %}{% endblock %}
+
+{% block main_content %}
+
+	<!-- Content area -->
+	<div class="content d-flex justify-content-center align-items-center">
+
+		<!-- Login card -->
+		<form class="login-form" action="{{ path('starTop_login') }}" method="post">
+			{% if error %}
+				<div class="alert bg-danger text-white alert-styled-left alert-dismissible">
+					<button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+					<span class="font-weight-semibold">{{ 'oops!'|trans([],'security') }}</span>
+					{{ error.messageKey }}.
+				</div>
+			{% endif %}
+			
+			<div class="card mb-0">
+				<div class="card-body">
+					<div class="text-center mb-3">
+						 <i class="icon-people icon-2x text-warning-400 border-warning-400 border-3 rounded-round p-3 mb-3 mt-1"></i> 
+						<!--<img src="{{ asset('global_assets/images/startop_login_page.jpg') }}" width="230" height="80" alt="startop">-->
+						<h5 class="mb-0">{{ 'Log_Into_Your_Account'|trans([],'security') }}</h5>
+						<span class="d-block text-muted">{{ 'your_credentials'|trans([],'security') }}</span>
+					</div>
+
+					<div class="form-group form-group-feedback form-group-feedback-left">
+						<input type="text" class="form-control" placeholder="{{ 'username'|trans([],'security') }}" id="username" name="_username" value="{{ last_username }}">
+						<div class="form-control-feedback">
+							<i class="icon-user text-muted"></i>
+						</div>
+					</div>
+
+					<div class="form-group form-group-feedback form-group-feedback-left">
+						<input type="password" class="form-control" placeholder="{{ 'password'|trans([],'security') }}" id="password" name="_password">
+						<div class="form-control-feedback">
+							<i class="icon-lock2 text-muted"></i>
+						</div>
+					</div>
+					
+					<div class="form-group form-group-feedback form-group-feedback-left">
+						<input type="hidden" name="_target_path" value="{{ app.request.get('redirect_to') }}"/>
+					</div>
+					
+					<div class="form-group form-group-feedback form-group-feedback-left">
+						<input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}"/>
+					</div>
+
+					<div class="form-group d-flex align-items-center">
+						<div class="form-check mb-0">
+							<label class="form-check-label">
+								<input type="checkbox" name="remember" class="form-input-styled" checked data-fouc>
+								{{ 'remember_me'|trans([],'security') }}
+							</label>
+						</div>
+
+						<a href="{{ path('login_password_reset') }}" class="ml-auto login-startop">{{ 'forgot_password'|trans([],'security') }}</a>
+					</div>
+
+					<div class="form-group">
+						<button type="submit" class="btn btn-primary btn-block">{{ 'sign_in'|trans([],'security') }} <i class="icon-circle-right2 ml-2"></i></button>
+					</div>
+
+					<!-- <div class="form-group text-center text-muted content-divider">
+						<span class="px-2">or sign in with</span>
+					</div>
+
+					<div class="form-group text-center">
+						<button type="button" class="btn btn-outline bg-indigo border-indigo text-indigo btn-icon rounded-round border-2"><i class="icon-facebook"></i></button>
+						<button type="button" class="btn btn-outline bg-pink-300 border-pink-300 text-pink-300 btn-icon rounded-round border-2 ml-2"><i class="icon-dribbble3"></i></button>
+						<button type="button" class="btn btn-outline bg-slate-600 border-slate-600 text-slate-600 btn-icon rounded-round border-2 ml-2"><i class="icon-github"></i></button>
+						<button type="button" class="btn btn-outline bg-info border-info text-info btn-icon rounded-round border-2 ml-2"><i class="icon-twitter"></i></button>
+					</div> -->
+
+					<span class="form-text text-center text-muted"><!-- By continuing, you're confirming that you've read our <a href="#">Terms &amp; Conditions</a> and <a href="#">Cookie Policy</a> --></span>
+				</div>
+			</div>
+		</form>
+		<!-- /login card -->
+
+	</div>
+	<!-- /content area -->
+
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+	<script src="{{ asset('global_assets/js/demo_pages/login.js') }}"></script>
+{% endblock %}
+

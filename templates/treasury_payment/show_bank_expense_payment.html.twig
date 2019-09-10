@@ -1,0 +1,62 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.bank_expense_payment'|trans([],'treasury') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'bank_expense_payment'|trans([],'treasury') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('bank_expense_validated') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'bank_expense_validated'|trans([],'treasury')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div
+			class="col-md-12">
+			<!-- HTML sourced data -->
+			<div class="card">
+			
+				<!-- <div class="card-body"></div> -->
+				<table class="table datatable-responsive table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th>{{ 'date'|trans([],'treasury') }}</th>
+							<th>{{ 'tr_number'|trans([],'treasury') }}</th>
+							<th>{{ 'ref_number'|trans([],'treasury') }}</th>
+							<th>{{ 'account'|trans([],'treasury') }}</th>
+							<th>{{ 'debit'|trans([],'treasury') }}</th>
+							<th>{{ 'credit'|trans([],'treasury') }}</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for ecritCptaBankExpense in ecritCptaBankExpenses %}
+							<tr>
+								<td>{{ ecritCptaBankExpense.doingAt is empty ? "" : ecritCptaBankExpense.doingAt|date("Y/m/d") }}</td>
+								<td>{{ ecritCptaBankExpense.transactionnumber }}</td>
+								<td>{{ ecritCptaBankExpense.reference }}</td>
+								<td>{{ ecritCptaBankExpense.account.number }}</td>
+								<td>{{ ecritCptaBankExpense.debit }}</td>
+								<td>{{ ecritCptaBankExpense.credit }}</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<!-- /HTML sourced data -->
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+{% endblock %}

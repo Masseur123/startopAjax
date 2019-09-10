@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="oR7ZB3E" resname="page.title.budget_expenses">
+        <source>page.title.budget_expenses</source>
+        <target>__page.title.budget_expenses</target>
+      </trans-unit>
+      <trans-unit id="jxiB13F" resname="budget_expenses">
+        <source>budget_expenses</source>
+        <target>__budget_expenses</target>
+      </trans-unit>
+      <trans-unit id="IX0_r6T" resname="cost_center">
+        <source>cost_center</source>
+        <target>__cost_center</target>
+      </trans-unit>
+      <trans-unit id="FapM5Dw" resname="tva">
+        <source>tva</source>
+        <target>__tva</target>
+      </trans-unit>
+      <trans-unit id="zzjZXJx" resname="amount">
+        <source>amount</source>
+        <target>__amount</target>
+      </trans-unit>
+      <trans-unit id="ZnE3isu" resname="tva_amount">
+        <source>tva_amount</source>
+        <target>__tva_amount</target>
+      </trans-unit>
+      <trans-unit id="NcxuF6n" resname="cash_payment">
+        <source>cash_payment</source>
+        <target>__cash_payment</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>__description</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>__reference</target>
+      </trans-unit>
+      <trans-unit id="dFRQh9G" resname="budget_expenses_list">
+        <source>budget_expenses_list</source>
+        <target>__budget_expenses_list</target>
+      </trans-unit>
+      <trans-unit id="DodjLNR" resname="date">
+        <source>date</source>
+        <target>__date</target>
+      </trans-unit>
+      <trans-unit id="sgvwaOW" resname="total_amount">
+        <source>total_amount</source>
+        <target>__total_amount</target>
+      </trans-unit>
+      <trans-unit id="BzwWNMS" resname="status">
+        <source>status</source>
+        <target>__status</target>
+      </trans-unit>
+      <trans-unit id="B_6ntFV" resname="BUDGETED">
+        <source>BUDGETED</source>
+        <target>__BUDGETED</target>
+      </trans-unit>
+      <trans-unit id="PawyLIN" resname="VALIDATED">
+        <source>VALIDATED</source>
+        <target>__VALIDATED</target>
+      </trans-unit>
+      <trans-unit id="4XlW5mN" resname="PAID">
+        <source>PAID</source>
+        <target>__PAID</target>
+      </trans-unit>
+      <trans-unit id="CzVyrIW" resname="NOT VALIDATED">
+        <source>NOT VALIDATED</source>
+        <target>__NOT VALIDATED</target>
+      </trans-unit>
+      <trans-unit id="kkgRmxc" resname="page.title.budget_incomes">
+        <source>page.title.budget_incomes</source>
+        <target>__page.title.budget_incomes</target>
+      </trans-unit>
+      <trans-unit id="v82RJE6" resname="budget_incomes">
+        <source>budget_incomes</source>
+        <target>__budget_incomes</target>
+      </trans-unit>
+      <trans-unit id="5fuYAQw" resname="cash_collection">
+        <source>cash_collection</source>
+        <target>__cash_collection</target>
+      </trans-unit>
+      <trans-unit id="jJtXQVO" resname="budget_incomes_list">
+        <source>budget_incomes_list</source>
+        <target>__budget_incomes_list</target>
+      </trans-unit>
+      <trans-unit id="44QhNYM" resname="NOT_VALIDATED">
+        <source>NOT_VALIDATED</source>
+        <target>__NOT_VALIDATED</target>
+      </trans-unit>
+      <trans-unit id="M3Rnldf" resname="page.title..cost_center_expense">
+        <source>page.title..cost_center_expense</source>
+        <target>__page.title..cost_center_expense</target>
+      </trans-unit>
+      <trans-unit id="a6eRixu" resname="cost_center_expence">
+        <source>cost_center_expence</source>
+        <target>__cost_center_expence</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>__code</target>
+      </trans-unit>
+      <trans-unit id="qvIyBkY" resname="title">
+        <source>title</source>
+        <target>__title</target>
+      </trans-unit>
+      <trans-unit id="_5z3Vga" resname="enabled">
+        <source>enabled</source>
+        <target>__enabled</target>
+      </trans-unit>
+      <trans-unit id="5H1yyh4" resname="has_control">
+        <source>has_control</source>
+        <target>__has_control</target>
+      </trans-unit>
+      <trans-unit id="O97J02." resname="cost_center_expence_list">
+        <source>cost_center_expence_list</source>
+        <target>__cost_center_expence_list</target>
+      </trans-unit>
+      <trans-unit id="mvIRMps" resname="account">
+        <source>account</source>
+        <target>__account</target>
+      </trans-unit>
+      <trans-unit id="6s9hx43" resname="page.title..cost_center_income">
+        <source>page.title..cost_center_income</source>
+        <target>__page.title..cost_center_income</target>
+      </trans-unit>
+      <trans-unit id="kaSxiQA" resname="cost_center_income">
+        <source>cost_center_income</source>
+        <target>__cost_center_income</target>
+      </trans-unit>
+      <trans-unit id="UN8lgBL" resname="cost_center_income_list">
+        <source>cost_center_income_list</source>
+        <target>__cost_center_income_list</target>
+      </trans-unit>
+      <trans-unit id=".KKSgfZ" resname="page.title.budget_variation">
+        <source>page.title.budget_variation</source>
+        <target>__page.title.budget_variation</target>
+      </trans-unit>
+      <trans-unit id="hJY5u74" resname="budget_variation">
+        <source>budget_variation</source>
+        <target>__budget_variation</target>
+      </trans-unit>
+      <trans-unit id="TLTqJVg" resname="year">
+        <source>year</source>
+        <target>__year</target>
+      </trans-unit>
+      <trans-unit id="bIzSAFW" resname="is_increase">
+        <source>is_increase</source>
+        <target>__is_increase</target>
+      </trans-unit>
+      <trans-unit id="DTVHrFU" resname="budget_variation_list">
+        <source>budget_variation_list</source>
+        <target>__budget_variation_list</target>
+      </trans-unit>
+      <trans-unit id="D58WU6w" resname="page.title.budget_allocation">
+        <source>page.title.budget_allocation</source>
+        <target>__page.title.budget_allocation</target>
+      </trans-unit>
+      <trans-unit id="hDfIhhl" resname="budget_allocation">
+        <source>budget_allocation</source>
+        <target>__budget_allocation</target>
+      </trans-unit>
+      <trans-unit id="rpwbsDu" resname="budget_allocation_list">
+        <source>budget_allocation_list</source>
+        <target>__budget_allocation_list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

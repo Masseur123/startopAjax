@@ -1,0 +1,35 @@
+<!-- Main navigation -->
+<div class="card card-sidebar-mobile">
+	<ul class="nav nav-sidebar" data-nav-type="accordion" style="color: #233647 !important;">
+
+		{% for menu in app.session.get('menu')|sort if app.user %}
+			<li class="nav-item nav-item-submenu">
+				<a class="nav-link" href="#">
+					<i class="{{ menu.icon }}"></i>
+					<span>
+						{% if (app.request.getLocale()) == 'en' %}
+							{{ menu.titleEn }}
+						{% else %}
+							{{ menu.titleFR }}
+						{% endif %}
+					</span>
+				</a>
+
+				<ul class="nav nav-group-sub" data-submenu-title="{{ menu.title }}">
+					{% for role in app.session.get('role')|sort if role.menu.id == menu.id %}
+						<li class="nav-item">
+							<a href="{{ path(role.route) }}" class="nav-link">
+								{% if (app.request.getLocale()) == 'en' %}
+									{{ role.titleEn }}
+								{% else %}
+									{{ role.titleFR }}
+								{% endif %}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</li>
+		{% endfor %}
+	</ul>
+</div>
+<!-- /main navigation -->

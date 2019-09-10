@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="n_eYFbg" resname="is_storable">
+        <source>is_storable</source>
+        <target>__is_storable</target>
+      </trans-unit>
+      <trans-unit id="F7BVYjH" resname="is_lost">
+        <source>is_lost</source>
+        <target>__is_lost</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>__new</target>
+      </trans-unit>
+      <trans-unit id="YSdgQyO" resname="equipment_category">
+        <source>equipment_category</source>
+        <target>__equipment_category</target>
+      </trans-unit>
+      <trans-unit id="Bzl9Yz8" resname="form">
+        <source>form</source>
+        <target>__form</target>
+      </trans-unit>
+      <trans-unit id="jVOj42c" resname="hotel">
+        <source>hotel</source>
+        <target>__hotel</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>__code</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>__description</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="HAn1p.R" resname="equipment">
+        <source>equipment</source>
+        <target>__equipment</target>
+      </trans-unit>
+      <trans-unit id="8NiXPUX" resname="extra_category">
+        <source>extra_category</source>
+        <target>__extra_category</target>
+      </trans-unit>
+      <trans-unit id="yN7nj4x" resname="extra">
+        <source>extra</source>
+        <target>__extra</target>
+      </trans-unit>
+      <trans-unit id="aDtTH0H" resname="price">
+        <source>price</source>
+        <target>__price</target>
+      </trans-unit>
+      <trans-unit id="PX_KK4F" resname="price_adult">
+        <source>price_adult</source>
+        <target>__price_adult</target>
+      </trans-unit>
+      <trans-unit id="vI0vzdI" resname="price_child">
+        <source>price_child</source>
+        <target>__price_child</target>
+      </trans-unit>
+      <trans-unit id="lzHU2ax" resname="daily_chargable">
+        <source>daily_chargable</source>
+        <target>__daily_chargable</target>
+      </trans-unit>
+      <trans-unit id="7ulJZoB" resname="ordering">
+        <source>ordering</source>
+        <target>__ordering</target>
+      </trans-unit>
+      <trans-unit id="PoDI8UI" resname="mandatory">
+        <source>mandatory</source>
+        <target>__mandatory</target>
+      </trans-unit>
+      <trans-unit id="hGnkbi5" resname="max_quantity">
+        <source>max_quantity</source>
+        <target>__max_quantity</target>
+      </trans-unit>
+      <trans-unit id="uqhVku9" resname="housing_option">
+        <source>housing_option</source>
+        <target>__housing_option</target>
+      </trans-unit>
+      <trans-unit id="4EDreFP" resname="housing_type">
+        <source>housing_type</source>
+        <target>__housing_type</target>
+      </trans-unit>
+      <trans-unit id="S6aXNcp" resname="state">
+        <source>state</source>
+        <target>__state</target>
+      </trans-unit>
+      <trans-unit id="cRMvu1s" resname="smoking">
+        <source>smoking</source>
+        <target>__smoking</target>
+      </trans-unit>
+      <trans-unit id="40ofS6E" resname="is_private">
+        <source>is_private</source>
+        <target>__is_private</target>
+      </trans-unit>
+      <trans-unit id="0AXWxFm" resname="housing">
+        <source>housing</source>
+        <target>__housing</target>
+      </trans-unit>
+      <trans-unit id="GsqA6LV" resname="label">
+        <source>label</source>
+        <target>__label</target>
+      </trans-unit>
+      <trans-unit id="rsbD0D8" resname="meal">
+        <source>meal</source>
+        <target>__meal</target>
+      </trans-unit>
+      <trans-unit id="FpQUPdq" resname="on_checkin">
+        <source>on_checkin</source>
+        <target>__on_checkin</target>
+      </trans-unit>
+      <trans-unit id="v_pp0w3" resname="on checkout">
+        <source>on checkout</source>
+        <target>__on checkout</target>
+      </trans-unit>
+      <trans-unit id="1H42KIZ" resname="on stay">
+        <source>on stay</source>
+        <target>__on stay</target>
+      </trans-unit>
+      <trans-unit id="Hi6m2bc" resname="pricing">
+        <source>pricing</source>
+        <target>__pricing</target>
+      </trans-unit>
+      <trans-unit id="HJvwmWL" resname="pricing_plan">
+        <source>pricing_plan</source>
+        <target>__pricing_plan</target>
+      </trans-unit>
+      <trans-unit id="0refz3k" resname="p_min">
+        <source>p_min</source>
+        <target>__p_min</target>
+      </trans-unit>
+      <trans-unit id="heEpLGC" resname="p_max">
+        <source>p_max</source>
+        <target>__p_max</target>
+      </trans-unit>
+      <trans-unit id="j44k9lx" resname="season">
+        <source>season</source>
+        <target>__season</target>
+      </trans-unit>
+      <trans-unit id="MJKl8Nu" resname="priority">
+        <source>priority</source>
+        <target>__priority</target>
+      </trans-unit>
+      <trans-unit id="1XPrwLu" resname="start_at">
+        <source>start_at</source>
+        <target>__start_at</target>
+      </trans-unit>
+      <trans-unit id="BzQVnKE" resname="end_at">
+        <source>end_at</source>
+        <target>__end_at</target>
+      </trans-unit>
+      <trans-unit id="pl0L_an" resname="stay_type">
+        <source>stay_type</source>
+        <target>__stay_type</target>
+      </trans-unit>
+      <trans-unit id="dChNncv" resname="color">
+        <source>color</source>
+        <target>__color</target>
+      </trans-unit>
+      <trans-unit id="9PPbUfG" resname="tag_category">
+        <source>tag_category</source>
+        <target>__tag_category</target>
+      </trans-unit>
+      <trans-unit id="KhBzpuZ" resname="tag">
+        <source>tag</source>
+        <target>__tag</target>
+      </trans-unit>
+      <trans-unit id="4lQ6oye" resname="tagcategory">
+        <source>tagcategory</source>
+        <target>__tagcategory</target>
+      </trans-unit>
+      <trans-unit id="zUJATVK" resname="value">
+        <source>value</source>
+        <target>__value</target>
+      </trans-unit>
+      <trans-unit id="AcuaAqd" resname="well_done">
+        <source>well_done</source>
+        <target>__well_done</target>
+      </trans-unit>
+      <trans-unit id="F1F7.0l" resname="list_of_equipmentcategories">
+        <source>list_of_equipmentcategories</source>
+        <target>__list_of_equipmentcategories</target>
+      </trans-unit>
+      <trans-unit id="BzwWNMS" resname="status">
+        <source>status</source>
+        <target>__status</target>
+      </trans-unit>
+      <trans-unit id="rR0UfkU" resname="is_not_enabled">
+        <source>is_not_enabled</source>
+        <target>__is_not_enabled</target>
+      </trans-unit>
+      <trans-unit id="7s7AnD2" resname="is_enabled">
+        <source>is_enabled</source>
+        <target>__is_enabled</target>
+      </trans-unit>
+      <trans-unit id="FGZj436" resname="list_of_extracategories">
+        <source>list_of_extracategories</source>
+        <target>__list_of_extracategories</target>
+      </trans-unit>
+      <trans-unit id="DA.CW.x" resname="list_of_extras">
+        <source>list_of_extras</source>
+        <target>__list_of_extras</target>
+      </trans-unit>
+      <trans-unit id="p32AH40" resname="price adult">
+        <source>price adult</source>
+        <target>__price adult</target>
+      </trans-unit>
+      <trans-unit id="POlWTgx" resname="price child">
+        <source>price child</source>
+        <target>__price child</target>
+      </trans-unit>
+      <trans-unit id="w8xPgSp" resname="daily chargable">
+        <source>daily chargable</source>
+        <target>__daily chargable</target>
+      </trans-unit>
+      <trans-unit id="tszGIz9" resname="list_of_housingoptions">
+        <source>list_of_housingoptions</source>
+        <target>__list_of_housingoptions</target>
+      </trans-unit>
+      <trans-unit id="Qriyv9Y" resname="housingtype">
+        <source>housingtype</source>
+        <target>__housingtype</target>
+      </trans-unit>
+      <trans-unit id="Emv5XJm" resname="list_of_housingtypes">
+        <source>list_of_housingtypes</source>
+        <target>__list_of_housingtypes</target>
+      </trans-unit>
+      <trans-unit id="_mqT3E5" resname="maxclient">
+        <source>maxclient</source>
+        <target>__maxclient</target>
+      </trans-unit>
+      <trans-unit id="IunFSUF" resname="max_adults">
+        <source>max_adults</source>
+        <target>__max_adults</target>
+      </trans-unit>
+      <trans-unit id="iBV4g3z" resname="max_children">
+        <source>max_children</source>
+        <target>__max_children</target>
+      </trans-unit>
+      <trans-unit id="XX2RU4O" resname="max_babies">
+        <source>max_babies</source>
+        <target>__max_babies</target>
+      </trans-unit>
+      <trans-unit id="fkrxy__" resname="min_stay">
+        <source>min_stay</source>
+        <target>__min_stay</target>
+      </trans-unit>
+      <trans-unit id="i7chWeT" resname="list_of_housings">
+        <source>list_of_housings</source>
+        <target>__list_of_housings</target>
+      </trans-unit>
+      <trans-unit id="lapcK5S" resname="list_of_meals">
+        <source>list_of_meals</source>
+        <target>__list_of_meals</target>
+      </trans-unit>
+      <trans-unit id="Xl0ZYqw" resname="on checkin">
+        <source>on checkin</source>
+        <target>__on checkin</target>
+      </trans-unit>
+      <trans-unit id="PAKh20t" resname="list_of_pricingplans">
+        <source>list_of_pricingplans</source>
+        <target>__list_of_pricingplans</target>
+      </trans-unit>
+      <trans-unit id="JrGscRl" resname="list_of_seasons">
+        <source>list_of_seasons</source>
+        <target>__list_of_seasons</target>
+      </trans-unit>
+      <trans-unit id=".wVfz_X" resname="list_of_staytypes">
+        <source>list_of_staytypes</source>
+        <target>__list_of_staytypes</target>
+      </trans-unit>
+      <trans-unit id="XE6dBlC" resname="list_of_tagcategories">
+        <source>list_of_tagcategories</source>
+        <target>__list_of_tagcategories</target>
+      </trans-unit>
+      <trans-unit id="C2thAeC" resname="list_of_tags">
+        <source>list_of_tags</source>
+        <target>__list_of_tags</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>__phone</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>__email</target>
+      </trans-unit>
+      <trans-unit id="zWS1l7i" resname="page.title.housing">
+        <source>page.title.housing</source>
+        <target>__page.title.housing</target>
+      </trans-unit>
+      <trans-unit id="ESw3OJF" resname="housing_management">
+        <source>housing_management</source>
+        <target>__housing_management</target>
+      </trans-unit>
+      <trans-unit id=".v_Cpdl" resname="housing_form">
+        <source>housing_form</source>
+        <target>__housing_form</target>
+      </trans-unit>
+      <trans-unit id="TVZy4TK" resname="housing type">
+        <source>housing type</source>
+        <target>__housing type</target>
+      </trans-unit>
+      <trans-unit id="BkPLbxo" resname="housing_list">
+        <source>housing_list</source>
+        <target>__housing_list</target>
+      </trans-unit>
+      <trans-unit id="v6A4cWb" resname="page.title.housing.type">
+        <source>page.title.housing.type</source>
+        <target>__page.title.housing.type</target>
+      </trans-unit>
+      <trans-unit id="TIKg67t" resname="housing_type_management">
+        <source>housing_type_management</source>
+        <target>__housing_type_management</target>
+      </trans-unit>
+      <trans-unit id="RoCpO98" resname="housing_type_form">
+        <source>housing_type_form</source>
+        <target>__housing_type_form</target>
+      </trans-unit>
+      <trans-unit id="HmMKPcf" resname="max_client">
+        <source>max_client</source>
+        <target>__max_client</target>
+      </trans-unit>
+      <trans-unit id="CDptPb_" resname="is enabled">
+        <source>is enabled</source>
+        <target>__is enabled</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>__cancel</target>
+      </trans-unit>
+      <trans-unit id="r01f7tJ" resname="housing_type_list">
+        <source>housing_type_list</source>
+        <target>__housing_type_list</target>
+      </trans-unit>
+      <trans-unit id="84x2TIq" resname="branch">
+        <source>branch</source>
+        <target>__branch</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

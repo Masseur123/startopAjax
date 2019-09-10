@@ -1,0 +1,60 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.log_stock'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'stock_list'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card">
+                <table class="table datatable-responsive table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th>{{ 'date'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'wood'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'quantity'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'volume'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'park'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'note'|trans([],'transit')|upper }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for stock in stocks %}
+                            <tr>
+                                <td><span class="badge badge-flat border-success text-success">{{ stock.stockAt|date("m/d/Y") }}</td>
+								<td><span class="badge badge-flat border-success text-success">{{ stock.wood.name }}</td>
+								<td>
+									{% if (stock.isadd == 1) %}
+										<span class="badge badge-flat border-success text-success">{{ stock.quantity }}
+										{% else %}
+										<span class="badge badge-flat border-danger text-danger">{{ stock.quantity }}
+									{% endif %}
+								</td>
+                                <td>{{ stock.volume }}</td>
+                                <td>{{ stock.park is empty ? "" : stock.park.name }}</td>
+                                <td>{{ stock.note }}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

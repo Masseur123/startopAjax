@@ -1,0 +1,75 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.article'|trans([],'article') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'article_list'|trans([],'article') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('article_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card">
+                <table class="table datatable-responsive table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th>{{ 'reference'|trans([],'mass')|upper }}</th>
+                            <th>{{ 'name'|trans([],'mass')|upper }}</th>
+                            <th>{{ 'pua'|trans([],'mass')|upper }}</th>
+                            <th>{{ 'puv'|trans([],'mass')|upper }}</th>
+                            <th>{{ 'family'|trans([],'mass')|upper }}</th>
+                            <th>{{ 'unity'|trans([],'mass')|upper }}</th>
+                            <th>{{ 'stockAlert'|trans([],'mass')|upper }}</th>
+                            <th>{{ 'type'|trans([],'mass')|upper }}</th>
+                            <th class="text-center">{{ 'th.actions'|trans([],'mass') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for article in articles %}
+                            <tr>
+                                <td><span class="badge badge-flat border-success text-success font-size-xl">{{ article.reference }}</td>
+                                <td>{{ article.name }}</td>
+                                <td>{{ article.pua }}</td>
+                                <td>{{ article.puv }}</td>
+                                <td>{{ article.family is empty ? "" : article.family.name }}</td>
+                                <td>{{ article.unity is empty ? "" : article.unity.name }}</td>
+                                <!--<td>{{ article.lostAt is empty ? "" : article.lostAt|date("m/d/Y") }}</td>-->
+                                <td><span class="badge badge-flat border-warning text-warning font-size-xl">{{ article.stockAlert }}</td>
+                                <td>{{ article.type is empty ? "" : article.type.name }}</td>
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        <a href="{{ path('article_edit', {id:article.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                        <a href="{{ path('article_delete', {id:article.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+            </div>
+            <!-- /HTML sourced data -->
+
+        </div>
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

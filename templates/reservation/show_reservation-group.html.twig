@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+
+{% block mainbtn %}
+    <div class="header-elements d-none">
+        <a href="{{ path('reservation_reservation-group_new') }}" class="btn btn-labeled btn-labeled-right bg-primary">{{ 'new'|trans([],'reservation') }} {{ 'reservation_group'|trans([],'reservation') }} <b><i class="icon-menu7"></i></b></a>
+    </div>
+
+    {% for label, messages in app.flashes %}
+        {% for message in messages %}
+            <div class="alert bg-{{ label }} text-white alert-styled-left alert-dismissible">
+                <button type="button" class="close" data-dismiss="alert"><span>&times;</span></button>
+                <span class="font-weight-semibold">{{ 'well_done'|trans([],'reservation') }}</span> {{ message }}.
+            </div>
+        {% endfor %}
+    {% endfor %}
+{% endblock %}
+
+{% block content %} 
+
+<div class="row">
+    <div class="col-md-12">
+        <!-- HTML sourced data -->
+        <div class="card border-teal-400">
+            <div class="card-header bg-teal-400 text-white header-elements-inline">
+                <h5 class="card-title">{{ 'list_of_reservationgroups'|trans([],'reservation') }}</h5>
+            </div>
+
+            <!-- <div class="card-body"></div> -->
+
+            <table class="table datatable-html">
+                <thead>
+                    <tr>
+                        <th>{{ 'hotel'|trans([],'reservation') }}</th>
+                        <th>{{ 'name'|trans([],'reservation') }}</th>
+                        <th>{{ 'phone'|trans([],'reservation') }}</th>
+                        <th>{{ 'email'|trans([],'reservation') }}</th>
+                        <th>{{ 'description'|trans([],'reservation') }}</th>
+                        <th>{{ 'color'|trans([],'reservation') }}</th>
+                        <th>{{ 'status'|trans([],'reservation') }}</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for reservationGroup in reservationGroups %}
+                    <tr>
+                        <td>{{ reservationGroup.hotel }}</td>
+                        <td><span class="badge badge-info">{{ reservationGroup.name }}</td>
+                        <td>{{ reservationGroup.phone }}</td>
+                        <td>{{ reservationGroup.email }}</td>
+                        <td>{{ reservationGroup.description }}</td>
+                        <td>{{ reservationGroup.color }}</td>
+                        <td>
+                            {% if reservationGroup.isenabled == 0 %}
+                            <span class="badge badge-danger">{{ 'is_not_enabled'|trans([],'reservation') }}</span>
+                            {% else %}
+                            <span class="badge badge-primary badge-pill">{{ 'is_enabled'|trans([],'reservation') }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <div class="list-icons">
+                                <a href="{{ path('reservation_reservation-group_edit', {id:reservationGroup.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                <a href="{{ path('reservation_reservation-group_delete', {id:reservationGroup.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+
+
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /HTML sourced data -->
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_data_sources.js') }}"></script>
+{% endblock %}

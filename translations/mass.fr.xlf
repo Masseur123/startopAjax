@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id=".wK_Srq" resname="th.type">
+        <source>th.type</source>
+        <target>__th.type</target>
+      </trans-unit>
+      <trans-unit id="6dB._OC" resname="th.family">
+        <source>th.family</source>
+        <target>__th.family</target>
+      </trans-unit>
+      <trans-unit id="kXYUbga" resname="th.name">
+        <source>th.name</source>
+        <target>__th.name</target>
+      </trans-unit>
+      <trans-unit id="SZgRd7c" resname="th.unity">
+        <source>th.unity</source>
+        <target>__th.unity</target>
+      </trans-unit>
+      <trans-unit id="hJAC5V6" resname="th.reference">
+        <source>th.reference</source>
+        <target>__th.reference</target>
+      </trans-unit>
+      <trans-unit id="7vQ2eQJ" resname="th.pua">
+        <source>th.pua</source>
+        <target>__th.pua</target>
+      </trans-unit>
+      <trans-unit id="i5wa_Ks" resname="th.puv">
+        <source>th.puv</source>
+        <target>__th.puv</target>
+      </trans-unit>
+      <trans-unit id="vNemH8j" resname="th.lostAt">
+        <source>th.lostAt</source>
+        <target>__th.lostAt</target>
+      </trans-unit>
+      <trans-unit id="pL.DpeK" resname="th.stockAlert">
+        <source>th.stockAlert</source>
+        <target>__th.stockAlert</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>__th.actions</target>
+      </trans-unit>
+      <trans-unit id="JPQxezm" resname="a.family_list">
+        <source>a.family_list</source>
+        <target>__a.family_list</target>
+      </trans-unit>
+      <trans-unit id="MrTOFF_" resname="title.form">
+        <source>title.form</source>
+        <target>__title.form</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>__code</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="jFKX2xt" resname="a.item_type_list">
+        <source>a.item_type_list</source>
+        <target>__a.item_type_list</target>
+      </trans-unit>
+      <trans-unit id="PZpbXX4" resname="a.serial_list">
+        <source>a.serial_list</source>
+        <target>__a.serial_list</target>
+      </trans-unit>
+      <trans-unit id="8vxWjxw" resname="a.new_supply_request">
+        <source>a.new_supply_request</source>
+        <target>__a.new_supply_request</target>
+      </trans-unit>
+      <trans-unit id="aTK2Tty" resname="a.supply_request_list">
+        <source>a.supply_request_list</source>
+        <target>__a.supply_request_list</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>__reference</target>
+      </trans-unit>
+      <trans-unit id="GB.dRvx" resname="origin">
+        <source>origin</source>
+        <target>__origin</target>
+      </trans-unit>
+      <trans-unit id="MdCNtkB" resname="a.unity_list">
+        <source>a.unity_list</source>
+        <target>__a.unity_list</target>
+      </trans-unit>
+      <trans-unit id="vD0euJr" resname="a.type_list">
+        <source>a.type_list</source>
+        <target>__a.type_list</target>
+      </trans-unit>
+      <trans-unit id="cEdgBUu" resname="a.new_stock">
+        <source>a.new_stock</source>
+        <target>__a.new_stock</target>
+      </trans-unit>
+      <trans-unit id="hTtUYyp" resname="a.stock_list">
+        <source>a.stock_list</source>
+        <target>__a.stock_list</target>
+      </trans-unit>
+      <trans-unit id="ymgENEq" resname="label.quantity">
+        <source>label.quantity</source>
+        <target>__label.quantity</target>
+      </trans-unit>
+      <trans-unit id="OHsLt1Z" resname="label.stockAt">
+        <source>label.stockAt</source>
+        <target>__label.stockAt</target>
+      </trans-unit>
+      <trans-unit id="oPk5e2P" resname="label.stockprice">
+        <source>label.stockprice</source>
+        <target>__label.stockprice</target>
+      </trans-unit>
+      <trans-unit id="lvrrAqH" resname="label.store">
+        <source>label.store</source>
+        <target>__label.store</target>
+      </trans-unit>
+      <trans-unit id="gk2A1xm" resname="store">
+        <source>store</source>
+        <target>__store</target>
+      </trans-unit>
+      <trans-unit id="hDk63Yx" resname="article">
+        <source>article</source>
+        <target>__article</target>
+      </trans-unit>
+      <trans-unit id="GnswjY3" resname="quantity">
+        <source>quantity</source>
+        <target>__quantity</target>
+      </trans-unit>
+      <trans-unit id="DWY3Trv" resname="title.stock_list">
+        <source>title.stock_list</source>
+        <target>__title.stock_list</target>
+      </trans-unit>
+      <trans-unit id="pfHSl3T" resname="th.store">
+        <source>th.store</source>
+        <target>__th.store</target>
+      </trans-unit>
+      <trans-unit id="_ebCh8y" resname="th.article">
+        <source>th.article</source>
+        <target>__th.article</target>
+      </trans-unit>
+      <trans-unit id="7U3arK0" resname="th.quantity">
+        <source>th.quantity</source>
+        <target>__th.quantity</target>
+      </trans-unit>
+      <trans-unit id="puDSQvB" resname="th.stockprice">
+        <source>th.stockprice</source>
+        <target>__th.stockprice</target>
+      </trans-unit>
+      <trans-unit id="HMXlptd" resname="th.stockAt">
+        <source>th.stockAt</source>
+        <target>__th.stockAt</target>
+      </trans-unit>
+      <trans-unit id="ocwb_8Z" resname="a.store_list">
+        <source>a.store_list</source>
+        <target>__a.store_list</target>
+      </trans-unit>
+      <trans-unit id="wRk2Ez8" resname="designation">
+        <source>designation</source>
+        <target>__designation</target>
+      </trans-unit>
+      <trans-unit id="5urqGOi" resname="location">
+        <source>location</source>
+        <target>__location</target>
+      </trans-unit>
+      <trans-unit id="qEg_QWS" resname="title.store_list">
+        <source>title.store_list</source>
+        <target>__title.store_list</target>
+      </trans-unit>
+      <trans-unit id="M0NZuQ7" resname="#">
+        <source>#</source>
+        <target>__#</target>
+      </trans-unit>
+      <trans-unit id="x4EoRPw" resname="th.designation">
+        <source>th.designation</source>
+        <target>__th.designation</target>
+      </trans-unit>
+      <trans-unit id="IQm4BtP" resname="th.location">
+        <source>th.location</source>
+        <target>__th.location</target>
+      </trans-unit>
+      <trans-unit id="OAkBqvv" resname="a.article_list">
+        <source>a.article_list</source>
+        <target>__a.article_list</target>
+      </trans-unit>
+      <trans-unit id="DSXz1c_" resname="span.well_done">
+        <source>span.well_done</source>
+        <target>__span.well_done</target>
+      </trans-unit>
+      <trans-unit id="K7Agvgq" resname="title.article_list">
+        <source>title.article_list</source>
+        <target>__title.article_list</target>
+      </trans-unit>
+      <trans-unit id="AmdsPgT" resname="a.new_store">
+        <source>a.new_store</source>
+        <target>__a.new_store</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.plumb'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'plumb'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('journal') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+
+            <div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+				</div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <label>{{ 'reference'|trans([],'transit') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.reference) }}
+                        {{ form_widget(form.is_certified) }}
+                        <span class="text-danger">{{ form_errors(form.is_certified) }}</span>
+                    </div>
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="reset" class="btn btn-light">
+                            {{ 'cancel'|trans([],'base')|upper }}
+                        </button>
+                        <button type="submit" class="btn btn-primary form-btn">
+                            {{ 'save'|trans([],'base')|upper }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+            <!-- /basic layout -->
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+{% endblock %}

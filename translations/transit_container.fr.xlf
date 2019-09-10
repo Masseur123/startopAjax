@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="AB0FfEm" resname="booking">
+        <source>booking</source>
+        <target>Booking</target>
+      </trans-unit>
+      <trans-unit id="4NLF6kh" resname="transit_file">
+        <source>transit_file</source>
+        <target>Dossier de transit</target>
+      </trans-unit>
+      <trans-unit id="Lg5_MIx" resname="container_length">
+        <source>container_length</source>
+        <target>Dimension d'un containeur</target>
+      </trans-unit>
+      <trans-unit id="GSSFfUh" resname="shippingline">
+        <source>shippingline</source>
+        <target>__shippingline</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>Enregistrer</target>
+      </trans-unit>
+      <trans-unit id="pC1RlxT" resname="container">
+        <source>container</source>
+        <target>Containeur</target>
+      </trans-unit>
+      <trans-unit id="S7JO.JZ" resname="batch">
+        <source>batch</source>
+        <target>Lot</target>
+      </trans-unit>
+      <trans-unit id="Ngui2pc" resname="plumb_number">
+        <source>plumb_number</source>
+        <target>Numéro de plomb</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="RVUgnhB" resname="container_loading">
+        <source>container_loading</source>
+        <target>Chargement de containeur</target>
+      </trans-unit>
+      <trans-unit id="XODSrDD" resname="loading_at">
+        <source>loading_at</source>
+        <target>Date de chargement</target>
+      </trans-unit>
+      <trans-unit id="mfeFXre" resname="wood">
+        <source>wood</source>
+        <target>Essence de bois</target>
+      </trans-unit>
+      <trans-unit id="uQP6ab1" resname="nbr_of_piece">
+        <source>nbr_of_piece</source>
+        <target>Nombre de pièces</target>
+      </trans-unit>
+      <trans-unit id="YtemsSE" resname="volume">
+        <source>volume</source>
+        <target>Volume</target>
+      </trans-unit>
+      <trans-unit id="Q1IcEV0" resname="container_filling">
+        <source>container_filling</source>
+        <target>Plomber un containeur</target>
+      </trans-unit>
+      <trans-unit id="EohvnQA" resname="number">
+        <source>number</source>
+        <target>Nombre</target>
+      </trans-unit>
+      <trans-unit id="UGMgH1E" resname="page.title.booking">
+        <source>page.title.booking</source>
+        <target>Gestion des booking</target>
+      </trans-unit>
+      <trans-unit id="xnIBtvK" resname="page.title.container">
+        <source>page.title.container</source>
+        <target>Gestion des containeurs</target>
+      </trans-unit>
+      <trans-unit id="ffYMs2L" resname="page.title.container_loading">
+        <source>page.title.container_loading</source>
+        <target>Gestion du chargement des containeurs</target>
+      </trans-unit>
+      <trans-unit id="q9OEaDk" resname="page.title.container_filling">
+        <source>page.title.container_filling</source>
+        <target>Gestion des plombs</target>
+      </trans-unit>
+      <trans-unit id="MiaZID9" resname="page.title.generate_container">
+        <source>page.title.generate_container</source>
+        <target>Gestion de la génération des containeurs</target>
+      </trans-unit>
+      <trans-unit id="f.nVpUN" resname="page.title.fill_container">
+        <source>page.title.fill_container</source>
+        <target>Gestion du plombage des containeurs</target>
+      </trans-unit>
+      <trans-unit id="IpQD0MW" resname="booking_list">
+        <source>booking_list</source>
+        <target>Liste des booking</target>
+      </trans-unit>
+      <trans-unit id="2asqtRi" resname="container_list">
+        <source>container_list</source>
+        <target>Liste des containeurs</target>
+      </trans-unit>
+      <trans-unit id="vUjgtvf" resname="loading_list">
+        <source>loading_list</source>
+        <target>Liste des chargements</target>
+      </trans-unit>
+      <trans-unit id="3GQzai0" resname="containers">
+        <source>containers</source>
+        <target>Containeurs</target>
+      </trans-unit>
+      <trans-unit id="PHcjNmq" resname="unfill_container_list">
+        <source>unfill_container_list</source>
+        <target>Liste des containeurs sans plomb</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="uDK6Hao" resname="container_routing_list">
+        <source>container_routing_list</source>
+        <target>Liste des mouvements de containeurs</target>
+      </trans-unit>
+      <trans-unit id="GaTZ036" resname="container_generation">
+        <source>container_generation</source>
+        <target>Génération des containeurs</target>
+      </trans-unit>
+      <trans-unit id="eQ_IG8w" resname="page.title.plumb">
+        <source>page.title.plumb</source>
+        <target>Gestion des plumbs</target>
+      </trans-unit>
+      <trans-unit id="e4o.GvB" resname="plumb">
+        <source>plumb</source>
+        <target>Plumb</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Reverse</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>Nouveau</target>
+      </trans-unit>
+      <trans-unit id="JMrPUAS" resname="generate">
+        <source>generate</source>
+        <target>Générer</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="idgNDd_" resname="seal_a_container">
+        <source>seal_a_container</source>
+        <target>Plomber un container</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="AwGETM2" resname="footer">
+        <source>footer</source>
+        <target>Footer</target>
+      </trans-unit>
+      <trans-unit id="tiNNLqD" resname="english">
+        <source>english</source>
+        <target>English</target>
+      </trans-unit>
+      <trans-unit id="Ibs2rQY" resname="french">
+        <source>french</source>
+        <target>French</target>
+      </trans-unit>
+      <trans-unit id="2DrMGmf" resname="my_profile">
+        <source>my_profile</source>
+        <target>My Profile</target>
+      </trans-unit>
+      <trans-unit id="BRsUZXR" resname="my_account">
+        <source>my_account</source>
+        <target>My Account</target>
+      </trans-unit>
+      <trans-unit id="ACcM9j_" resname="logout">
+        <source>logout</source>
+        <target>Logout</target>
+      </trans-unit>
+      <trans-unit id="1w1aeQn" resname="navigation">
+        <source>navigation</source>
+        <target>Navigation</target>
+      </trans-unit>
+      <trans-unit id="Fx7VyBY" resname="main_menu">
+        <source>main_menu</source>
+        <target>Main Menu</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="oYYDCG5" resname="support">
+        <source>support</source>
+        <target>Support</target>
+      </trans-unit>
+      <trans-unit id="RrQrQin" resname="docs">
+        <source>docs</source>
+        <target>Docs</target>
+      </trans-unit>
+      <trans-unit id="mQsj6BR" resname="division">
+        <source>division</source>
+        <target>Division</target>
+      </trans-unit>
+      <trans-unit id="OnhpU4i" resname="Home">
+        <source>Home</source>
+        <target>Home</target>
+      </trans-unit>
+      <trans-unit id="PzgXkxW" resname="a.new_branch">
+        <source>a.new_branch</source>
+        <target>New Branch</target>
+      </trans-unit>
+      <trans-unit id="S32.m9j" resname="a.branch_list">
+        <source>a.branch_list</source>
+        <target>List of branches</target>
+      </trans-unit>
+      <trans-unit id="84x2TIq" resname="branch">
+        <source>branch</source>
+        <target>Branch</target>
+      </trans-unit>
+      <trans-unit id="MrTOFF_" resname="title.form">
+        <source>title.form</source>
+        <target>Form</target>
+      </trans-unit>
+      <trans-unit id="gi.jZ5y" resname="institution">
+        <source>institution</source>
+        <target>Institution</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>Code</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="5urqGOi" resname="location">
+        <source>location</source>
+        <target>Location</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="UKyB_XA" resname="town">
+        <source>town</source>
+        <target>Town</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="rZNvy_1" resname="group">
+        <source>group</source>
+        <target>Group</target>
+      </trans-unit>
+      <trans-unit id="Bzl9Yz8" resname="form">
+        <source>form</source>
+        <target>Form</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="Lg6WCrM" resname="Form">
+        <source>Form</source>
+        <target>Form</target>
+      </trans-unit>
+      <trans-unit id=".JY_lRT" resname="business_type">
+        <source>business_type</source>
+        <target>Business Type</target>
+      </trans-unit>
+      <trans-unit id="VCqBCYJ" resname="cigle">
+        <source>cigle</source>
+        <target>Cigle</target>
+      </trans-unit>
+      <trans-unit id="2Ayb_RD" resname="address">
+        <source>address</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="aiFJAsZ" resname="po_box">
+        <source>po_box</source>
+        <target>Po Box</target>
+      </trans-unit>
+      <trans-unit id="F.3qKWR" resname="business_number">
+        <source>business_number</source>
+        <target>Business Number</target>
+      </trans-unit>
+      <trans-unit id="y5R_Z1Y" resname="tax_payer_number">
+        <source>tax_payer_number</source>
+        <target>Tax Payer Number</target>
+      </trans-unit>
+      <trans-unit id="NZjOb5Z" resname="logo">
+        <source>logo</source>
+        <target>Logo</target>
+      </trans-unit>
+      <trans-unit id="dHqPOYO" resname="website">
+        <source>website</source>
+        <target>Website</target>
+      </trans-unit>
+      <trans-unit id="VZGzaK_" resname="submit_form">
+        <source>submit_form</source>
+        <target>Submit Form</target>
+      </trans-unit>
+      <trans-unit id="OYmRAJ2" resname="menu">
+        <source>menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="qvIyBkY" resname="title">
+        <source>title</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="ioTkBsC" resname="route">
+        <source>route</source>
+        <target>Route</target>
+      </trans-unit>
+      <trans-unit id="wtS0RqR" resname="icon">
+        <source>icon</source>
+        <target>Icon</target>
+      </trans-unit>
+      <trans-unit id="WkUkWVA" resname="position">
+        <source>position</source>
+        <target>Position</target>
+      </trans-unit>
+      <trans-unit id="SxaNiNy" resname="role">
+        <source>role</source>
+        <target>Role</target>
+      </trans-unit>
+      <trans-unit id="g0SUekA" resname="Oops!">
+        <source>Oops!</source>
+        <target>Oops!</target>
+      </trans-unit>
+      <trans-unit id="g.XcMkQ" resname="Log_Into_Your">
+        <source>Log_Into_Your</source>
+        <target>Log Into Your</target>
+      </trans-unit>
+      <trans-unit id="fhsNVkH" resname="Account">
+        <source>Account</source>
+        <target>Account</target>
+      </trans-unit>
+      <trans-unit id="EnWU1Gf" resname="Log_Into_Your_Account">
+        <source>Log_Into_Your_Account</source>
+        <target>Log Into Your Account</target>
+      </trans-unit>
+      <trans-unit id="hHwCqTh" resname="your_credentials">
+        <source>your_credentials</source>
+        <target>Your Credentials</target>
+      </trans-unit>
+      <trans-unit id="FveKfWM" resname="username">
+        <source>username</source>
+        <target>Username</target>
+      </trans-unit>
+      <trans-unit id="XohImNo" resname="password">
+        <source>password</source>
+        <target>Password</target>
+      </trans-unit>
+      <trans-unit id="uTT64Kc" resname="remember_me">
+        <source>remember_me</source>
+        <target>Remember me?</target>
+      </trans-unit>
+      <trans-unit id="9GluP_Z" resname="sign_in">
+        <source>sign_in</source>
+        <target>Sign In</target>
+      </trans-unit>
+      <trans-unit id="DSXz1c_" resname="span.well_done">
+        <source>span.well_done</source>
+        <target>__span.well_done</target>
+      </trans-unit>
+      <trans-unit id="4Wrwlgb" resname="title.branch_list">
+        <source>title.branch_list</source>
+        <target>List of branches</target>
+      </trans-unit>
+      <trans-unit id="dJ.8uxd" resname="th.code">
+        <source>th.code</source>
+        <target>Code</target>
+      </trans-unit>
+      <trans-unit id="kXYUbga" resname="th.name">
+        <source>th.name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="IQm4BtP" resname="th.location">
+        <source>th.location</source>
+        <target>Location</target>
+      </trans-unit>
+      <trans-unit id="Xqwcpk9" resname="th.phone">
+        <source>th.phone</source>
+        <target>Phone</target>
+      </trans-unit>
+      <trans-unit id="Qq9KOmo" resname="th.email">
+        <source>th.email</source>
+        <target>Email</target>
+      </trans-unit>
+      <trans-unit id="ccDUhiq" resname="th.institution">
+        <source>th.institution</source>
+        <target>Institution</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="AcuaAqd" resname="well_done">
+        <source>well_done</source>
+        <target>__well_done</target>
+      </trans-unit>
+      <trans-unit id="T9o3olA" resname="list_of_groups">
+        <source>list_of_groups</source>
+        <target>List of groups</target>
+      </trans-unit>
+      <trans-unit id="BzwWNMS" resname="status">
+        <source>status</source>
+        <target>Status</target>
+      </trans-unit>
+      <trans-unit id="BdoP8nl" resname="a.new_institution">
+        <source>a.new_institution</source>
+        <target>New Institution</target>
+      </trans-unit>
+      <trans-unit id="JpGT00p" resname="a.institution_list">
+        <source>a.institution_list</source>
+        <target>List of institutions</target>
+      </trans-unit>
+      <trans-unit id="TDRO2OR" resname="title.institution_list">
+        <source>title.institution_list</source>
+        <target>List of institutions</target>
+      </trans-unit>
+      <trans-unit id="tVFT0pM" resname="th.cigle">
+        <source>th.cigle</source>
+        <target>Cigle</target>
+      </trans-unit>
+      <trans-unit id="TD9XeBp" resname="th.address">
+        <source>th.address</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id=".nNavOM" resname="th.town">
+        <source>th.town</source>
+        <target>Town</target>
+      </trans-unit>
+      <trans-unit id="YqNBA20" resname="list_of_menus">
+        <source>list_of_menus</source>
+        <target>List of menus</target>
+      </trans-unit>
+      <trans-unit id="N_Qbre1" resname="list_of_roles">
+        <source>list_of_roles</source>
+        <target>List of roles</target>
+      </trans-unit>
+      <trans-unit id="1uNKAN8" resname="login_page">
+        <source>login_page</source>
+        <target>Login Page</target>
+      </trans-unit>
+      <trans-unit id="ZvZxKVt" resname="titre.langue">
+        <source>titre.langue</source>
+        <target>Change Your Language</target>
+      </trans-unit>
+      <trans-unit id="E_M1i76" resname="langue.english">
+        <source>langue.english</source>
+        <target>English</target>
+      </trans-unit>
+      <trans-unit id="xWcOAdu" resname="langue.french">
+        <source>langue.french</source>
+        <target>French</target>
+      </trans-unit>
+      <trans-unit id="_2LAwsK" resname="français">
+        <source>français</source>
+        <target>Français</target>
+      </trans-unit>
+      <trans-unit id="Eglw2BK" resname="module">
+        <source>module</source>
+        <target>__module</target>
+      </trans-unit>
+      <trans-unit id="IGkb0HO" resname="oops!">
+        <source>oops!</source>
+        <target>__oops!</target>
+      </trans-unit>
+      <trans-unit id="y45Kzfu" resname="forgot_password">
+        <source>forgot_password</source>
+        <target>__forgot_password</target>
+      </trans-unit>
+      <trans-unit id="m00ocM_" resname="login_password_reset">
+        <source>login_password_reset</source>
+        <target>__login_password_reset</target>
+      </trans-unit>
+      <trans-unit id="z8lBMx3" resname="reset_password">
+        <source>reset_password</source>
+        <target>__reset_password</target>
+      </trans-unit>
+      <trans-unit id="tCGuN9f" resname="back_to_login_page">
+        <source>back_to_login_page</source>
+        <target>__back_to_login_page</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,151 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'page.title.credit_card'|trans([],'setting') }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'form'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <label>{{ 'number'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.number) }}
+                        <span class="text-danger">{{ form_errors(form.number) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'provider'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.provider) }}
+                        <span class="text-danger">{{ form_errors(form.provider) }}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'expired_at'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="icon-calendar3"></i>
+                                </span>
+                            </span>
+                            {{ form_widget(form.expiredAt, {'attr':{'class':"form-control", 'id':"anytime-month-numeric"}}) }}
+                            <span class="text-danger">{{ form_errors(form.expiredAt) }}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'csc'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.csc, {'attr':{'placeholder':"csc" , 'class':"form-control"}}) }}
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'save'|trans([],'setting') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <!-- /basic layout -->
+        </div>
+
+        <div class="col-md-8">
+            <!-- HTML sourced data -->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'list_of_Credit Card'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover" id="region">
+                        <thead>
+                            <tr>
+                                <th>{{ 'number'|trans([],'setting') }}</th>
+                                <th>{{ 'provider'|trans([],'setting') }}</th>
+                                <th>{{ 'CSC'|trans([],'setting') }}</th>
+                                <th>{{ 'status'|trans([],'setting') }}</th>
+                                <th></th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for creditCard in creditCards %}
+                                <tr>
+                                    <td>
+                                        <span class="badge badge-info">{{ creditCard.number }}</td>
+                                        <td>{{ creditCard.provider }}</td>
+                                        <td>{{ creditCard.csc }}</td>
+                                        <td>
+                                            {% if creditCard.isenabled == 0 %}
+                                                <span class="badge badge-danger">Is Not Enabled</span>
+                                            {% else %}
+                                                <span class="badge badge-primary badge-pill">Is Enabled</span>
+                                            {% endif %}
+                                        </td>
+                                        <td></td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <a href="{{ path('credit_card_edit', {id:creditCard.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600">
+                                                    <i class="icon-pencil7"></i>
+                                                </a>
+                                                <a href="{{ path('credit_card_delete', {id:creditCard.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600">
+                                                    <i class="icon-trash"></i>
+                                                </a>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /HTML sourced data -->
+            </div>
+
+        </div>
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/plugins/ui/moment/moment.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/pickers/daterangepicker.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/pickers/anytime.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/picker.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/picker.date.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/picker.time.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/pickers/pickadate/legacy.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/notifications/jgrowl.min.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/demo_pages/picker_date.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+        <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+
+    {% endblock %}

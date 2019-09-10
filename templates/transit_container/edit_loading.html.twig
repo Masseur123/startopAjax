@@ -1,0 +1,129 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.container_loading'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'loading'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('loading') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'loading_list'|trans([],'transit')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+					<div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                        </div>
+                    </div>
+				</div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="row">
+                        <div class="col-md-4">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Personal details</legend> -->
+
+                                <div class="form-group">
+                                    <label>{{ 'reference'|trans([],'transit') }}
+                                    </label>
+                                    {{ form_widget(form.reference) }}
+                                    <span class="text-danger">{{ form_errors(form.reference) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'date'|trans([],'transit') }}</label>
+                                    <div class="input-group">
+                                        <span class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="icon-calendar3"></i>
+                                            </span>
+                                        </span>
+                                        {{ form_widget(form.loadingAt) }}
+                                        <span class="text-danger">{{ form_errors(form.loadingAt) }}</span>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-4">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> Shipping details</legend> -->
+
+                                <div class="form-group">
+                                    <label>{{ 'container_number'|trans([],'transit') }}
+                                        <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.container) }}
+                                    <span class="text-danger">{{ form_errors(form.container) }}</span>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'wood'|trans([],'transit') }}
+                                        <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.wood) }}
+                                    <span class="text-danger">{{ form_errors(form.wood) }}</span>
+                                </div>
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-4">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> Shipping details</legend> -->
+
+                                <div class="form-group">
+                                    <label>{{ 'nbr_of_piece'|trans([],'transit') }}
+                                        <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.nbrofpiece) }}
+                                </div>
+
+                                <div class="form-group">
+                                    <label>{{ 'volume'|trans([],'transit') }}
+                                        <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.volume) }}
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="reset" class="btn btn-light">
+                            {{ 'cancel'|trans([],'base')|upper }}
+                        </button>
+						<div>
+							{{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+							<button class="btn btn-primary form-btn" type="submit">
+								{{ 'save'|trans([],'base')|upper }}
+								<i class="icon-paperplane ml-2"></i>
+							</button>
+						</div>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+       
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

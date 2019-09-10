@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.log_procurement'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'log_procurement_list'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('log_procurement_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+       <div class="row">
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card">
+
+                <table class="table datatable-responsive table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th>{{ 'date'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'reference'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'wood'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'quantity'|trans([],'transit')|upper }}</th>
+							<th>{{ 'stock'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'volume'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'source'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'destination'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'consignment_note'|trans([],'transit')|upper }}</th>
+                            <th class="text-center">{{ 'actions'|trans([],'base')|upper }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        {% for logProcurement in logProcurements %}
+                            <tr>
+                                <td><span class="badge badge-flat border-success text-success">{{ logProcurement.byingAt is empty ? "" : logProcurement.byingAt|date("m/d/Y") }}</td>
+                                <td><span class="badge badge-flat border-success text-success">{{ logProcurement.reference }}</td>
+                                <td>{{ logProcurement.wood.name }}</td>
+                                <td>{{ logProcurement.quantity }}</td>
+                                <td>
+									{% if (logProcurement.quantity == logProcurement.quantityToDelever) %}
+										<span class="badge badge-flat border-success text-success">{{ logProcurement.quantityToDelever }}
+										{% else %}
+										<span class="badge badge-flat border-danger text-danger">{{ logProcurement.quantityToDelever }}
+									{% endif %}
+								</td>
+                                <td>{{ logProcurement.volume }}</td>
+                                <td>{{ logProcurement.source }}</td>
+                                <td>{{ logProcurement.destination.name }}</td>
+                                <td>{{ logProcurement.consignmentnote }}</td>
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        <a href="{{ path('log_procurement_edit', {id:logProcurement.id}) }}" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body" class="list-icons-item form-icon text-primary-600">
+                                            <i class="icon-pencil7"></i>
+                                        </a>
+                                        <a href="{{ path('log_procurement_delete', {id:logProcurement.id}) }}" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')" class="list-icons-item text-danger-600">
+                                            <i class="icon-trash"></i>
+                                        </a>
+										
+										<a href="{{ path('log_procurement_add_stock', {id:logProcurement.id}) }}" data-popup="tooltip" title="{{ 'add_stock'|trans([],'base') }}" data-container="body" class="list-icons-item form-icon text-primary-600">
+                                            <i class="icon-add"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

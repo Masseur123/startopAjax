@@ -1,0 +1,83 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'settlement_list'|trans([],'purchase') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'settlement'|trans([],'purchase') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('invoice_settle',  {id:invoice.id}) }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'settlement_list'|trans([],'purchase')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+
+            <div class="card">
+                <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                    <h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+                </div>
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group" id="amount">
+                        <label>{{ 'amount'|trans([],'purchase') }} </label>
+                        {{ form_widget(form.amount) }}
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'amount pay'|trans([],'purchase') }} </label>
+                        {{ form_widget(form.amountPay) }}
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'tva'|trans([],'purchase') }}</label>
+                        {{ form_widget(form.tva) }}
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'bank'|trans([],'purchase') }}</label>
+                        {{ form_widget(form.bank) }}
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-light" type="reset">
+                            {{ 'cancel'|trans([],'base')|upper }}
+                        </button>
+                        <div>
+                            {{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+                            <button class="btn btn-primary form-btn" type="submit">
+                                {{ 'save'|trans([],'base')|upper }}
+                                <i class="icon-paperplane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            {{ form_end(form) }}
+    </div>
+
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

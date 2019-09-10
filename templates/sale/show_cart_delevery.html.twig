@@ -1,0 +1,95 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.cart_delevery_list'|trans([],'purchase') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'cart_delevery_list'|trans([],'purchase') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('sale_delevery_cart_new', {id:delevery.id}) }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+
+    <div class="col-md-9">
+        <div class="card">
+            <table class="table conrouting table-bordered table-striped table-hover">
+                <thead class="bg-blue">
+                    <tr>
+                        <th>{{ 'th.reference'|trans([],'purchase')|upper }}</th>
+                        <th>{{ 'th.article'|trans([],'purchase')|upper }}</th>
+                        <th>{{ 'th.quantity'|trans ([],'purchase')|upper }}</th>
+                        <th>{{ 'pu'|trans([],'purchase')|upper }}</th>
+                        <th>{{ 'pt'|trans([],'purchase')|upper }}</th>
+                        <th class="text-center">{{ 'th.actions'|trans([],'purchase') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for deleveryarticle in deleveriesArticles %}
+                        <tr>
+                            {% if deleveryarticle.isvalid is null %}
+                                <td><span class="badge badge-flat border-info text-info-600">{{ deleveryarticle.delevery.reference }}</span></td>
+                            {% elseif deleveryarticle.isvalid == 1 %}
+                                <td><span class="badge badge-flat border-success text-success-600">{{ deleveryarticle.delevery.reference }}</span></td>
+                            {% else %}
+                                <td><span class="badge badge-flat border-warning text-warning-600">{{ deleveryarticle.delevery.reference }}</span></td>
+                            {% endif %}
+
+                            {% if deleveryarticle.stockage is not null %}
+                                <td><span class="badge badge-flat border-dark-alpha text-dark">{{ deleveryarticle.delevery.reference }}</span></td>
+                            {% endif %}
+
+                            <td>{{ deleveryarticle.article }}</td>
+                            <td>{{ deleveryarticle.quantity }}</td>
+                            <td>{{ deleveryarticle.pu }}</td>
+                            <td>{{ deleveryarticle.pt }}</td>
+
+
+                            <td class="text-center">
+                                <div class="list-icons">
+
+                                    {% if deleveryarticle.isvalid is null %}
+                                        {#<a href="{{ path('delevery_cart', {id:deleveryarticle.id}) }}" class="col-lg-2"> <i class="icon-cart-add text-info-600"></i></a>#}
+                                        <a href="{{ path('sale_delevery_cart_valid', {id:deleveryarticle.id}) }}" onclick="return confirm('do you want to validate?')" class="col-lg-2"> <i class="icon-checkmark4 text-success-600"></i></a>
+                                        <a href="{{ path('sale_delevery_cart_edit', {id:deleveryarticle.id}) }}" class="col-lg-2"><i class="icon-pencil7 text-primary-600"></i></a>
+                                        <a href="{{ path('sale_delevery_cart_delete', {id:deleveryarticle.id}) }}"  onclick="return confirm('are u sure?')" class="col-lg-2"><i class="icon-trash text-danger-600"></i></a>
+                                        <a href="{{ path('sale_delevery_cart_reject', {id:deleveryarticle.id}) }}" onclick="return confirm('do you want to reject?')" class="col-lg-2"> <i class="icon-blocked text-warning-600"></i></a>
+                                    {% elseif deleveryarticle.isvalid == 1 %}
+                                        <a href="{{ path('sale_delevery_cart_edit', {id:deleveryarticle.id}) }}" class="col-lg-2"><i class="icon-pencil7 text-primary-600"></i></a>
+                                        <a href="{{ path('sale_delevery_cart_reverse', {id:deleveryarticle.id}) }}" onclick="return confirm('do you want to reverse?')" class="col-lg-2"><i class="icon-reset text-success-600"></i></a>
+                                        <a href="{{ path('sale_delevery_cart_stock', {id:deleveryarticle.id}) }}" onclick="return confirm('do you want to add in stock?')" class="col-lg-2"><i class="icon-arrow-down16 text-secondary"></i></a>
+                                    {% else %}
+                                        <a href="{{ path('sale_delevery_cart_delete', {id:deleveryarticle.id}) }}"  onclick="return confirm('are u sure?')" class="col-lg-2"><i class="icon-trash text-danger-600"></i></a>
+                                        <a href="{{ path('sale_delevery_cart_reverse', {id:deleveryarticle.id}) }}" onclick="return confirm('do you want to reverse?')" class="col-lg-2"><i class="icon-reset text-success-600"></i></a>
+                                    {% endif %}
+
+                                    {% if deleveryarticle.stockage is not null %}
+
+                                    {% endif %}
+
+                                </div>
+                            </td>
+
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

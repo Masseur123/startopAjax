@@ -1,0 +1,276 @@
+{#
+   This is the base template used as the application layout which contains the
+   common elements and decorates all the other templates.
+#}
+<!DOCTYPE html> 
+<html lang="{{ app.request.locale }}">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<title>{% block title %}{{ 'starTop_application'|trans([],'base') }}{% endblock %}</title>
+		
+		{% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('build/css/app.css') }}">
+			<!-- Global stylesheets -->
+			<link href="https://fonts.googleapis.com/css?family=Roboto:400,300,100,500,700,900" rel="stylesheet" type="text/css">
+			<link href="{{ asset('global_assets/css/icons/icomoon/styles.css') }}" rel="stylesheet" type="text/css">
+			<link href="{{ asset('assets/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css">
+			<link href="{{ asset('assets/css/bootstrap_limitless.min.css') }}" rel="stylesheet" type="text/css">
+			<link href="{{ asset('assets/css/layout.min.css') }}" rel="stylesheet" type="text/css">
+			<link href="{{ asset('assets/css/components.min.css') }}" rel="stylesheet" type="text/css">
+			<link href="{{ asset('assets/css/colors.min.css') }}" rel="stylesheet" type="text/css">
+			<!-- /global stylesheets -->
+			
+			<!-- Custom stylesheets -->
+			<link href="{{ asset('assets/css/custom.css') }}" rel="stylesheet" type="text/css">
+			<!-- /custom stylesheets -->
+		{% endblock %}
+		
+			<link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+	</head>
+
+	<body class="{% block body_class %}navbar-top{% endblock %}">
+
+		{% block main_navbar %}
+			<!-- Main navbar -->
+			<div class="navbar navbar-expand-md {% block main_navbar_color %}navbar-startop{% endblock %} {% block main_navbar_position %}fixed-top{% endblock %}">
+				<div class="navbar-brand navbar-brand-startop">
+					
+					<a href="#" class="d-inline-block d-inline-block-startop">
+						<img src="{{ asset('global_assets/images/logo_startop_5.fw.png') }}" alt="startop" class="navbar-logo">
+						<!--<h1><i class="icon-star-full2 icon-2x"></i> StarTop</h1>-->
+					</a>
+				</div>
+
+				<div class="d-md-none">
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-mobile">
+						<i class="icon-tree5"></i>
+					</button>
+					<button class="navbar-toggler sidebar-mobile-main-toggle" type="button">
+						<i class="icon-paragraph-justify3"></i>
+					</button>
+				</div>
+
+				<div class="collapse navbar-collapse navbar-collapse-startop" id="navbar-mobile">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a href="#" class="navbar-nav-link sidebar-control sidebar-main-toggle d-none d-md-block navbar-nav-link-startop">
+								<i class="icon-paragraph-justify3"></i>
+							</a>
+						</li>
+					</ul>
+
+					<ul class="navbar-nav ml-auto">
+						{% block language_options %}{{ include('default/_language_options.html.twig') }}{% endblock %}
+						
+						{% block user %}{{ include('default/_user_options.html.twig') }}{% endblock %}
+					</ul>
+				</div>
+			</div>
+			<!-- /main navbar -->
+		{% endblock %}
+
+		{% block page_content %}
+			<!-- Page content -->
+			<div class="page-content like-gb">
+
+				{% block main_sidebar %}
+					<!-- Main sidebar -->
+					<div class="sidebar sidebar-light sidebar-main sidebar-expand-md main-sidebar-white"> 
+					<!-- <div class="sidebar sidebar-dark sidebar-main sidebar-expand-md"> -->
+
+						<!-- Sidebar mobile toggler -->
+						<div class="sidebar-mobile-toggler text-center">
+							<a href="#" class="sidebar-mobile-main-toggle">
+								<i class="icon-arrow-left8"></i>
+							</a>
+							{{ 'navigation'|trans([],'base') }}
+							<a href="#" class="sidebar-mobile-expand">
+								<i class="icon-screen-full"></i>
+								<i class="icon-screen-normal"></i>
+							</a>
+						</div>
+						<!-- /sidebar mobile toggler -->
+
+						{% block main_sidebar_content %}
+							<!-- Sidebar content -->
+							<div class="sidebar-content">
+
+								{% block main_sidebar_user_menu %}
+									<!-- User menu -->
+									<div class="sidebar-user">
+										<div class="card-body">
+											<div class="media">
+												<div class="mr-3">
+													<a href="#"><img src="{{ asset('global_assets/images/image.png') }}" width="38" height="38" class="rounded-circle" alt=""></a>
+												</div>
+
+												<div class="media-body">
+													<div class="media-title font-weight-semibold text-dark">{{ app.user.fullname }}</div>
+													<div class="font-size-xs opacity-50 text-dark">
+														<i class="icon-pin font-size-sm"></i> &nbsp;{{ app.user.id }}
+													</div>
+												</div>
+
+												<!-- <div class="ml-3 align-self-center">
+													<a href="#" class="text-dark"><i class="icon-cog3"></i></a>
+												</div> -->
+											</div>
+										</div>
+									</div>
+									<!-- /user menu -->
+								{% endblock %}
+
+								{% block main_sidebar_main_navigation %}
+									<!-- Main navigation -->
+									{{ include('default/_user_component_menus_roles.html.twig') }}
+									<!-- /main navigation -->
+								{% endblock %}
+
+							</div>
+							<!-- /sidebar content -->
+						{% endblock %}
+						
+					</div>
+					<!-- /main sidebar -->
+				{% endblock %}
+
+				{% block main_content %}
+					<!-- Main content -->
+					<div class="content-wrapper content-wrapper-startop">
+
+						{% block page_header %}
+							<!-- Page header -->
+							<div class="page-header"> <!-- page-header-light -->
+							
+								{% block page_header_content_breadcrumb %}
+								{{ include('default/_flash_messages.html.twig') }}
+								<!-- <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+									<div class="d-flex">
+										<div class="breadcrumb">
+											<a href="index.html" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> Home</a>
+											<a href="#" class="breadcrumb-item">Link</a>
+											<span class="breadcrumb-item active">Current</span>
+										</div>
+
+										<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+									</div>
+
+									<div class="header-elements d-none">
+										<div class="breadcrumb justify-content-center">
+											<a href="#" class="breadcrumb-elements-item">
+												Link
+											</a>
+
+											<div class="breadcrumb-elements-item dropdown p-0">
+												<a href="#" class="breadcrumb-elements-item dropdown-toggle" data-toggle="dropdown">
+													Dropdown
+												</a>
+
+												<div class="dropdown-menu dropdown-menu-right">
+													<a href="#" class="dropdown-item">Action</a>
+													<a href="#" class="dropdown-item">Another action</a>
+													<a href="#" class="dropdown-item">One more action</a>
+													<div class="dropdown-divider"></div>
+													<a href="#" class="dropdown-item">Separate action</a>
+												</div>
+											</div>
+										</div> 
+									</div> 
+								</div> -->
+								{% endblock %}
+							
+								{% block page_header_content_header_elements %}
+									<div class="page-header-content header-elements-md-inline phc-he">
+										{% block page_header_content_page_title %}
+											<!-- <div class="page-title d-flex">
+												<h4><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-semibold">Starters</span> - Navbar Fixed Main</h4>
+												<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+											</div> -->
+										{% endblock %}
+
+										{% block page_header_content_header_elements_button %}{% endblock %}
+										
+									</div>
+									<!-- <div style="width:100%; height:20px; border;1px solid #000;"></div> -->
+								{% endblock %}
+
+							</div> 
+							<!-- /page header -->
+						{% endblock %}
+
+						
+							<!-- Content area -->
+							<div class="content">
+								{% block content %}{% endblock %}
+							</div>
+							<!-- /content area -->
+						
+
+						{% block footer %}
+							<!-- Footer -->
+							<div class="navbar navbar-expand-lg navbar-light">
+								<div class="text-center d-lg-none w-100">
+									<button type="button" class="navbar-toggler dropdown-toggle" data-toggle="collapse" data-target="#navbar-footer">
+										<i class="icon-unfold mr-2"></i>
+										{{ 'footer'|trans([],'base') }}
+									</button>
+								</div>
+
+								<div class="navbar-collapse collapse" id="navbar-footer">
+									<span class="navbar-text">
+										&copy; 2019. <a href="#">{{ 'StarTop'|trans([],'base') }}</a> {{ 'by'|trans([],'base') }} <a href="#" target="_blank">{{ 'better_planning'|trans([],'base') }}</a>
+									</span>
+
+									<!-- <ul class="navbar-nav ml-lg-auto">
+										<li class="nav-item"><a href="#" class="navbar-nav-link" target="_blank"><i class="icon-lifebuoy mr-2"></i> {{ 'support'|trans([],'base') }}</a></li>
+										<li class="nav-item"><a href="#" class="navbar-nav-link" target="_blank"><i class="icon-file-text2 mr-2"></i> {{ 'docs'|trans([],'base') }}</a></li>
+									</ul> -->
+								</div>
+							</div>
+							<!-- /footer -->
+						{% endblock %}
+
+					</div>
+					<!-- /main content -->
+				{% endblock %}
+
+			</div>
+			<!-- /page content -->
+		{% endblock %}
+		
+		{% block javascripts %}
+			<!-- Core JS files -->
+			<script src="{{ asset('global_assets/js/main/jquery.min.js') }}"></script>
+			<script src="{{ asset('global_assets/js/main/jqueryForm.min.js') }}"></script>
+			<script src="{{ asset('global_assets/js/main/bootstrap.bundle.min.js') }}"></script>
+			<script src="{{ asset('global_assets/js/plugins/loaders/blockui.min.js') }}"></script>
+			<!-- /core JS files -->
+			
+			<!-- Common JS files -->
+			<script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+			<script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+			
+			<script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+			<script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+			
+			<script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+			<script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+			
+			<script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+			<script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+			<!-- /Common JS files -->
+			
+			<!-- Custom JS files -->
+			<script src="{{ asset('assets/js/error.js') }}"></script>
+			<script src="{{ asset('assets/js/custom.js') }}"></script>
+			<!-- *custom JS files -->
+			
+			<!-- Theme JS files -->
+			<script src="{{ asset('assets/js/app.js') }}"></script>
+			<!-- /theme JS files -->		
+		{% endblock %}
+
+	</body>
+</html>

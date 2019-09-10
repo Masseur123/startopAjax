@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="dSsDvUh" resname="a.civility_list">
+        <source>a.civility_list</source>
+        <target>__a.civility_list</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>dashboard</target>
+      </trans-unit>
+      <trans-unit id="MrTOFF_" resname="title.form">
+        <source>title.form</source>
+        <target>Form</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>code</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>description</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>save</target>
+      </trans-unit>
+      <trans-unit id="E6BYFM_" resname="title.civility_list">
+        <source>title.civility_list</source>
+        <target>Civility list</target>
+      </trans-unit>
+      <trans-unit id="M0NZuQ7" resname="#">
+        <source>#</source>
+        <target>#</target>
+      </trans-unit>
+      <trans-unit id="dJ.8uxd" resname="th.code">
+        <source>th.code</source>
+        <target>code</target>
+      </trans-unit>
+      <trans-unit id="DJIIaCo" resname="th.description">
+        <source>th.description</source>
+        <target>description</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>actions</target>
+      </trans-unit>
+      <trans-unit id="bdrO5Ge" resname="a.country_list">
+        <source>a.country_list</source>
+        <target>country_list</target>
+      </trans-unit>
+      <trans-unit id="Bzl9Yz8" resname="form">
+        <source>form</source>
+        <target>Form</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>name</target>
+      </trans-unit>
+      <trans-unit id="tozjOJR" resname="code(2)">
+        <source>code(2)</source>
+        <target>code(2)</target>
+      </trans-unit>
+      <trans-unit id="LO97gph" resname="code(3)">
+        <source>code(3)</source>
+        <target>code(3)</target>
+      </trans-unit>
+      <trans-unit id="nEcmELu" resname="list_of_countries">
+        <source>list_of_countries</source>
+        <target>List of countries</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>actions</target>
+      </trans-unit>
+      <trans-unit id=".M_iv0d" resname="a.currency_list">
+        <source>a.currency_list</source>
+        <target>__a.currency_list</target>
+      </trans-unit>
+      <trans-unit id="EohvnQA" resname="number">
+        <source>number</source>
+        <target>number</target>
+      </trans-unit>
+      <trans-unit id="1KzUvxG" resname="list_of_currencies">
+        <source>list_of_currencies</source>
+        <target>List of currencies</target>
+      </trans-unit>
+      <trans-unit id="kOP2X2w" resname="a.division_list">
+        <source>a.division_list</source>
+        <target>__a.division_list</target>
+      </trans-unit>
+      <trans-unit id="xpfSmBv" resname="region">
+        <source>region</source>
+        <target>region</target>
+      </trans-unit>
+      <trans-unit id="iwfIqG8" resname="list_of_divisions">
+        <source>list_of_divisions</source>
+        <target>List of divisions</target>
+      </trans-unit>
+      <trans-unit id="9YXJnj6" resname="a.language_list">
+        <source>a.language_list</source>
+        <target>__a.language_list</target>
+      </trans-unit>
+      <trans-unit id="3I1TcLL" resname="list_of_languages">
+        <source>list_of_languages</source>
+        <target>List of languages</target>
+      </trans-unit>
+      <trans-unit id="Ia9f2vg" resname="a.region_list">
+        <source>a.region_list</source>
+        <target>__a.region_list</target>
+      </trans-unit>
+      <trans-unit id="r.ZOT9U" resname="country">
+        <source>country</source>
+        <target>Country</target>
+      </trans-unit>
+      <trans-unit id="MgACOPU" resname="list_of_regions">
+        <source>list_of_regions</source>
+        <target>List of regions</target>
+      </trans-unit>
+      <trans-unit id="ZLP.RaI" resname="a.subdivision_list">
+        <source>a.subdivision_list</source>
+        <target>__a.subdivision_list</target>
+      </trans-unit>
+      <trans-unit id="mQsj6BR" resname="division">
+        <source>division</source>
+        <target>Division</target>
+      </trans-unit>
+      <trans-unit id="uG.1EVm" resname="list_of_subdivisions">
+        <source>list_of_subdivisions</source>
+        <target>List of subdivisions</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

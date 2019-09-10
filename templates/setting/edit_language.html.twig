@@ -1,0 +1,117 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ 'page.title.language'|trans([],'setting') }} {% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="{{ path('home') }}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> {{ 'dashboard'|trans([],'setting') }}</a>
+                <span class="breadcrumb-item active"> {{ 'language'|trans([],'setting') }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %} 
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'form'|trans([],'global') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <label>{{ 'name'|trans([],'global') }} <span class="text-danger">*</span></label>
+                            {{ form_widget(form.name) }}
+                        <span class="text-danger"> {{ form_errors(form.name) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'code'|trans([],'global') }}</label>
+                            {{ form_widget(form.code) }}
+                        <span class="text-danger"> {{ form_errors(form.code) }}</span>
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                        {{ 'save'|trans([],'global') }}
+                        <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <!-- /basic layout -->
+        </div>
+
+        <div class="col-md-8">
+            <!-- HTML sourced data -->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'list_of_languages'|trans([],'global') }}</h5>
+                </div>
+
+                <!-- <div class="card-body"></div> -->
+
+                <div class="card-body">
+                <table class="table datatable-responsive table-bordered table-striped table-hover" id="region">
+                    <thead>
+                    <tr>
+                        <th>{{ '#'|trans([],'global') }}</th>
+                        <th>{{ 'code'|trans([],'global') }}</th>
+                        <th>{{ 'name'|trans([],'global') }}</th>
+                        <th></th>
+                        <th></th>
+                        <th class="text-center">{{ 'actions'|trans([],'global') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for language in languages %}
+                        <tr>
+                            <td>{{ language.id }}</td>
+                            <td><span class="badge badge-info">{{ language.code }}</td>
+                            <td>{{ language.name }}</td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('language_edit', {id:language.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                    <a href="{{ path('language_delete', {id:language.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+        
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+    
+{% endblock %}

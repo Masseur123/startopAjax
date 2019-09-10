@@ -1,0 +1,88 @@
+{% extends 'base.html.twig' %}
+{% block title %} {{ 'page.title.housing'|trans([],'setting') }} {% endblock %}
+
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'housing'|trans([],'setting') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('housing_housing_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+
+{% block content %}
+<div class="col-md-12">
+    <!-- HTML sourced data -->
+    <div class="card">
+        <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+            <h5 class="card-title"><span class="font-weight-bold"> {{ 'housing_list'|trans([],'setting')|upper }}</span></h5>
+        </div>
+
+        <div class="card-body">
+            <table class="table datatable-responsive table-bordered table-striped table-hover" id="extra">
+            <thead>
+                    <tr>
+                        <th>{{ 'name'|trans([],'housing') }}</th>
+                        <th>{{ 'housingtype'|trans([],'housing') }}</th>
+                        <th>{{ 'status'|trans([],'housing') }}</th>
+                        <th>{{ 'price'|trans([],'housing') }}</th>
+                        <th>{{ 'price adult'|trans([],'housing') }}</th>
+                        <th>{{ 'price child'|trans([],'housing') }}</th>
+                        <th>{{ 'reserations'|trans([],'housing') }}</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for housing in housings %}
+                        <tr>
+                            <td>{{ housing.housingtype }}</td>
+                            <td>{{ housing.label }}</td>
+                            <td>
+                                {% if housing.isenabled == 0 %}
+                                    <span class="badge badge-danger">Is Not Enabled</span>
+                                {% else %}
+                                    <span class="badge badge-primary badge-pill">Is Enabled</span>
+                                {% endif %}
+                            </td>
+                            <td>{{ housing.price }}</td>
+                            <td>{{ housing.priceadult }}</td>
+                            <td>{{ housing.pricechild }}</td>
+                            <td>{{ housing.reservations }}</td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('housing_housing_edit', {id:housing.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                    <a href="{{ path('housing_housing_delete', {id:housing.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+
+
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

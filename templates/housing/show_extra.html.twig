@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.extra'|trans([],'setting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'extra'|trans([],'setting') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('extra_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card">
+                <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                    <h5 class="card-title"><span class="font-weight-bold"> {{ 'extra_list'|trans([],'setting')|upper }}</span></h5>
+                </div>
+
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover" id="extra">
+                    <thead>
+                    <tr>
+                        <th>{{ 'code'|trans([],'housing') }}</th>
+                        <th>{{ 'name'|trans([],'housing') }}</th>
+                        <th>{{ 'property'|trans([],'housing') }}</th>
+                        <th>{{ 'price'|trans([],'housing') }}</th>
+                        <th>{{ 'area'|trans([],'housing') }}</th>
+                        <th>{{ 'reservations'|trans([],'housing') }}</th>
+                        <th>{{ 'meals'|trans([],'housing') }}</th>
+                        <th>{{ 'status'|trans([],'housing') }}</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for extra in extras %}
+                        <tr>
+                            <td>{{ extra.code }}</td>
+                            <td>{{ extra.name }}</td>
+                            <td>{{ extra.property }} <span class="badge badge-info">{</td>
+                            
+                            <td>{{ extra.price }}</td>
+                            <td>{{ extra.area }}</td>
+                            <td>{{ extra.reservations }}</td>
+                            <td>{{ extra.meals }}</td>
+                            <td>
+                                    {% if extra.isenabled == 0 %}
+                                        <span class="badge badge-danger">Is Not Enabled</span>
+                                    {% else %}
+                                        <span class="badge badge-primary badge-pill">Is Enabled</span>
+                                    {% endif %}
+                                </td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('extra_edit', {id:extra.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                    <a href="{{ path('extra_delete', {id:extra.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+
+
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+                </div>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

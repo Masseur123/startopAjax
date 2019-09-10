@@ -1,0 +1,66 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.unity'|trans([],'article') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'unity_list'|trans([],'article') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('unity_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-8">
+
+            <div class="card">
+                <table class="table park table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th></th>
+                            <th >{{ 'code'|trans([],'article')|upper }}</th>
+                            <th>{{ 'name'|trans([],'article')|upper }}</th>
+                            <th></th>
+                            <th></th>
+                            <th class="text-center">{{ 'th.actions'|trans([],'article') }}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {% for unity in unities %}
+                            <tr>
+                                <td></td>
+                                <td><span class="badge badge-flat border-success text-success font-size-xl">{{ unity.code }}</td>
+                                <td>{{ unity.name }}</td>
+                                <td></td>
+                                <td></td>
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        <a href="{{ path('unity_edit', {id:unity.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                        <a href="{{ path('unity_delete', {id:unity.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /HTML sourced data -->
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Bzl9Yz8" resname="form">
+        <source>form</source>
+        <target>__form</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>__email</target>
+      </trans-unit>
+      <trans-unit id="dChNncv" resname="color">
+        <source>color</source>
+        <target>__color</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>__phone</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="AcuaAqd" resname="well_done">
+        <source>well_done</source>
+        <target>__well_done</target>
+      </trans-unit>
+      <trans-unit id="TVIaH0J" resname="customer_group_list">
+        <source>customer_group_list</source>
+        <target>__customer_group_list</target>
+      </trans-unit>
+      <trans-unit id="IYB_nJl" resname="fixphone">
+        <source>fixphone</source>
+        <target>__fixphone</target>
+      </trans-unit>
+      <trans-unit id="efRGKUS" resname="mobilephone">
+        <source>mobilephone</source>
+        <target>__mobilephone</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>__actions</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

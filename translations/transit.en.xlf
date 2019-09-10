@@ -1,0 +1,442 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="ivxVZFq" resname="doing_at">
+        <source>doing_at</source>
+        <target>Doing At</target>
+      </trans-unit>
+      <trans-unit id="DodjLNR" resname="date">
+        <source>date</source>
+        <target>Date</target>
+      </trans-unit>
+      <trans-unit id="bz3oIuK" resname="page.title.component_loading">
+        <source>page.title.component_loading</source>
+        <target>__page.title.component_loading</target>
+      </trans-unit>
+      <trans-unit id="UGMgH1E" resname="page.title.booking">
+        <source>page.title.booking</source>
+        <target>Booking Management</target>
+      </trans-unit>
+      <trans-unit id="FeSBSsd" resname="transit_file_number">
+        <source>transit_file_number</source>
+        <target>Contract Num.</target>
+      </trans-unit>
+      <trans-unit id="Lg5_MIx" resname="container_length">
+        <source>container_length</source>
+        <target>Container Length</target>
+      </trans-unit>
+      <trans-unit id="GSSFfUh" resname="shippingline">
+        <source>shippingline</source>
+        <target>Shipping Line</target>
+      </trans-unit>
+      <trans-unit id="4SZdUM4" resname="booking_number">
+        <source>booking_number</source>
+        <target>Booking Number</target>
+      </trans-unit>
+      <trans-unit id="xnIBtvK" resname="page.title.container">
+        <source>page.title.container</source>
+        <target>Container Management</target>
+      </trans-unit>
+      <trans-unit id="F9s4aIs" resname="container_number">
+        <source>container_number</source>
+        <target>Container Number</target>
+      </trans-unit>
+      <trans-unit id="Ngui2pc" resname="plumb_number">
+        <source>plumb_number</source>
+        <target>Plumb Number</target>
+      </trans-unit>
+      <trans-unit id="ffYMs2L" resname="page.title.container_loading">
+        <source>page.title.container_loading</source>
+        <target>Container Loading Management</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="mfeFXre" resname="wood">
+        <source>wood</source>
+        <target>Wood</target>
+      </trans-unit>
+      <trans-unit id="uQP6ab1" resname="nbr_of_piece">
+        <source>nbr_of_piece</source>
+        <target>Nbr. of piece</target>
+      </trans-unit>
+      <trans-unit id="YtemsSE" resname="volume">
+        <source>volume</source>
+        <target>Volume</target>
+      </trans-unit>
+      <trans-unit id="eQ_IG8w" resname="page.title.plumb">
+        <source>page.title.plumb</source>
+        <target>Plumb Management</target>
+      </trans-unit>
+      <trans-unit id="e4o.GvB" resname="plumb">
+        <source>plumb</source>
+        <target>Plumb</target>
+      </trans-unit>
+      <trans-unit id="MiaZID9" resname="page.title.generate_container">
+        <source>page.title.generate_container</source>
+        <target>Generate Container Management</target>
+      </trans-unit>
+      <trans-unit id="HN5e7Rs" resname="generate_container">
+        <source>generate_container</source>
+        <target>Generate Container</target>
+      </trans-unit>
+      <trans-unit id="61zOF66" resname="number_to_generate">
+        <source>number_to_generate</source>
+        <target>Number of Container</target>
+      </trans-unit>
+      <trans-unit id="8Kp6.JJ" resname="page.title.plumb_container">
+        <source>page.title.plumb_container</source>
+        <target>Plumb Container Management</target>
+      </trans-unit>
+      <trans-unit id="P7UpFn." resname="plumb_container">
+        <source>plumb_container</source>
+        <target>Plumb Container</target>
+      </trans-unit>
+      <trans-unit id="S7JO.JZ" resname="batch">
+        <source>batch</source>
+        <target>Booking</target>
+      </trans-unit>
+      <trans-unit id="IpQD0MW" resname="booking_list">
+        <source>booking_list</source>
+        <target>Booking List</target>
+      </trans-unit>
+      <trans-unit id="2asqtRi" resname="container_list">
+        <source>container_list</source>
+        <target>Container List</target>
+      </trans-unit>
+      <trans-unit id="PHcjNmq" resname="unfill_container_list">
+        <source>unfill_container_list</source>
+        <target>Unfill Container List</target>
+      </trans-unit>
+      <trans-unit id="idgNDd_" resname="seal_a_container">
+        <source>seal_a_container</source>
+        <target>Seal a container</target>
+      </trans-unit>
+      <trans-unit id="EX0hRDq" resname="page.title.log_procurement">
+        <source>page.title.log_procurement</source>
+        <target>Log Procurement Management</target>
+      </trans-unit>
+      <trans-unit id="lKf1i_d" resname="transit_number">
+        <source>transit_number</source>
+        <target>Contract Number</target>
+      </trans-unit>
+      <trans-unit id="2mlpAoW" resname="procurement_number">
+        <source>procurement_number</source>
+        <target>Procurement Number</target>
+      </trans-unit>
+      <trans-unit id="Qc9nlLp" resname="source">
+        <source>source</source>
+        <target>Origin</target>
+      </trans-unit>
+      <trans-unit id="tcdVqqs" resname="destination">
+        <source>destination</source>
+        <target>Destination</target>
+      </trans-unit>
+      <trans-unit id="GnswjY3" resname="quantity">
+        <source>quantity</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="iJZ5KLO" resname="page.title.log">
+        <source>page.title.log</source>
+        <target>Log Management</target>
+      </trans-unit>
+      <trans-unit id="56zNV9n" resname="log_number">
+        <source>log_number</source>
+        <target>Log Number</target>
+      </trans-unit>
+      <trans-unit id="zeDnU9w" resname="dm">
+        <source>dm</source>
+        <target>DM</target>
+      </trans-unit>
+      <trans-unit id="C0BygXa" resname="gb">
+        <source>gb</source>
+        <target>GB</target>
+      </trans-unit>
+      <trans-unit id="MxX0TaS" resname="pb">
+        <source>pb</source>
+        <target>PB</target>
+      </trans-unit>
+      <trans-unit id="8Ev3enk" resname="log_procurement_list">
+        <source>log_procurement_list</source>
+        <target>Log Procurement List</target>
+      </trans-unit>
+      <trans-unit id="MGgaWp5" resname="consignment_note">
+        <source>consignment_note</source>
+        <target>Note</target>
+      </trans-unit>
+      <trans-unit id="578qoNE" resname="log_list">
+        <source>log_list</source>
+        <target>Log List</target>
+      </trans-unit>
+      <trans-unit id="7Hjx_00" resname="page.title.document_file">
+        <source>page.title.document_file</source>
+        <target>Document Management</target>
+      </trans-unit>
+      <trans-unit id="wez42jO" resname="document_name">
+        <source>document_name</source>
+        <target>Document Name</target>
+      </trans-unit>
+      <trans-unit id="MSH9hXk" resname="ohada_account">
+        <source>ohada_account</source>
+        <target>Ohada Account</target>
+      </trans-unit>
+      <trans-unit id="EK9UkOf" resname="page.title.container_length">
+        <source>page.title.container_length</source>
+        <target>Container Length Management</target>
+      </trans-unit>
+      <trans-unit id="bb_ssS9" resname="page.title.park">
+        <source>page.title.park</source>
+        <target>Park Management</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="2Ayb_RD" resname="address">
+        <source>address</source>
+        <target>Address</target>
+      </trans-unit>
+      <trans-unit id="G0WXWtR" resname="page.title.transit_file">
+        <source>page.title.transit_file</source>
+        <target>Contract Management</target>
+      </trans-unit>
+      <trans-unit id="BDjokek" resname="boat_number">
+        <source>boat_number</source>
+        <target>Boat</target>
+      </trans-unit>
+      <trans-unit id="g3kC10u" resname="is_open">
+        <source>is_open</source>
+        <target>In Progress?</target>
+      </trans-unit>
+      <trans-unit id="GLRhEcj" resname="origin_country">
+        <source>origin_country</source>
+        <target>Origin Country</target>
+      </trans-unit>
+      <trans-unit id="6OFSkoq" resname="origin_town">
+        <source>origin_town</source>
+        <target>Origin Town</target>
+      </trans-unit>
+      <trans-unit id="cdXOMyH" resname="destination_country">
+        <source>destination_country</source>
+        <target>Dest. Country</target>
+      </trans-unit>
+      <trans-unit id="wVMJpax" resname="destination_town">
+        <source>destination_town</source>
+        <target>Dest. Town</target>
+      </trans-unit>
+      <trans-unit id="zdAnIeU" resname="page.title.wood">
+        <source>page.title.wood</source>
+        <target>Wood Type Management</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>Code</target>
+      </trans-unit>
+      <trans-unit id="tGGpzL6" resname="document_file_list">
+        <source>document_file_list</source>
+        <target>Document List</target>
+      </trans-unit>
+      <trans-unit id="0S1PN9Z" resname="length_list">
+        <source>length_list</source>
+        <target>Container Length List</target>
+      </trans-unit>
+      <trans-unit id="5CtA2WD" resname="park_list">
+        <source>park_list</source>
+        <target>Park List</target>
+      </trans-unit>
+      <trans-unit id="Bj3FJWI" resname="transit_list">
+        <source>transit_list</source>
+        <target>Contract List</target>
+      </trans-unit>
+      <trans-unit id="ACMGm0j" resname="wood_list">
+        <source>wood_list</source>
+        <target>Wood List</target>
+      </trans-unit>
+      <trans-unit id="3GM__Mq" resname="page.title.container_routing">
+        <source>page.title.container_routing</source>
+        <target>Container Routing Management</target>
+      </trans-unit>
+      <trans-unit id="TTlx3mI" resname="park">
+        <source>park</source>
+        <target>Park</target>
+      </trans-unit>
+      <trans-unit id="zSa4qtg" resname="page.title.log_routing">
+        <source>page.title.log_routing</source>
+        <target>Log Routing Management</target>
+      </trans-unit>
+      <trans-unit id="KFN15S1" resname="page.title.transit_expense">
+        <source>page.title.transit_expense</source>
+        <target>Transit Expenses Management</target>
+      </trans-unit>
+      <trans-unit id="LgYPHMt" resname="transit_expense">
+        <source>transit_expense</source>
+        <target>Transit Expenses</target>
+      </trans-unit>
+      <trans-unit id="6KkosRR" resname="transit_expense_list">
+        <source>transit_expense_list</source>
+        <target>Transit Expenses List</target>
+      </trans-unit>
+      <trans-unit id="8FPpwOs" resname="upload_file">
+        <source>upload_file</source>
+        <target>Upload File</target>
+      </trans-unit>
+      <trans-unit id="zzjZXJx" resname="amount">
+        <source>amount</source>
+        <target>Amount</target>
+      </trans-unit>
+      <trans-unit id="FapM5Dw" resname="tva">
+        <source>tva</source>
+        <target>Tva</target>
+      </trans-unit>
+      <trans-unit id="ZnE3isu" resname="tva_amount">
+        <source>tva_amount</source>
+        <target>Amount (Tva)</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>Description</target>
+      </trans-unit>
+      <trans-unit id="NcxuF6n" resname="cash_payment">
+        <source>cash_payment</source>
+        <target>Cash Payment</target>
+      </trans-unit>
+      <trans-unit id="u4117q1" resname="page.title.upload_file">
+        <source>page.title.upload_file</source>
+        <target>Upload File Management</target>
+      </trans-unit>
+      <trans-unit id="Q8wj_lK" resname="document">
+        <source>document</source>
+        <target>Document</target>
+      </trans-unit>
+      <trans-unit id="5U7pDet" resname="file_upload">
+        <source>file_upload</source>
+        <target>Upload File</target>
+      </trans-unit>
+      <trans-unit id="dcMnanl" resname="container_tracking_list">
+        <source>container_tracking_list</source>
+        <target>Container Tracking List</target>
+      </trans-unit>
+      <trans-unit id="jwjGYUE" resname="log_tracking_list">
+        <source>log_tracking_list</source>
+        <target>Log Tracking List</target>
+      </trans-unit>
+      <trans-unit id="T_Bcb6m" resname="transit_expenses_list">
+        <source>transit_expenses_list</source>
+        <target>Contract Expenses List</target>
+      </trans-unit>
+      <trans-unit id="Bot_bJf" resname="transit">
+        <source>transit</source>
+        <target>Contract</target>
+      </trans-unit>
+      <trans-unit id="sgvwaOW" resname="total_amount">
+        <source>total_amount</source>
+        <target>Total Amount</target>
+      </trans-unit>
+      <trans-unit id="Qsnupcy" resname="upload_file_list">
+        <source>upload_file_list</source>
+        <target>Upload File List</target>
+      </trans-unit>
+      <trans-unit id="AB0FfEm" resname="booking">
+        <source>booking</source>
+        <target>Booking</target>
+      </trans-unit>
+      <trans-unit id="pC1RlxT" resname="container">
+        <source>container</source>
+        <target>Container</target>
+      </trans-unit>
+      <trans-unit id="tKBwotN" resname="loading">
+        <source>loading</source>
+        <target>Loading</target>
+      </trans-unit>
+      <trans-unit id="RY_OHGk" resname="log_procurement">
+        <source>log_procurement</source>
+        <target>Log Procurement</target>
+      </trans-unit>
+      <trans-unit id="g2.xhOe" resname="log">
+        <source>log</source>
+        <target>Log</target>
+      </trans-unit>
+      <trans-unit id="D4Kspmr" resname="length">
+        <source>length</source>
+        <target>Length</target>
+      </trans-unit>
+      <trans-unit id="4kjsIxV" resname="page.title.log_loading">
+        <source>page.title.log_loading</source>
+        <target>Log Loading Management</target>
+      </trans-unit>
+      <trans-unit id="A1XUVoz" resname="log_loading_list">
+        <source>log_loading_list</source>
+        <target>Log Loading List</target>
+      </trans-unit>
+      <trans-unit id="yP1wp6o" resname="nbr_of_log">
+        <source>nbr_of_log</source>
+        <target>Nbr. of Log</target>
+      </trans-unit>
+      <trans-unit id="Ol2u4XT" resname="container_tracking">
+        <source>container_tracking</source>
+        <target>Container Tracking</target>
+      </trans-unit>
+      <trans-unit id="6hcEzYk" resname="log_tracking">
+        <source>log_tracking</source>
+        <target>Log Tracking</target>
+      </trans-unit>
+      <trans-unit id="vUjgtvf" resname="loading_list">
+        <source>loading_list</source>
+        <target>Loading List</target>
+      </trans-unit>
+      <trans-unit id="I7GOUE3" resname="expense">
+        <source>expense</source>
+        <target>Expense</target>
+      </trans-unit>
+      <trans-unit id="GB.dRvx" resname="origin">
+        <source>origin</source>
+        <target>Origin</target>
+      </trans-unit>
+      <trans-unit id="r.ZOT9U" resname="country">
+        <source>country</source>
+        <target>Country</target>
+      </trans-unit>
+      <trans-unit id="UKyB_XA" resname="town">
+        <source>town</source>
+        <target>Town</target>
+      </trans-unit>
+      <trans-unit id="EikKQz4" resname="inter_log_number">
+        <source>inter_log_number</source>
+        <target>Internal Number</target>
+      </trans-unit>
+      <trans-unit id="Qmm7TRk" resname="page.title.stock_wood">
+        <source>page.title.stock_wood</source>
+        <target>__page.title.stock_wood</target>
+      </trans-unit>
+      <trans-unit id="PpecHnR" resname="stock_wood">
+        <source>stock_wood</source>
+        <target>__stock_wood</target>
+      </trans-unit>
+      <trans-unit id="GXTVuUG" resname="stock_list">
+        <source>stock_list</source>
+        <target>__stock_list</target>
+      </trans-unit>
+      <trans-unit id="H.zVnnM" resname="remark">
+        <source>remark</source>
+        <target>__remark</target>
+      </trans-unit>
+      <trans-unit id="CMQkK19" resname="stock">
+        <source>stock</source>
+        <target>__stock</target>
+      </trans-unit>
+      <trans-unit id="ybsZN5." resname="page.title.log_stock">
+        <source>page.title.log_stock</source>
+        <target>__page.title.log_stock</target>
+      </trans-unit>
+      <trans-unit id="7bRlYkK" resname="note">
+        <source>note</source>
+        <target>__note</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

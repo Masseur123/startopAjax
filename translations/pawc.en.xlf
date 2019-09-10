@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="MrTOFF_" resname="title.form">
+        <source>title.form</source>
+        <target>__title.form</target>
+      </trans-unit>
+      <trans-unit id="9HDxqZl" resname="lable.code">
+        <source>lable.code</source>
+        <target>__lable.code</target>
+      </trans-unit>
+      <trans-unit id="ysOvPSq" resname="label.name">
+        <source>label.name</source>
+        <target>__label.name</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="geP6Ppr" resname="title.type_of_fee_list">
+        <source>title.type_of_fee_list</source>
+        <target>__title.type_of_fee_list</target>
+      </trans-unit>
+      <trans-unit id="dJ.8uxd" resname="th.code">
+        <source>th.code</source>
+        <target>__th.code</target>
+      </trans-unit>
+      <trans-unit id="kXYUbga" resname="th.name">
+        <source>th.name</source>
+        <target>__th.name</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>__th.actions</target>
+      </trans-unit>
+      <trans-unit id="0dOZinV" resname="title.mode-trans_list">
+        <source>title.mode-trans_list</source>
+        <target>__title.mode-trans_list</target>
+      </trans-unit>
+      <trans-unit id="uKtR815" resname="title.port_list">
+        <source>title.port_list</source>
+        <target>__title.port_list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

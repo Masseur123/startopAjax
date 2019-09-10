@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="M0NZuQ7" resname="#">
+        <source>#</source>
+        <target>__#</target>
+      </trans-unit>
+      <trans-unit id="hJAC5V6" resname="th.reference">
+        <source>th.reference</source>
+        <target>__th.reference</target>
+      </trans-unit>
+      <trans-unit id="_ebCh8y" resname="th.article">
+        <source>th.article</source>
+        <target>__th.article</target>
+      </trans-unit>
+      <trans-unit id="7U3arK0" resname="th.quantity">
+        <source>th.quantity</source>
+        <target>__th.quantity</target>
+      </trans-unit>
+      <trans-unit id="AUSx3vz" resname="serial">
+        <source>serial</source>
+        <target>__serial</target>
+      </trans-unit>
+      <trans-unit id="u2F4c7G" resname="title.serial_list">
+        <source>title.serial_list</source>
+        <target>__title.serial_list</target>
+      </trans-unit>
+      <trans-unit id="dJ.8uxd" resname="th.code">
+        <source>th.code</source>
+        <target>__th.code</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>__th.actions</target>
+      </trans-unit>
+      <trans-unit id="hDk63Yx" resname="article">
+        <source>article</source>
+        <target>__article</target>
+      </trans-unit>
+      <trans-unit id="GnswjY3" resname="quantity">
+        <source>quantity</source>
+        <target>__quantity</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>__dashboard</target>
+      </trans-unit>
+      <trans-unit id="ulWRQPa" resname="a.new_serial">
+        <source>a.new_serial</source>
+        <target>__a.new_serial</target>
+      </trans-unit>
+      <trans-unit id="PZpbXX4" resname="a.serial_list">
+        <source>a.serial_list</source>
+        <target>__a.serial_list</target>
+      </trans-unit>
+      <trans-unit id="jRohuP2" resname="th.date">
+        <source>th.date</source>
+        <target>__th.date</target>
+      </trans-unit>
+      <trans-unit id="GB.dRvx" resname="origin">
+        <source>origin</source>
+        <target>__origin</target>
+      </trans-unit>
+      <trans-unit id="QM03.Gu" resname="is_valid">
+        <source>is_valid</source>
+        <target>__is_valid</target>
+      </trans-unit>
+      <trans-unit id="7GVPrJW" resname="valid">
+        <source>valid</source>
+        <target>__valid</target>
+      </trans-unit>
+      <trans-unit id="8SNNdRe" resname="invalid">
+        <source>invalid</source>
+        <target>__invalid</target>
+      </trans-unit>
+      <trans-unit id="_SDAwMA" resname="page.title.item_type">
+        <source>page.title.item_type</source>
+        <target>__page.title.item_type</target>
+      </trans-unit>
+      <trans-unit id="OBzjOm7" resname="page.title.serial">
+        <source>page.title.serial</source>
+        <target>__page.title.serial</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

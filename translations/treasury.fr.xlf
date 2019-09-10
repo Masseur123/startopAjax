@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>Code</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>Nom</target>
+      </trans-unit>
+      <trans-unit id="5urqGOi" resname="location">
+        <source>location</source>
+        <target>Localisation</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>E-mail</target>
+      </trans-unit>
+      <trans-unit id="lPDkMFj" resname="fix_phone">
+        <source>fix_phone</source>
+        <target>Téléphone fixe</target>
+      </trans-unit>
+      <trans-unit id=".4S6QdO" resname="mobile_phone">
+        <source>mobile_phone</source>
+        <target>Téléphone mobile</target>
+      </trans-unit>
+      <trans-unit id="y5R_Z1Y" resname="tax_payer_number">
+        <source>tax_payer_number</source>
+        <target>Carte de contribuable</target>
+      </trans-unit>
+      <trans-unit id="F.3qKWR" resname="business_number">
+        <source>business_number</source>
+        <target>Registre de commerce</target>
+      </trans-unit>
+      <trans-unit id="bT6zY3g" resname="code_bank">
+        <source>code_bank</source>
+        <target>Code banque</target>
+      </trans-unit>
+      <trans-unit id="gVTypSg" resname="code_branch">
+        <source>code_branch</source>
+        <target>Code agence</target>
+      </trans-unit>
+      <trans-unit id="UUoWg5z" resname="code_swift">
+        <source>code_swift</source>
+        <target>Code swift</target>
+      </trans-unit>
+      <trans-unit id="4_zrw.z" resname="code_ibam">
+        <source>code_ibam</source>
+        <target>Code ibam</target>
+      </trans-unit>
+      <trans-unit id="DW3S5M3" resname="code_rib">
+        <source>code_rib</source>
+        <target>Code rib</target>
+      </trans-unit>
+      <trans-unit id="V1HgSOt" resname="balance">
+        <source>balance</source>
+        <target>Montant</target>
+      </trans-unit>
+      <trans-unit id="KH2hgil" resname="account_number">
+        <source>account_number</source>
+        <target>Banque</target>
+      </trans-unit>
+      <trans-unit id="mvIRMps" resname="account">
+        <source>account</source>
+        <target>Ohada</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>Sauvegarder</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="Q4HcKrF" resname="bank">
+        <source>bank</source>
+        <target>Banque</target>
+      </trans-unit>
+      <trans-unit id="gd1rd1r" resname="journal">
+        <source>journal</source>
+        <target>Journal</target>
+      </trans-unit>
+      <trans-unit id="HBDEndz" resname="page.title.bank">
+        <source>page.title.bank</source>
+        <target>Gestion des banques</target>
+      </trans-unit>
+      <trans-unit id="bbOllUz" resname="bank_list">
+        <source>bank_list</source>
+        <target>Liste des banques</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="HwCINrM" resname="page.title.cash_desk">
+        <source>page.title.cash_desk</source>
+        <target>Gestion des caisses</target>
+      </trans-unit>
+      <trans-unit id="Qds9Nar" resname="cash_desk">
+        <source>cash_desk</source>
+        <target>Caisse</target>
+      </trans-unit>
+      <trans-unit id="n76IgHL" resname="cash_desk_list">
+        <source>cash_desk_list</source>
+        <target>Liste des caisses</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Annuler</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>Nouveau</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modifier</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Supprimer</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>Confirmez-vous cette action ?</target>
+      </trans-unit>
+      <trans-unit id="BuVbYzS" resname="operator">
+        <source>operator</source>
+        <target>Responsable</target>
+      </trans-unit>
+      <trans-unit id="MQ.yABS" resname="close">
+        <source>close</source>
+        <target>Fermer</target>
+      </trans-unit>
+      <trans-unit id="I0j5mHR" resname="open">
+        <source>open</source>
+        <target>Ouvrir</target>
+      </trans-unit>
+      <trans-unit id="aiFJAsZ" resname="po_box">
+        <source>po_box</source>
+        <target>Boite postale</target>
+      </trans-unit>
+      <trans-unit id="5vCh_7Q" resname="vault">
+        <source>vault</source>
+        <target>Vault</target>
+      </trans-unit>
+      <trans-unit id="5q2i99a" resname="page.title.bank_expense_payment">
+        <source>page.title.bank_expense_payment</source>
+        <target>__page.title.bank_expense_payment</target>
+      </trans-unit>
+      <trans-unit id="U7amKkf" resname="bank_expense_payment">
+        <source>bank_expense_payment</source>
+        <target>__bank_expense_payment</target>
+      </trans-unit>
+      <trans-unit id="XeC4d06" resname="bank_expense_validated">
+        <source>bank_expense_validated</source>
+        <target>__bank_expense_validated</target>
+      </trans-unit>
+      <trans-unit id="DodjLNR" resname="date">
+        <source>date</source>
+        <target>__date</target>
+      </trans-unit>
+      <trans-unit id="r2_B.Hm" resname="tr_number">
+        <source>tr_number</source>
+        <target>__tr_number</target>
+      </trans-unit>
+      <trans-unit id="kiYog7z" resname="ref_number">
+        <source>ref_number</source>
+        <target>__ref_number</target>
+      </trans-unit>
+      <trans-unit id="UOFr3ZS" resname="debit">
+        <source>debit</source>
+        <target>__debit</target>
+      </trans-unit>
+      <trans-unit id="7MSHOha" resname="credit">
+        <source>credit</source>
+        <target>__credit</target>
+      </trans-unit>
+      <trans-unit id="egzz1tW" resname="page.title.bank_expense_validated">
+        <source>page.title.bank_expense_validated</source>
+        <target>__page.title.bank_expense_validated</target>
+      </trans-unit>
+      <trans-unit id="IX0_r6T" resname="cost_center">
+        <source>cost_center</source>
+        <target>__cost_center</target>
+      </trans-unit>
+      <trans-unit id="zzjZXJx" resname="amount">
+        <source>amount</source>
+        <target>__amount</target>
+      </trans-unit>
+      <trans-unit id="mLT2Xf8" resname="tax_amount">
+        <source>tax_amount</source>
+        <target>__tax_amount</target>
+      </trans-unit>
+      <trans-unit id="H.wEBrm" resname="tax">
+        <source>tax</source>
+        <target>__tax</target>
+      </trans-unit>
+      <trans-unit id="Qf.Yt2r" resname="details">
+        <source>details</source>
+        <target>__details</target>
+      </trans-unit>
+      <trans-unit id="4ENZfF2" resname="page.title.cash_expense_payment">
+        <source>page.title.cash_expense_payment</source>
+        <target>__page.title.cash_expense_payment</target>
+      </trans-unit>
+      <trans-unit id="sSt7OuO" resname="cash_expense_payment">
+        <source>cash_expense_payment</source>
+        <target>__cash_expense_payment</target>
+      </trans-unit>
+      <trans-unit id="4BjtWlw" resname="cash_expense_validated">
+        <source>cash_expense_validated</source>
+        <target>__cash_expense_validated</target>
+      </trans-unit>
+      <trans-unit id="rxsgTwm" resname="page.title.cash_expense_validated">
+        <source>page.title.cash_expense_validated</source>
+        <target>__page.title.cash_expense_validated</target>
+      </trans-unit>
+      <trans-unit id="C05mYsl" resname="transit_cash_expense">
+        <source>transit_cash_expense</source>
+        <target>__transit_cash_expense</target>
+      </trans-unit>
+      <trans-unit id="Bot_bJf" resname="transit">
+        <source>transit</source>
+        <target>__transit</target>
+      </trans-unit>
+      <trans-unit id="Q8wj_lK" resname="document">
+        <source>document</source>
+        <target>__document</target>
+      </trans-unit>
+      <trans-unit id="_EFBeYq" resname="page.title.bank_expense_details">
+        <source>page.title.bank_expense_details</source>
+        <target>__page.title.bank_expense_details</target>
+      </trans-unit>
+      <trans-unit id="lxZ6qCt" resname="bank_expense_details">
+        <source>bank_expense_details</source>
+        <target>__bank_expense_details</target>
+      </trans-unit>
+      <trans-unit id="ZnE3isu" resname="tva_amount">
+        <source>tva_amount</source>
+        <target>__tva_amount</target>
+      </trans-unit>
+      <trans-unit id="6AmqlCT" resname="payment_method">
+        <source>payment_method</source>
+        <target>__payment_method</target>
+      </trans-unit>
+      <trans-unit id="1vmmI8G" resname="doc_ref_number">
+        <source>doc_ref_number</source>
+        <target>__doc_ref_number</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>__description</target>
+      </trans-unit>
+      <trans-unit id="8OHPqA6" resname="pay_at">
+        <source>pay_at</source>
+        <target>__pay_at</target>
+      </trans-unit>
+      <trans-unit id="NQnK4qE" resname="page.title.cash_expense_details">
+        <source>page.title.cash_expense_details</source>
+        <target>__page.title.cash_expense_details</target>
+      </trans-unit>
+      <trans-unit id="lDxVvhB" resname="cash_expense_details">
+        <source>cash_expense_details</source>
+        <target>__cash_expense_details</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>__reference</target>
+      </trans-unit>
+      <trans-unit id="n1K0wMx" resname="bank_account">
+        <source>bank_account</source>
+        <target>__bank_account</target>
+      </trans-unit>
+      <trans-unit id="MSH9hXk" resname="ohada_account">
+        <source>ohada_account</source>
+        <target>__ohada_account</target>
+      </trans-unit>
+      <trans-unit id="Oz01GpK" resname="page.title.credit_card">
+        <source>page.title.credit_card</source>
+        <target>__page.title.credit_card</target>
+      </trans-unit>
+      <trans-unit id="k.1l62l" resname="credit_card">
+        <source>credit_card</source>
+        <target>__credit_card</target>
+      </trans-unit>
+      <trans-unit id="XEwZZDQ" resname="provider">
+        <source>provider</source>
+        <target>__provider</target>
+      </trans-unit>
+      <trans-unit id="EohvnQA" resname="number">
+        <source>number</source>
+        <target>__number</target>
+      </trans-unit>
+      <trans-unit id="4rKcwbw" resname="expired_at">
+        <source>expired_at</source>
+        <target>__expired_at</target>
+      </trans-unit>
+      <trans-unit id="zA84uox" resname="csc">
+        <source>csc</source>
+        <target>__csc</target>
+      </trans-unit>
+      <trans-unit id="q87VxW4" resname="credit_card_list">
+        <source>credit_card_list</source>
+        <target>__credit_card_list</target>
+      </trans-unit>
+      <trans-unit id="X7lH9zD" resname="page.title.bank_to_bank_transfer">
+        <source>page.title.bank_to_bank_transfer</source>
+        <target>__page.title.bank_to_bank_transfer</target>
+      </trans-unit>
+      <trans-unit id="hJHOko_" resname="bank_to_bank_transfer">
+        <source>bank_to_bank_transfer</source>
+        <target>__bank_to_bank_transfer</target>
+      </trans-unit>
+      <trans-unit id="loAOGm8" resname="bank_source">
+        <source>bank_source</source>
+        <target>__bank_source</target>
+      </trans-unit>
+      <trans-unit id="HXHrxWw" resname="bank_destination">
+        <source>bank_destination</source>
+        <target>__bank_destination</target>
+      </trans-unit>
+      <trans-unit id="RrszTuM" resname="bank_to_bank_list">
+        <source>bank_to_bank_list</source>
+        <target>__bank_to_bank_list</target>
+      </trans-unit>
+      <trans-unit id="Qc9nlLp" resname="source">
+        <source>source</source>
+        <target>__source</target>
+      </trans-unit>
+      <trans-unit id="tcdVqqs" resname="destination">
+        <source>destination</source>
+        <target>__destination</target>
+      </trans-unit>
+      <trans-unit id="GqIQpnv" resname="page.title.bank_to_cash_transfer">
+        <source>page.title.bank_to_cash_transfer</source>
+        <target>__page.title.bank_to_cash_transfer</target>
+      </trans-unit>
+      <trans-unit id="uXAK6Bn" resname="bank_to_cash_transfer">
+        <source>bank_to_cash_transfer</source>
+        <target>__bank_to_cash_transfer</target>
+      </trans-unit>
+      <trans-unit id="26_0.am" resname="cashdesk">
+        <source>cashdesk</source>
+        <target>__cashdesk</target>
+      </trans-unit>
+      <trans-unit id="F006GyS" resname="bank_to_cash_list">
+        <source>bank_to_cash_list</source>
+        <target>__bank_to_cash_list</target>
+      </trans-unit>
+      <trans-unit id="dQPkBGp" resname="page.title.cash_to_bank_transfer">
+        <source>page.title.cash_to_bank_transfer</source>
+        <target>__page.title.cash_to_bank_transfer</target>
+      </trans-unit>
+      <trans-unit id="ttyo28p" resname="cash_to_bank_transfer">
+        <source>cash_to_bank_transfer</source>
+        <target>__cash_to_bank_transfer</target>
+      </trans-unit>
+      <trans-unit id="Hu3iq1o" resname="cash_to_bank_list">
+        <source>cash_to_bank_list</source>
+        <target>__cash_to_bank_list</target>
+      </trans-unit>
+      <trans-unit id="tyzyh8i" resname="page.title.cash_to_cash_transfer">
+        <source>page.title.cash_to_cash_transfer</source>
+        <target>__page.title.cash_to_cash_transfer</target>
+      </trans-unit>
+      <trans-unit id="otsC1Fv" resname="cash_to_cash_transfer">
+        <source>cash_to_cash_transfer</source>
+        <target>__cash_to_cash_transfer</target>
+      </trans-unit>
+      <trans-unit id="9UVg.58" resname="cashdesk_source">
+        <source>cashdesk_source</source>
+        <target>__cashdesk_source</target>
+      </trans-unit>
+      <trans-unit id="kyEJyqw" resname="cashdesk_destination">
+        <source>cashdesk_destination</source>
+        <target>__cashdesk_destination</target>
+      </trans-unit>
+      <trans-unit id="EMqEbA0" resname="cash_to_cash_list">
+        <source>cash_to_cash_list</source>
+        <target>__cash_to_cash_list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

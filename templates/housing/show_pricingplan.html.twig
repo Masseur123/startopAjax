@@ -1,0 +1,93 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.pricingplan'|trans([],'setting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'princing_plan'|trans([],'setting') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('pricing_plan_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %} 
+<div class="row">
+        <div class="col-md-8">
+    
+            <!-- HTML sourced data -->
+            <div class="card">
+                <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                    <h5 class="card-title"><span class="font-weight-bold"> {{ 'pricingplan_list'|trans([],'setting')|upper }}</span></h5>
+                </div>
+    
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover" id="tag">
+                        <thead>
+                    <tr>
+                        <th>{{ 'name'|trans([],'housing') }}</th>
+                        <th>{{ 'pricing'|trans([],'housing') }}</th>
+                        <th>{{ 'reduction'|trans([],'housing') }}</th>
+                        <th>{{ 'housing type'|trans([],'housing') }}</th>
+                        <th>{{ 'tags'|trans([],'housing') }}</th>
+                        <th>{{ 'description'|trans([],'housing') }}</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for pricingplan in pricingplans %}
+                    <tr>
+                        <td><span class="badge badge-info">{{ pricingplan.name }}</td>
+                        <td>
+                            {{ pricingplan.pricing.name }}
+                        </td>
+                        <td>{{ pricingplan.reduction }}</td>
+
+                        {% for housingType in pricingplan.housingType %}
+                        <td>{{ housingType.name }}</td>
+                        {% endfor %}
+                        <td></td>
+
+                        {% for tags in pricingplan.tags %}
+                        <td>{{ tags.value }}</td>
+                        {% endfor %}
+                        
+                        <td>{{ pricingplan.description }}</td>
+                        
+                        <td class="text-center">
+                            <div class="list-icons">
+                                <a href="{{ path('pricing_plan_edit', {id:pricingplan.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                <a href="{{ path('pricing_plan_delete', {id:pricingplan.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <!-- /HTML sourced data -->
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_data_sources.js') }}"></script>
+{% endblock %}

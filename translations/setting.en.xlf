@@ -1,0 +1,826 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="jPzWfcF" resname="a.supply_request_article_list">
+        <source>a.supply_request_article_list</source>
+        <target>__a.supply_request_article_list</target>
+      </trans-unit>
+      <trans-unit id="EETnmx1" resname="title.supply_request_article_list">
+        <source>title.supply_request_article_list</source>
+        <target>__title.supply_request_article_list</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>__th.actions</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>__dashboard</target>
+      </trans-unit>
+      <trans-unit id="hDk63Yx" resname="article">
+        <source>article</source>
+        <target>__article</target>
+      </trans-unit>
+      <trans-unit id="Lg6WCrM" resname="Form">
+        <source>Form</source>
+        <target>__Form</target>
+      </trans-unit>
+      <trans-unit id="bAPftDm" resname="lost_at">
+        <source>lost_at</source>
+        <target>__lost_at</target>
+      </trans-unit>
+      <trans-unit id="VZGzaK_" resname="submit_form">
+        <source>submit_form</source>
+        <target>__submit_form</target>
+      </trans-unit>
+      <trans-unit id="K7Agvgq" resname="title.article_list">
+        <source>title.article_list</source>
+        <target>__title.article_list</target>
+      </trans-unit>
+      <trans-unit id="00pWmre" resname="family">
+        <source>family</source>
+        <target>__family</target>
+      </trans-unit>
+      <trans-unit id="fOBMmIw" resname="title.family_list">
+        <source>title.family_list</source>
+        <target>__title.family_list</target>
+      </trans-unit>
+      <trans-unit id="M0NZuQ7" resname="#">
+        <source>#</source>
+        <target>__#</target>
+      </trans-unit>
+      <trans-unit id="dJ.8uxd" resname="th.code">
+        <source>th.code</source>
+        <target>__th.code</target>
+      </trans-unit>
+      <trans-unit id="kXYUbga" resname="th.name">
+        <source>th.name</source>
+        <target>__th.name</target>
+      </trans-unit>
+      <trans-unit id="JNhdPj2" resname="item_type">
+        <source>item_type</source>
+        <target>__item_type</target>
+      </trans-unit>
+      <trans-unit id="FclbjmZ" resname="title.item_type_list">
+        <source>title.item_type_list</source>
+        <target>__title.item_type_list</target>
+      </trans-unit>
+      <trans-unit id="iuFTQcM" resname="supply_request">
+        <source>supply_request</source>
+        <target>__supply_request</target>
+      </trans-unit>
+      <trans-unit id="DodjLNR" resname="date">
+        <source>date</source>
+        <target>__date</target>
+      </trans-unit>
+      <trans-unit id="pXkLBvY" resname="unity">
+        <source>unity</source>
+        <target>__unity</target>
+      </trans-unit>
+      <trans-unit id="GTgugxH" resname="title.unity_list">
+        <source>title.unity_list</source>
+        <target>__title.unity_list</target>
+      </trans-unit>
+      <trans-unit id="1hsjb7H" resname="a.new_article">
+        <source>a.new_article</source>
+        <target>__a.new_article</target>
+      </trans-unit>
+      <trans-unit id="OAkBqvv" resname="a.article_list">
+        <source>a.article_list</source>
+        <target>__a.article_list</target>
+      </trans-unit>
+      <trans-unit id="DSXz1c_" resname="span.well_done">
+        <source>span.well_done</source>
+        <target>__span.well_done</target>
+      </trans-unit>
+      <trans-unit id="qIvNxbE" resname="a.new_family">
+        <source>a.new_family</source>
+        <target>__a.new_family</target>
+      </trans-unit>
+      <trans-unit id="JPQxezm" resname="a.family_list">
+        <source>a.family_list</source>
+        <target>__a.family_list</target>
+      </trans-unit>
+      <trans-unit id="wUiQnBp" resname="a.new_item_type">
+        <source>a.new_item_type</source>
+        <target>__a.new_item_type</target>
+      </trans-unit>
+      <trans-unit id="jFKX2xt" resname="a.item_type_list">
+        <source>a.item_type_list</source>
+        <target>__a.item_type_list</target>
+      </trans-unit>
+      <trans-unit id="AUSx3vz" resname="serial">
+        <source>serial</source>
+        <target>__serial</target>
+      </trans-unit>
+      <trans-unit id="thCCkCM" resname="supply request">
+        <source>supply request</source>
+        <target>__supply request</target>
+      </trans-unit>
+      <trans-unit id="8vxWjxw" resname="a.new_supply_request">
+        <source>a.new_supply_request</source>
+        <target>__a.new_supply_request</target>
+      </trans-unit>
+      <trans-unit id="aTK2Tty" resname="a.supply_request_list">
+        <source>a.supply_request_list</source>
+        <target>__a.supply_request_list</target>
+      </trans-unit>
+      <trans-unit id="rda2q0L" resname="title.supply_request_list">
+        <source>title.supply_request_list</source>
+        <target>__title.supply_request_list</target>
+      </trans-unit>
+      <trans-unit id="Ip7mPSm" resname="supply request article">
+        <source>supply request article</source>
+        <target>__supply request article</target>
+      </trans-unit>
+      <trans-unit id="JbVJ6CG" resname="a.new_unity">
+        <source>a.new_unity</source>
+        <target>__a.new_unity</target>
+      </trans-unit>
+      <trans-unit id="MdCNtkB" resname="a.unity_list">
+        <source>a.unity_list</source>
+        <target>__a.unity_list</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>__code</target>
+      </trans-unit>
+      <trans-unit id="x8ScodK" resname="civility">
+        <source>civility</source>
+        <target>__civility</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="DWmmKcm" resname="bornAt">
+        <source>bornAt</source>
+        <target>__bornAt</target>
+      </trans-unit>
+      <trans-unit id="y8RxymA" resname="passport">
+        <source>passport</source>
+        <target>__passport</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>__phone</target>
+      </trans-unit>
+      <trans-unit id="oVCUW01" resname="busphone">
+        <source>busphone</source>
+        <target>__busphone</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>__email</target>
+      </trans-unit>
+      <trans-unit id="aiFJAsZ" resname="po_box">
+        <source>po_box</source>
+        <target>__po_box</target>
+      </trans-unit>
+      <trans-unit id="MLMDnn1" resname="Remark">
+        <source>Remark</source>
+        <target>__Remark</target>
+      </trans-unit>
+      <trans-unit id="KSJFntS" resname="idcardnumber">
+        <source>idcardnumber</source>
+        <target>__idcardnumber</target>
+      </trans-unit>
+      <trans-unit id="XoyZAiB" resname="job">
+        <source>job</source>
+        <target>__job</target>
+      </trans-unit>
+      <trans-unit id="UKyB_XA" resname="town">
+        <source>town</source>
+        <target>__town</target>
+      </trans-unit>
+      <trans-unit id="2Ayb_RD" resname="address">
+        <source>address</source>
+        <target>__address</target>
+      </trans-unit>
+      <trans-unit id="8bDAe2F" resname="title.customer_list">
+        <source>title.customer_list</source>
+        <target>__title.customer_list</target>
+      </trans-unit>
+      <trans-unit id="SZu1Z28" resname="th.bornAt">
+        <source>th.bornAt</source>
+        <target>__th.bornAt</target>
+      </trans-unit>
+      <trans-unit id="Qq9KOmo" resname="th.email">
+        <source>th.email</source>
+        <target>__th.email</target>
+      </trans-unit>
+      <trans-unit id="Xqwcpk9" resname="th.phone">
+        <source>th.phone</source>
+        <target>__th.phone</target>
+      </trans-unit>
+      <trans-unit id="TD9XeBp" resname="th.address">
+        <source>th.address</source>
+        <target>__th.address</target>
+      </trans-unit>
+      <trans-unit id=".nNavOM" resname="th.town">
+        <source>th.town</source>
+        <target>__th.town</target>
+      </trans-unit>
+      <trans-unit id="ojXkGhT" resname="th.idcardnumber">
+        <source>th.idcardnumber</source>
+        <target>__th.idcardnumber</target>
+      </trans-unit>
+      <trans-unit id="k4BUnW2" resname="new_customer_group">
+        <source>new_customer_group</source>
+        <target>__new_customer_group</target>
+      </trans-unit>
+      <trans-unit id="TVIaH0J" resname="customer_group_list">
+        <source>customer_group_list</source>
+        <target>__customer_group_list</target>
+      </trans-unit>
+      <trans-unit id="EwPAaws" resname="type">
+        <source>type</source>
+        <target>__type</target>
+      </trans-unit>
+      <trans-unit id="W74gH69" resname="title.exporter_list">
+        <source>title.exporter_list</source>
+        <target>__title.exporter_list</target>
+      </trans-unit>
+      <trans-unit id="HTIoEWb" resname="th.passport">
+        <source>th.passport</source>
+        <target>__th.passport</target>
+      </trans-unit>
+      <trans-unit id="YNCYbe5" resname="th.idcard">
+        <source>th.idcard</source>
+        <target>__th.idcard</target>
+      </trans-unit>
+      <trans-unit id=".wK_Srq" resname="th.type">
+        <source>th.type</source>
+        <target>__th.type</target>
+      </trans-unit>
+      <trans-unit id="VCqBCYJ" resname="cigle">
+        <source>cigle</source>
+        <target>__cigle</target>
+      </trans-unit>
+      <trans-unit id="dHqPOYO" resname="website">
+        <source>website</source>
+        <target>__website</target>
+      </trans-unit>
+      <trans-unit id="NZjOb5Z" resname="logo">
+        <source>logo</source>
+        <target>__logo</target>
+      </trans-unit>
+      <trans-unit id="y5R_Z1Y" resname="tax_payer_number">
+        <source>tax_payer_number</source>
+        <target>__tax_payer_number</target>
+      </trans-unit>
+      <trans-unit id="mu_liYX" resname="businessnumber">
+        <source>businessnumber</source>
+        <target>__businessnumber</target>
+      </trans-unit>
+      <trans-unit id="tZ3qZVH" resname="a.new_customer">
+        <source>a.new_customer</source>
+        <target>__a.new_customer</target>
+      </trans-unit>
+      <trans-unit id="qWb8soW" resname="a.customer_list">
+        <source>a.customer_list</source>
+        <target>__a.customer_list</target>
+      </trans-unit>
+      <trans-unit id="n24UAat" resname="a.new_shippingline">
+        <source>a.new_shippingline</source>
+        <target>__a.new_shippingline</target>
+      </trans-unit>
+      <trans-unit id="nPmGNhu" resname="a.shippingline_list">
+        <source>a.shippingline_list</source>
+        <target>__a.shippingline_list</target>
+      </trans-unit>
+      <trans-unit id="AUqNehl" resname="title.shipping_line_list">
+        <source>title.shipping_line_list</source>
+        <target>__title.shipping_line_list</target>
+      </trans-unit>
+      <trans-unit id="tVFT0pM" resname="th.cigle">
+        <source>th.cigle</source>
+        <target>__th.cigle</target>
+      </trans-unit>
+      <trans-unit id="qZyh5kl" resname="th.taxpayernumber">
+        <source>th.taxpayernumber</source>
+        <target>__th.taxpayernumber</target>
+      </trans-unit>
+      <trans-unit id="DWyX9K6" resname="th.businessnumber">
+        <source>th.businessnumber</source>
+        <target>__th.businessnumber</target>
+      </trans-unit>
+      <trans-unit id="66L95lP" resname="business phone">
+        <source>business phone</source>
+        <target>__business phone</target>
+      </trans-unit>
+      <trans-unit id="KupsqAM" resname="pobox">
+        <source>pobox</source>
+        <target>__pobox</target>
+      </trans-unit>
+      <trans-unit id="NrhG1Bh" resname="taxpayernumber">
+        <source>taxpayernumber</source>
+        <target>__taxpayernumber</target>
+      </trans-unit>
+      <trans-unit id="Y_4fYF3" resname="Type Person">
+        <source>Type Person</source>
+        <target>__Type Person</target>
+      </trans-unit>
+      <trans-unit id="DU3wNJ3" resname="a.new_carrier">
+        <source>a.new_carrier</source>
+        <target>__a.new_carrier</target>
+      </trans-unit>
+      <trans-unit id="wzsxEdo" resname="a.carrier_list">
+        <source>a.carrier_list</source>
+        <target>__a.carrier_list</target>
+      </trans-unit>
+      <trans-unit id="iGqZXzE" resname="title.carrier_list">
+        <source>title.carrier_list</source>
+        <target>__title.carrier_list</target>
+      </trans-unit>
+      <trans-unit id="rNbSM5N" resname="a.new_exporter">
+        <source>a.new_exporter</source>
+        <target>__a.new_exporter</target>
+      </trans-unit>
+      <trans-unit id="Ng01gBs" resname="a.exporter_list">
+        <source>a.exporter_list</source>
+        <target>__a.exporter_list</target>
+      </trans-unit>
+      <trans-unit id="dSsDvUh" resname="a.civility_list">
+        <source>a.civility_list</source>
+        <target>__a.civility_list</target>
+      </trans-unit>
+      <trans-unit id="_NOXoz." resname="port">
+        <source>port</source>
+        <target>__port</target>
+      </trans-unit>
+      <trans-unit id="MrTOFF_" resname="title.form">
+        <source>title.form</source>
+        <target>__title.form</target>
+      </trans-unit>
+      <trans-unit id="yQRveje" resname="description">
+        <source>description</source>
+        <target>__description</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="E6BYFM_" resname="title.civility_list">
+        <source>title.civility_list</source>
+        <target>__title.civility_list</target>
+      </trans-unit>
+      <trans-unit id="DJIIaCo" resname="th.description">
+        <source>th.description</source>
+        <target>__th.description</target>
+      </trans-unit>
+      <trans-unit id="Bzl9Yz8" resname="form">
+        <source>form</source>
+        <target>__form</target>
+      </trans-unit>
+      <trans-unit id="xpfSmBv" resname="region">
+        <source>region</source>
+        <target>__region</target>
+      </trans-unit>
+      <trans-unit id="r.ZOT9U" resname="country">
+        <source>country</source>
+        <target>__country</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>__new</target>
+      </trans-unit>
+      <trans-unit id="Hi6m2bc" resname="pricing">
+        <source>pricing</source>
+        <target>__pricing</target>
+      </trans-unit>
+      <trans-unit id="HCsB_js" resname="list_of_pricing">
+        <source>list_of_pricing</source>
+        <target>__list_of_pricing</target>
+      </trans-unit>
+      <trans-unit id="aDtTH0H" resname="price">
+        <source>price</source>
+        <target>__price</target>
+      </trans-unit>
+      <trans-unit id="BzwWNMS" resname="status">
+        <source>status</source>
+        <target>__status</target>
+      </trans-unit>
+      <trans-unit id="4m91W5e" resname="minimum day">
+        <source>minimum day</source>
+        <target>__minimum day</target>
+      </trans-unit>
+      <trans-unit id="uJ0ZCyW" resname="maximum day">
+        <source>maximum day</source>
+        <target>__maximum day</target>
+      </trans-unit>
+      <trans-unit id="E3kQXA4" resname="minimum price">
+        <source>minimum price</source>
+        <target>__minimum price</target>
+      </trans-unit>
+      <trans-unit id="SYHtn8F" resname="maximum price">
+        <source>maximum price</source>
+        <target>__maximum price</target>
+      </trans-unit>
+      <trans-unit id="7ulJZoB" resname="ordering">
+        <source>ordering</source>
+        <target>__ordering</target>
+      </trans-unit>
+      <trans-unit id="0AXWxFm" resname="housing">
+        <source>housing</source>
+        <target>__housing</target>
+      </trans-unit>
+      <trans-unit id="utK4k_W" resname="Season">
+        <source>Season</source>
+        <target>__Season</target>
+      </trans-unit>
+      <trans-unit id="6E2r0gv" resname="Pricing Plan">
+        <source>Pricing Plan</source>
+        <target>__Pricing Plan</target>
+      </trans-unit>
+      <trans-unit id="oaNGiIK" resname="a.business_type_list">
+        <source>a.business_type_list</source>
+        <target>__a.business_type_list</target>
+      </trans-unit>
+      <trans-unit id=".JY_lRT" resname="business_type">
+        <source>business_type</source>
+        <target>__business_type</target>
+      </trans-unit>
+      <trans-unit id="hatL.5f" resname="title.business_type_list">
+        <source>title.business_type_list</source>
+        <target>__title.business_type_list</target>
+      </trans-unit>
+      <trans-unit id="oIngu9e" resname="th.user">
+        <source>th.user</source>
+        <target>__th.user</target>
+      </trans-unit>
+      <trans-unit id="7lh77eK" resname="th.created_at">
+        <source>th.created_at</source>
+        <target>__th.created_at</target>
+      </trans-unit>
+      <trans-unit id="EohvnQA" resname="number">
+        <source>number</source>
+        <target>__number</target>
+      </trans-unit>
+      <trans-unit id="XEwZZDQ" resname="provider">
+        <source>provider</source>
+        <target>__provider</target>
+      </trans-unit>
+      <trans-unit id="4rKcwbw" resname="expired_at">
+        <source>expired_at</source>
+        <target>__expired_at</target>
+      </trans-unit>
+      <trans-unit id="zA84uox" resname="csc">
+        <source>csc</source>
+        <target>__csc</target>
+      </trans-unit>
+      <trans-unit id="HrWB36u" resname="list_of_Credit Card">
+        <source>list_of_Credit Card</source>
+        <target>__list_of_Credit Card</target>
+      </trans-unit>
+      <trans-unit id="61NQ.ER" resname="CSC">
+        <source>CSC</source>
+        <target>__CSC</target>
+      </trans-unit>
+      <trans-unit id="jVOj42c" resname="hotel">
+        <source>hotel</source>
+        <target>__hotel</target>
+      </trans-unit>
+      <trans-unit id="Qgk8yhz" resname="a.mode_transport_list">
+        <source>a.mode_transport_list</source>
+        <target>__a.mode_transport_list</target>
+      </trans-unit>
+      <trans-unit id="0B5pVs6" resname="mode_transport">
+        <source>mode_transport</source>
+        <target>__mode_transport</target>
+      </trans-unit>
+      <trans-unit id="uKtR815" resname="title.port_list">
+        <source>title.port_list</source>
+        <target>__title.port_list</target>
+      </trans-unit>
+      <trans-unit id="fdWlsd5" resname="list_of_Payment_method">
+        <source>list_of_Payment_method</source>
+        <target>__list_of_Payment_method</target>
+      </trans-unit>
+      <trans-unit id="ypv2Gjl" resname="a.port_list">
+        <source>a.port_list</source>
+        <target>__a.port_list</target>
+      </trans-unit>
+      <trans-unit id="Jft1yJ6" resname="a.priority_list">
+        <source>a.priority_list</source>
+        <target>__a.priority_list</target>
+      </trans-unit>
+      <trans-unit id="MJKl8Nu" resname="priority">
+        <source>priority</source>
+        <target>__priority</target>
+      </trans-unit>
+      <trans-unit id="AIF3nCh" resname="level">
+        <source>level</source>
+        <target>__level</target>
+      </trans-unit>
+      <trans-unit id="HxFWgAh" resname="title.priority_list">
+        <source>title.priority_list</source>
+        <target>__title.priority_list</target>
+      </trans-unit>
+      <trans-unit id="6RugeP7" resname="th.level">
+        <source>th.level</source>
+        <target>__th.level</target>
+      </trans-unit>
+      <trans-unit id="tdj2jgL" resname="a.new_business_type">
+        <source>a.new_business_type</source>
+        <target>__a.new_business_type</target>
+      </trans-unit>
+      <trans-unit id="k.1l62l" resname="credit_card">
+        <source>credit_card</source>
+        <target>__credit_card</target>
+      </trans-unit>
+      <trans-unit id="CZIMQW8" resname="a.new_type_of_fee">
+        <source>a.new_type_of_fee</source>
+        <target>__a.new_type_of_fee</target>
+      </trans-unit>
+      <trans-unit id="6sucMgr" resname="a.type_of_fee_list">
+        <source>a.type_of_fee_list</source>
+        <target>__a.type_of_fee_list</target>
+      </trans-unit>
+      <trans-unit id="AcuaAqd" resname="well_done">
+        <source>well_done</source>
+        <target>__well_done</target>
+      </trans-unit>
+      <trans-unit id="PZzitw6" resname="list_of_hotels">
+        <source>list_of_hotels</source>
+        <target>__list_of_hotels</target>
+      </trans-unit>
+      <trans-unit id="7YWxvrd" resname="phone (fix)">
+        <source>phone (fix)</source>
+        <target>__phone (fix)</target>
+      </trans-unit>
+      <trans-unit id=".eQlZWf" resname="phone (mobile)">
+        <source>phone (mobile)</source>
+        <target>__phone (mobile)</target>
+      </trans-unit>
+      <trans-unit id="rR0UfkU" resname="is_not_enabled">
+        <source>is_not_enabled</source>
+        <target>__is_not_enabled</target>
+      </trans-unit>
+      <trans-unit id="7s7AnD2" resname="is_enabled">
+        <source>is_enabled</source>
+        <target>__is_enabled</target>
+      </trans-unit>
+      <trans-unit id="oKIlEj5" resname="a.new_mode_transport">
+        <source>a.new_mode_transport</source>
+        <target>__a.new_mode_transport</target>
+      </trans-unit>
+      <trans-unit id="6AmqlCT" resname="payment_method">
+        <source>payment_method</source>
+        <target>__payment_method</target>
+      </trans-unit>
+      <trans-unit id="HZl6Zl7" resname="list_of_Media">
+        <source>list_of_Media</source>
+        <target>__list_of_Media</target>
+      </trans-unit>
+      <trans-unit id="MydaxxC" resname="a.new_port">
+        <source>a.new_port</source>
+        <target>__a.new_port</target>
+      </trans-unit>
+      <trans-unit id="UbZuA7s" resname="a.new_priority">
+        <source>a.new_priority</source>
+        <target>__a.new_priority</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>__actions</target>
+      </trans-unit>
+      <trans-unit id="XrU8TvF" resname="a.new_rubric">
+        <source>a.new_rubric</source>
+        <target>__a.new_rubric</target>
+      </trans-unit>
+      <trans-unit id="b4Upbzl" resname="a.rubric_list">
+        <source>a.rubric_list</source>
+        <target>__a.rubric_list</target>
+      </trans-unit>
+      <trans-unit id="TTlx3mI" resname="park">
+        <source>park</source>
+        <target>__park</target>
+      </trans-unit>
+      <trans-unit id="mfeFXre" resname="wood">
+        <source>wood</source>
+        <target>__wood</target>
+      </trans-unit>
+      <trans-unit id="Q4HcKrF" resname="bank">
+        <source>bank</source>
+        <target>__bank</target>
+      </trans-unit>
+      <trans-unit id="XfC4HkT" resname="page.title.civility">
+        <source>page.title.civility</source>
+        <target>__page.title.civility</target>
+      </trans-unit>
+      <trans-unit id="MhotHGy" resname="page.title.country">
+        <source>page.title.country</source>
+        <target>__page.title.country</target>
+      </trans-unit>
+      <trans-unit id="A.AL5KH" resname="page.title.currency">
+        <source>page.title.currency</source>
+        <target>__page.title.currency</target>
+      </trans-unit>
+      <trans-unit id="Rm5bnNV" resname="currency">
+        <source>currency</source>
+        <target>__currency</target>
+      </trans-unit>
+      <trans-unit id="iNodCOy" resname="page.title.division">
+        <source>page.title.division</source>
+        <target>__page.title.division</target>
+      </trans-unit>
+      <trans-unit id="mQsj6BR" resname="division">
+        <source>division</source>
+        <target>__division</target>
+      </trans-unit>
+      <trans-unit id="V2EaJU1" resname="page.title.language">
+        <source>page.title.language</source>
+        <target>__page.title.language</target>
+      </trans-unit>
+      <trans-unit id="pO8wS6Q" resname="language">
+        <source>language</source>
+        <target>__language</target>
+      </trans-unit>
+      <trans-unit id="8g6C0Sr" resname="page.title.region">
+        <source>page.title.region</source>
+        <target>__page.title.region</target>
+      </trans-unit>
+      <trans-unit id="RxzNcTu" resname="page.title.subdivision">
+        <source>page.title.subdivision</source>
+        <target>__page.title.subdivision</target>
+      </trans-unit>
+      <trans-unit id="moC0R4g" resname="subdivision">
+        <source>subdivision</source>
+        <target>__subdivision</target>
+      </trans-unit>
+      <trans-unit id="xKS6uLf" resname="page.title.article">
+        <source>page.title.article</source>
+        <target>__page.title.article</target>
+      </trans-unit>
+      <trans-unit id="uIcaBQj" resname="page.title.family">
+        <source>page.title.family</source>
+        <target>__page.title.family</target>
+      </trans-unit>
+      <trans-unit id="ONeYp1p" resname="page.title.unity">
+        <source>page.title.unity</source>
+        <target>__page.title.unity</target>
+      </trans-unit>
+      <trans-unit id="xaC5jMb" resname="page.title.business_type">
+        <source>page.title.business_type</source>
+        <target>__page.title.business_type</target>
+      </trans-unit>
+      <trans-unit id="Oz01GpK" resname="page.title.credit_card">
+        <source>page.title.credit_card</source>
+        <target>__page.title.credit_card</target>
+      </trans-unit>
+      <trans-unit id="Dcf0gYs" resname="page.title.fee_type">
+        <source>page.title.fee_type</source>
+        <target>__page.title.fee_type</target>
+      </trans-unit>
+      <trans-unit id="_SDAwMA" resname="page.title.item_type">
+        <source>page.title.item_type</source>
+        <target>__page.title.item_type</target>
+      </trans-unit>
+      <trans-unit id="iFlh8u." resname="page.title.mode_transport">
+        <source>page.title.mode_transport</source>
+        <target>__page.title.mode_transport</target>
+      </trans-unit>
+      <trans-unit id="ClxcqkQ" resname="page.title.payment_method">
+        <source>page.title.payment_method</source>
+        <target>__page.title.payment_method</target>
+      </trans-unit>
+      <trans-unit id="V8A41Lx" resname="page.title.port">
+        <source>page.title.port</source>
+        <target>__page.title.port</target>
+      </trans-unit>
+      <trans-unit id="6eiTWyA" resname="page.title.priority">
+        <source>page.title.priority</source>
+        <target>__page.title.priority</target>
+      </trans-unit>
+      <trans-unit id="ZCQv15q" resname="page.title.year">
+        <source>page.title.year</source>
+        <target>__page.title.year</target>
+      </trans-unit>
+      <trans-unit id="TLTqJVg" resname="year">
+        <source>year</source>
+        <target>__year</target>
+      </trans-unit>
+      <trans-unit id="a22qjy8" resname="title.creation_form">
+        <source>title.creation_form</source>
+        <target>__title.creation_form</target>
+      </trans-unit>
+      <trans-unit id="1XPrwLu" resname="start_at">
+        <source>start_at</source>
+        <target>__start_at</target>
+      </trans-unit>
+      <trans-unit id="BzQVnKE" resname="end_at">
+        <source>end_at</source>
+        <target>__end_at</target>
+      </trans-unit>
+      <trans-unit id="g3kC10u" resname="is_open">
+        <source>is_open</source>
+        <target>__is_open</target>
+      </trans-unit>
+      <trans-unit id="R1IrPqu" resname="is_current">
+        <source>is_current</source>
+        <target>__is_current</target>
+      </trans-unit>
+      <trans-unit id="xUl3nXn" resname="rate">
+        <source>rate</source>
+        <target>__rate</target>
+      </trans-unit>
+      <trans-unit id="mvIRMps" resname="account">
+        <source>account</source>
+        <target>__account</target>
+      </trans-unit>
+      <trans-unit id="O6XIUef" resname="title.year_list">
+        <source>title.year_list</source>
+        <target>__title.year_list</target>
+      </trans-unit>
+      <trans-unit id="VgRtk.8" resname="th.start_at">
+        <source>th.start_at</source>
+        <target>__th.start_at</target>
+      </trans-unit>
+      <trans-unit id="3GgcMmc" resname="th.end_at">
+        <source>th.end_at</source>
+        <target>__th.end_at</target>
+      </trans-unit>
+      <trans-unit id="pMTxrNt" resname="th.is_open">
+        <source>th.is_open</source>
+        <target>__th.is_open</target>
+      </trans-unit>
+      <trans-unit id="ahQ7hgM" resname="th.is_current">
+        <source>th.is_current</source>
+        <target>__th.is_current</target>
+      </trans-unit>
+      <trans-unit id="1KzUvxG" resname="list_of_currencies">
+        <source>list_of_currencies</source>
+        <target>__list_of_currencies</target>
+      </trans-unit>
+      <trans-unit id="yVP5i49" resname="list_of_payment_method">
+        <source>list_of_payment_method</source>
+        <target>__list_of_payment_method</target>
+      </trans-unit>
+      <trans-unit id="H.wEBrm" resname="tax">
+        <source>tax</source>
+        <target>__tax</target>
+      </trans-unit>
+      <trans-unit id="KnQmOEm" resname="list_of_taxes">
+        <source>list_of_taxes</source>
+        <target>__list_of_taxes</target>
+      </trans-unit>
+      <trans-unit id="VOUufIT" resname="list_of_year">
+        <source>list_of_year</source>
+        <target>__list_of_year</target>
+      </trans-unit>
+      <trans-unit id="wvaYaKe" resname="business_type_list">
+        <source>business_type_list</source>
+        <target>__business_type_list</target>
+      </trans-unit>
+      <trans-unit id="sqA5X91" resname="civility_list">
+        <source>civility_list</source>
+        <target>__civility_list</target>
+      </trans-unit>
+      <trans-unit id="2Tg9ydN" resname="languages_list">
+        <source>languages_list</source>
+        <target>__languages_list</target>
+      </trans-unit>
+      <trans-unit id="wfia05U" resname="mode_transport_list">
+        <source>mode_transport_list</source>
+        <target>__mode_transport_list</target>
+      </trans-unit>
+      <trans-unit id="jlomLFv" resname="port_list">
+        <source>port_list</source>
+        <target>__port_list</target>
+      </trans-unit>
+      <trans-unit id="0vkS3u6" resname="priority_list">
+        <source>priority_list</source>
+        <target>__priority_list</target>
+      </trans-unit>
+      <trans-unit id="tozjOJR" resname="code(2)">
+        <source>code(2)</source>
+        <target>__code(2)</target>
+      </trans-unit>
+      <trans-unit id="LO97gph" resname="code(3)">
+        <source>code(3)</source>
+        <target>__code(3)</target>
+      </trans-unit>
+      <trans-unit id="nEcmELu" resname="list_of_countries">
+        <source>list_of_countries</source>
+        <target>__list_of_countries</target>
+      </trans-unit>
+      <trans-unit id="iwfIqG8" resname="list_of_divisions">
+        <source>list_of_divisions</source>
+        <target>__list_of_divisions</target>
+      </trans-unit>
+      <trans-unit id="MgACOPU" resname="list_of_regions">
+        <source>list_of_regions</source>
+        <target>__list_of_regions</target>
+      </trans-unit>
+      <trans-unit id="uG.1EVm" resname="list_of_subdivisions">
+        <source>list_of_subdivisions</source>
+        <target>__list_of_subdivisions</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

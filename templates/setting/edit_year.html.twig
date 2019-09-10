@@ -1,0 +1,164 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'page.title.year'|trans([],'setting') }}
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="{{ path('home') }}" class="breadcrumb-item">
+                    <i class="icon-home2 mr-2"></i>
+                    {{ 'dashboard'|trans([],'setting') }}</a>
+                <span class="breadcrumb-item active">
+                    {{ 'year'|trans([],'setting') }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.creation_form'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+
+                    <div class="form-group">
+                        <label>{{ 'start_at'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="icon-calendar3"></i>
+                                </span>
+                            </span>
+                            {{ form_widget(form.startAt) }}
+                            <span class="text-danger">{{ form_errors(form.startAt) }}</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'end_at'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <span class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i class="icon-calendar3"></i>
+                                </span>
+                            </span>
+                            {{ form_widget(form.endAt) }}
+                            <span class="text-danger">{{ form_errors(form.endAt) }}</span>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>{{ 'is_open'|trans([],'setting') }}
+                                    <span class="text-danger">*</span></label>
+                                {{ form_widget(form.is_open) }}
+                            </div>
+                        </div>
+
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label>{{ 'is_current'|trans([],'setting') }}
+                                </label>
+                                {{ form_widget(form.is_current) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">{{ 'save'|trans([],'setting') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+        </div>
+
+        <div class="col-md-8">
+
+            <!-- HTML sourced data -->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.year_list'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>{{ '#'|trans([],'setting') }}</th>
+                                <th>{{ 'th.start_at'|trans([],'setting') }}</th>
+                                <th>{{ 'th.end_at'|trans([],'setting') }}</th>
+                                <th>{{ 'th.is_open'|trans([],'setting') }}</th>
+                                <th>{{ 'th.is_current'|trans([],'setting') }}</th>
+                                <th class="text-center">{{ 'th.actions'|trans([],'setting') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for year in years %}
+                                <tr>
+                                    <td>{{ year.id }}</td>
+                                    <td>{{ year.startAt is empty ? "" : year.startAt|date("m/d/Y") }}</td>
+                                    <td>{{ year.endAt is empty ? "" : year.endAt|date("m/d/Y") }}</td>
+                                    <td>{{ year.isopen }}</td>
+                                    <td>{{ year.iscurrent }}</td>
+                                    <td class="text-center">
+                                        <div class="list-icons">
+                                            <a href="{{ path('year_edit', {id:year.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600">
+                                                <i class="icon-pencil7"></i>
+                                            </a>
+                                            <a href="{{ path('year_delete', {id:year.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /HTML sourced data -->
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+{% endblock %}

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="00pWmre" resname="family">
+        <source>family</source>
+        <target>__family</target>
+      </trans-unit>
+      <trans-unit id="EwPAaws" resname="type">
+        <source>type</source>
+        <target>__type</target>
+      </trans-unit>
+      <trans-unit id="t2p8oVP" resname="symbol">
+        <source>symbol</source>
+        <target>__symbol</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>__reference</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="pXkLBvY" resname="unity">
+        <source>unity</source>
+        <target>__unity</target>
+      </trans-unit>
+      <trans-unit id="TZNbP4d" resname="stock_alert">
+        <source>stock_alert</source>
+        <target>__stock_alert</target>
+      </trans-unit>
+      <trans-unit id="CETfj_6" resname="weight">
+        <source>weight</source>
+        <target>__weight</target>
+      </trans-unit>
+      <trans-unit id="cLJ96yu" resname="dimensions">
+        <source>dimensions</source>
+        <target>__dimensions</target>
+      </trans-unit>
+      <trans-unit id="Myogedg" resname="pua">
+        <source>pua</source>
+        <target>__pua</target>
+      </trans-unit>
+      <trans-unit id="JYel6_i" resname="puv">
+        <source>puv</source>
+        <target>__puv</target>
+      </trans-unit>
+      <trans-unit id="C9opMG7" resname="puv_min">
+        <source>puv_min</source>
+        <target>__puv_min</target>
+      </trans-unit>
+      <trans-unit id="9.cZCH2" resname="puv_max">
+        <source>puv_max</source>
+        <target>__puv_max</target>
+      </trans-unit>
+      <trans-unit id="mvIRMps" resname="account">
+        <source>account</source>
+        <target>__account</target>
+      </trans-unit>
+      <trans-unit id="x1a4QcT" resname="account_sale">
+        <source>account_sale</source>
+        <target>__account_sale</target>
+      </trans-unit>
+      <trans-unit id="RiEIJUr" resname="account_pur">
+        <source>account_pur</source>
+        <target>__account_pur</target>
+      </trans-unit>
+      <trans-unit id="lt6cyGP" resname="account_var">
+        <source>account_var</source>
+        <target>__account_var</target>
+      </trans-unit>
+      <trans-unit id="hDk63Yx" resname="article">
+        <source>article</source>
+        <target>__article</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="gi.jZ5y" resname="institution">
+        <source>institution</source>
+        <target>__institution</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>__code</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>__email</target>
+      </trans-unit>
+      <trans-unit id="1STBoIE" resname="mobile">
+        <source>mobile</source>
+        <target>__mobile</target>
+      </trans-unit>
+      <trans-unit id="HG5sTAL" resname="fix">
+        <source>fix</source>
+        <target>__fix</target>
+      </trans-unit>
+      <trans-unit id="5urqGOi" resname="location">
+        <source>location</source>
+        <target>__location</target>
+      </trans-unit>
+      <trans-unit id="UKyB_XA" resname="town">
+        <source>town</source>
+        <target>__town</target>
+      </trans-unit>
+      <trans-unit id="UMLtdZ1" resname="branch_list">
+        <source>branch_list</source>
+        <target>__branch_list</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>__phone</target>
+      </trans-unit>
+      <trans-unit id="Qxy_nfQ" resname="page.title.institution">
+        <source>page.title.institution</source>
+        <target>__page.title.institution</target>
+      </trans-unit>
+      <trans-unit id=".JY_lRT" resname="business_type">
+        <source>business_type</source>
+        <target>__business_type</target>
+      </trans-unit>
+      <trans-unit id="VCqBCYJ" resname="cigle">
+        <source>cigle</source>
+        <target>__cigle</target>
+      </trans-unit>
+      <trans-unit id="2Ayb_RD" resname="address">
+        <source>address</source>
+        <target>__address</target>
+      </trans-unit>
+      <trans-unit id="aiFJAsZ" resname="po_box">
+        <source>po_box</source>
+        <target>__po_box</target>
+      </trans-unit>
+      <trans-unit id="F.3qKWR" resname="business_number">
+        <source>business_number</source>
+        <target>__business_number</target>
+      </trans-unit>
+      <trans-unit id="y5R_Z1Y" resname="tax_payer_number">
+        <source>tax_payer_number</source>
+        <target>__tax_payer_number</target>
+      </trans-unit>
+      <trans-unit id="NZjOb5Z" resname="logo">
+        <source>logo</source>
+        <target>__logo</target>
+      </trans-unit>
+      <trans-unit id="dHqPOYO" resname="website">
+        <source>website</source>
+        <target>__website</target>
+      </trans-unit>
+      <trans-unit id="ry_fGVb" resname="page.title.branch">
+        <source>page.title.branch</source>
+        <target>__page.title.branch</target>
+      </trans-unit>
+      <trans-unit id="84x2TIq" resname="branch">
+        <source>branch</source>
+        <target>__branch</target>
+      </trans-unit>
+      <trans-unit id="dG3e9Gp" resname="institution_list">
+        <source>institution_list</source>
+        <target>__institution_list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

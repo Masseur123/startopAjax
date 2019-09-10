@@ -1,0 +1,98 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title..cost_center_income'|trans([],'budget') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'cost_center_income'|trans([],'budget') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('cost_center_income') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'cost_center_income_list'|trans([],'budget')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+    
+	<div class="row">
+		<div class="col-md-6">
+			<!-- Basic layout-->
+			{{ form_start(form) }}
+			<div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+				</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label>
+							{{ 'code'|trans([],'budget') }}
+							<span class="text-danger">*</span>
+						</label>
+						{{ form_widget(form.code) }}
+					</div>
+					<div class="form-group">
+						<label>
+							{{ 'title'|trans([],'budget') }}
+							<span class="text-danger">*</span>
+						</label>
+						{{ form_widget(form.title) }}
+					</div>
+					<div class="form-group">
+						<label>
+							{{ 'account'|trans([],'budget') }}</label>
+						{{ form_widget(form.account) }}
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>
+										{{ 'enabled'|trans([],'budget') }}
+									</label>
+									{{ form_widget(form.is_enabled) }}
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>
+										{{ 'has_control'|trans([],'budget') }}
+									</label>
+									{{ form_widget(form.has_control) }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex justify-content-between align-items-center">
+						<button class="btn btn-light" type="reset">
+							{{ 'cancel'|trans([],'base')|upper }}
+						</button>
+						<div>
+							{{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+							<button class="btn btn-primary form-btn" type="submit">
+								{{ 'save'|trans([],'base')|upper }}
+								<i class="icon-paperplane ml-2"></i>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ form_end(form) }}
+			<!-- /basic layout -->
+		</div>
+	</div>
+
+{% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+        <script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+    {% endblock %}

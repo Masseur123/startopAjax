@@ -1,0 +1,163 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.bank_to_cash_transfer'|trans([],'treasury') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'bank_to_cash_transfer'|trans([],'treasury') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('bank_to_cash') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-3">
+			{{ form_start(form) }}
+			<div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+				</div>
+				<div class="card-body">
+					<div class="form-group">
+						<label>
+							{{ 'bank'|trans([],'treasury') }}
+							<span class="text-danger">*</span>
+						</label>
+						{{ form_widget(form.bankSrc) }}
+					</div>
+					<div class="form-group">
+						<label>
+							{{ 'cashdesk'|trans([],'treasury') }}
+							<span class="text-danger">*</span>
+						</label>
+						{{ form_widget(form.cashdeskDes) }}
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>
+										{{ 'amount'|trans([],'treasury') }}
+										<span class="text-danger">*</span>
+									</label>
+									{{ form_widget(form.amount) }}
+								</div>
+							</div>
+							<div class="col-md-6">
+								<div class="form-group">
+									<label>
+										{{ 'reference'|trans([],'treasury') }}
+									</label>
+									{{ form_widget(form.reference) }}
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="form-group">
+						<label>
+							{{ 'description'|trans([],'treasury') }}
+							<span class="text-danger">*</span>
+						</label>
+						{{ form_widget(form.description) }}
+					</div>
+					<div class="d-flex justify-content-between align-items-center">
+						<button class="btn btn-light" type="reset">
+							{{ 'cancel'|trans([],'base')|upper }}
+						</button>
+						<button class="btn btn-primary form-btn" type="submit">
+							{{ 'save'|trans([],'base')|upper }}
+							<i class="icon-paperplane ml-2"></i>
+						</button>
+					</div>
+				</div>
+			</div>
+			{{ form_end(form) }}
+		</div>
+		<div
+			class="col-md-9">
+			<!-- HTML sourced data -->
+			<div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold"> {{ 'bank_to_cash_list'|trans([],'treasury')|upper }}</span></h5>
+				</div>
+				<table class="table datatable-responsive table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th>
+								{{ 'source'|trans([],'treasury') }}</th>
+							<th>
+								{{ 'destination'|trans([],'treasury') }}</th>
+							<th>
+								{{ 'amount'|trans([],'treasury') }}</th>
+							<th>
+								{{ 'reference'|trans([],'treasury') }}</th>
+							<th>
+								{{ 'description'|trans([],'treasury') }}</th>
+							<th class="text-center">
+								{{ 'actions'|trans([],'treasury') }}</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for bankToCash in bankToCashs %}
+							<tr>
+								<td>
+									{{ bankToCash.bankSrc.code }}</td>
+								<td>
+									{{ bankToCash.cashdeskDes.code }}</td>
+								<td>
+									{% if bankToCash.isvalid %}
+										<span class="badge badge-flat border-success text-success-600">
+											{% else %}
+											<span class="badge badge-flat border-info text-info-600">
+											{% endif %}
+											{{ bankToCash.amount|number_format(2, '.', ',') }}
+										</span>
+									</td>
+									<td>
+										{{ bankToCash.reference }}</td>
+									<td>
+										{{ bankToCash.description }}</td>
+									<td class="text-center">
+										<div class="list-icons">
+											{% if not bankToCash.isvalid %}
+												<a href="{{ path('bank_to_cash_edit', {id:bankToCash.id}) }}" class="list-icons-item form-icon text-primary-600" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body">
+													<i class="icon-pencil7"></i>
+												</a>
+												<a href="{{ path('bank_to_cash_delete', {id:bankToCash.id}) }}" class="list-icons-item form-icon text-danger-600" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+													<i class="icon-trash"></i>
+												</a>
+												<a href="{{ path('bank_to_cash_validate', {id:bankToCash.id}) }}" class="list-icons-item text-success-600" data-popup="tooltip" title="{{ 'validate'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+													<i class="icon-checkmark4"></i>
+												</a>
+											{% endif %}
+											{% if bankToCash.isvalid %}
+												<a href="{{ path('bank_to_cash_cancel', {id:bankToCash.id}) }}" class="list-icons-item text-warning-600" data-popup="tooltip" title="{{ 'cancel'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+													<i class="icon-cancel-circle2"></i>
+												</a>
+											{% endif %}
+										</div>
+									</td>
+								</tr>
+							{% endfor %}
+						</tbody>
+					</table>
+				</div>
+				<!-- /HTML sourced data -->
+			</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+{% endblock %}
+    

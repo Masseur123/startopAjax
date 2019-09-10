@@ -1,0 +1,125 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'page.title.business_type'|trans([],'setting') }}
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="{{ path('home') }}" class="breadcrumb-item">
+                    <i class="icon-home2 mr-2"></i>
+                    {{ 'dashboard'|trans([],'setting') }}</a>
+                <span class="breadcrumb-item active">
+                    {{ 'business_type'|trans([],'setting') }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.form'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <label>{{ 'code'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.code) }}
+                        <span class="text-danger">{{ form_errors(form.code) }}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'description'|trans([],'setting') }}
+                        </label>
+                        {{ form_widget(form.description) }}
+                        <span class="text-danger">{{ form_errors(form.code) }}</span>
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'save'|trans([],'setting') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+            <!-- /basic layout -->
+        </div>
+
+        <div class="col-md-8">
+
+            <!-- HTML sourced data -->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.business_type_list'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>{{ '#'|trans([],'setting') }}</th>
+                                <th>{{ 'th.code'|trans([],'setting') }}</th>
+                                <th >{{ 'th.description'|trans([],'setting') }}</th>
+                                <th>{{ 'th.user'|trans([],'setting') }}</th>
+                                <th>{{ 'th.created_at'|trans([],'setting') }}</th>
+                                <th class="text-center">{{ 'th.actions'|trans([],'setting') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for business_type in businessTypes %}
+                                <tr>
+                                    <td>{{ business_type.id }}</td>
+                                    <td>{{ business_type.code }}</td>
+                                    <td>{{ business_type.description }}</td>
+                                    <td>{{ business_type.user }}</td>
+                                    <td>{{ business_type.createdAt|date}}</td>
+                                    <td class="text-center">
+                                        <div class="list-icons">
+                                            <a href="{{ path('business_type_edit', {id:business_type.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600">
+                                                <i class="icon-pencil7"></i>
+                                            </a>
+                                            <a href="{{ path('business_type_delete', {id:business_type.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /HTML sourced data -->
+
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+{% endblock %}

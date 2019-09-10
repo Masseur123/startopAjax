@@ -1,0 +1,93 @@
+/* ------------------------------------------------------------------------------
+ *
+ *  # Custom css
+ *
+ *  For header, form, ...
+ *
+ * ---------------------------------------------------------------------------- */
+
+.cw {
+     background:#f9f9f9 !important; 
+     padding-top:20px;
+    }
+
+ .phc-he {
+     height: 50px;
+    }
+
+.a-btn {
+     background:#d05b00 !important;
+     margin-left: 20px;
+    }
+
+ /*.base-main-nav {
+     background:#4077B5 !important; #0081ff !important  
+     border-bottom:0px solid #94b3cd;
+    }*/
+	
+ .navbar-startop {
+     background: #1E7FCB !important;
+    }
+	
+ .navbar-logo {
+	 width: 135px !important;
+	 height: 25px !important;
+    }
+	
+.main-sidebar-white {
+	 border:1px solid #fff;
+    width: 220px;
+    }
+
+.navbar-brand-startop{
+    padding-top: 12px;
+    padding-bottom: 10px;
+    width: 180px !important;
+}
+
+.d-inline-block-startop{
+    width: 190px;
+}
+
+.navbar-collapse-startop{
+    margin-left: -6.20rem;
+}
+
+.navbar-nav-link-startop{
+    color: #fff;
+}
+	
+.like-gb {
+	background: #357AB7 !important;
+    }
+    
+
+/* Form */
+/*.main-div {
+     border:1px solid #94b3cd !important;
+    }*/
+
+.main-div-header {
+     background:#FFF !important;
+     height: 40px !important;
+    }
+
+.form-btn {
+     background:#d05b00 !important;
+    }
+
+    .form-btn-sn {
+        background:#d05b00 !important;
+        margin-right: 5px;
+       }
+
+
+.form-a {
+     background:#d05b00 !important;
+     margin-left: 30px;
+    }
+
+.form-icon {
+    margin-right: 10px !important;
+    }
+/* End Form */

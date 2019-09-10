@@ -1,0 +1,141 @@
+/* ------------------------------------------------------------------------------
+ *
+ *  # Custom css
+ *
+ *  For header, form, ...
+ *
+ * ---------------------------------------------------------------------------- */
+
+.content-wrapper-startop {
+     /*background:#1063af !important;*/
+     padding-top:20px;
+    }
+
+ .phc-he {
+     height: 30px;
+    }
+
+.a-btn {
+     background:#d05b00 !important;
+     margin-left: 20px;
+    }
+
+ /*.base-main-nav {
+     background:#4077B5 !important; #0081ff !important  
+     border-bottom:0px solid #94b3cd;
+    }*/
+	
+ .navbar-startop {
+     background: #00a3c8 !important;
+    }
+	
+ .navbar-logo {
+	 width: 138px !important;
+	 height: 28px !important;
+    }
+	
+.main-sidebar-white {
+    width: 220px;
+    background: #00a3c8;
+    color: #fff;
+    }
+
+.navbar-brand-startop{
+    padding-top: 12px;
+    padding-bottom: 10px;
+    width: 180px !important;
+}
+
+.d-inline-block-startop{
+    width: 190px;
+}
+
+.navbar-collapse-startop{
+    margin-left: -6.20rem;
+}
+
+.navbar-nav-link-startop{
+    color: #fff;
+}
+	
+/*.like-gb {
+	background: #357AB7 !important;
+    }*/
+
+.component {
+    width:20%;
+    height:auto;
+    padding:5px 5px 5px 5px;
+}
+
+a {
+    color: #fff;
+}
+
+/*                                  Login                                       */
+.login-startop {
+    color: #761c19;
+}
+/* End Login */
+
+
+/* Form */
+/*.main-div {
+     border:1px solid #94b3cd !important;
+    }*/
+
+.main-div-header {
+     background:#FFF !important;
+     height: 40px !important;
+    }
+
+.form-btn {
+     background:#d05b00 !important;
+    }
+	
+.form-btn-sn {
+        background:#d05b00 !important;
+        margin-right: 5px;
+       }
+
+
+.form-a {
+     background:#d05b00 !important;
+     margin-left: 30px;
+    }
+
+.form-icon {
+    margin-right: 10px !important;
+    }
+/* End Form */
+
+
+/*                                  Table                                       */
+
+tr th {
+    font-size: 10pt;
+}
+
+tr td {
+    font-size: 10.5pt;
+}
+
+tr td .text-success{
+    font-size: 10.5pt;
+}
+tr td .text-warning{
+    font-size: 10.5pt;
+}
+tr td .text-danger{
+    font-size: 10.5pt;
+}
+
+tr td .badge-info{
+    font-size: 10.5pt;
+}
+
+tr td .badge-warning{
+    font-size: 10.5pt;
+}
+
+/* End Table */

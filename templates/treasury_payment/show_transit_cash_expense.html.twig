@@ -1,0 +1,79 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.cash_expense_validated'|trans([],'treasury') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'transit_cash_expense'|trans([],'treasury') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('cash_expense_payment') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'cash_expense_payment'|trans([],'treasury')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-12">
+			<!-- HTML sourced data -->
+			<div class="card">
+				<!-- <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold"> {{ 'cash_expense_validated'|trans([],'treasury')|upper }}</span></h5>
+				</div> -->
+				
+				<!-- <div class="card-body"></div> -->
+				<table class="table datatable-responsive table-bordered table-striped table-hover">
+					<thead>
+						<tr>
+							<th>{{ 'date'|trans([],'treasury') }}</th>
+							<th>{{ 'transit'|trans([],'treasury') }}</th>
+							<th>{{ 'document'|trans([],'treasury') }}</th>
+							<th>{{ 'amount'|trans([],'treasury') }}</th>
+							<th>{{ 'tax_amount'|trans([],'treasury') }}</th>
+							<th>{{ 'tax'|trans([],'treasury') }}</th>
+							<th class="text-center">{{ 'actions'|trans([],'base') }}</th>
+						</tr>
+					</thead>
+					<tbody>
+						{% for transitHist in transitHists %}
+							<tr>
+								<td>{{ transitHist.createdAt is empty ? "" : transitHist.createdAt|date("Y/m/d") }}</td>
+								<td>{{ transitHist.transit.reference }}</td>
+								<td>{{ transitHist.document.code }}</td>
+								<td>
+									{{ transitHist.amount }}
+									{% if transitHist.cashpay %}
+										<span class="badge badge-flat border-success text-success-600">
+											{{ transitHist.currency.code }}</span>
+										{% else %}
+										<span class="badge badge-flat border-danger text-danger-600">
+											{{ transitHist.currency.code }}</span>
+									{% endif %}
+								</td>
+								<td>{{ transitHist.taxamount }}</td>
+								<td>{{ transitHist.tax is empty ? "" : transitHist.tax.rate }}</td>
+								<td class="text-center">
+									<div class="list-icons">
+										<a href="{{ path('transit_cash_expense_details', {id:transitHist.id}) }}" class="btn btn-info">{{ 'details'|trans([],'base')|upper }}</a>
+									</div>
+								</td>
+							</tr>
+						{% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<!-- /HTML sourced data -->
+		</div>
+	</div>
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+{% endblock %}

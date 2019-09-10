@@ -1,0 +1,73 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'settlement_list'|trans([],'purchase') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'settlement_list'|trans([],'purchase') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('sale_invoice_settle_new', {id:invoice.id}) }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+        <div class="card">
+            <table class="table datatable-responsive table-bordered table-striped table-hover">
+                <thead class="bg-blue">
+                <tr>
+                    <th>{{ 'th.reference'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'amount'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'amount p'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'tva'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'bank'|trans([],'purchase')|upper }}</th>
+                    <th class="text-center">{{ 'th.actions'|trans([],'purchase') }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for settlement in settlements %}
+                    <tr>
+                        {#<td>{{ invoice.client is empty ? "" : invoice.client.person.name }}</td>#}
+                        <td>{{ settlement.invoice.reference }}</td>
+                        <td>{{ settlement.amount is empty ? "" : settlement.invoice.amountTva}}</td>
+                        <td>{{ settlement.amountPay }}</td>
+                        <td>{{ settlement.tva }}</td>
+                        {% if settlement.bank is null %}
+                            <td>{{ settlement.cashier is empty ? "" : settlement.cashier.account }}</td>
+                        {% else %}
+                            <td>{{ settlement.bank is empty ? "" : settlement.bank.name }}</td>
+                        {% endif %}
+
+                        {#<td>{{ invoice.payAt is empty ? "" : invoice.payAt|date("m/d/Y") }}</td>
+                        <td>{{ invoice.paymentDelay }}</td>#}
+
+                        <td class="text-center">
+                            <div class="list-icons">
+                                {#<a href="{{ path('sale_invoice_settle_delete', {id:invoice.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>#}
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /HTML sourced data -->
+
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

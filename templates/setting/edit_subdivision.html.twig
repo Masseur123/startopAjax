@@ -1,0 +1,91 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {{ 'page.title.subdivision'|trans([],'setting') }} {% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'list_of_subdivisions'|trans([],'setting') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block content %} 
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'form'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <label>{{ 'division'|trans([],'security') }} <span class="text-danger">*</span></label>
+                            {{ form_widget(form.division) }}
+                        <span class="text-danger"> {{ form_errors(form.division) }}</span>
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'name'|trans([],'setting') }} <span class="text-danger">*</span></label>
+                            {{ form_widget(form.name, {'attr':{'placeholder':"Name" , 'class':"form-control"}}) }}
+                        <span class="text-danger"> {{ form_errors(form.name) }}</span>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-light" type="reset">
+                            {{ 'cancel'|trans([],'base')|upper }}
+                        </button>
+                        <div>
+                            {{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+                            <button class="btn btn-primary form-btn" type="submit">
+                                {{ 'save'|trans([],'base')|upper }}
+                                <i class="icon-paperplane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+            <!-- /basic layout -->
+        </div>
+        
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+
+    
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+    
+{% endblock %}

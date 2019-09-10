@@ -1,0 +1,94 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.housing_type'|trans([],'setting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'housing_type'|trans([],'setting') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('housing_h-type_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+        <div class="col-md-12">
+                <!-- HTML sourced data -->
+                <div class="card">
+                    <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                        <h5 class="card-title"><span class="font-weight-bold"> {{ 'list_of_housings_type'|trans([],'setting')|upper }}</span></h5>
+                    </div>
+        
+                    <!-- <div class="card-body"></div> -->
+        
+                    <div class="card-body">
+                        <table class="table datatable-responsive table-bordered table-striped table-hover" id="region">
+                            <thead>
+                    <tr>
+                        <th>{{ 'name'|trans([],'housing') }}</th>
+                        <th>{{ 'maxclient'|trans([],'housing') }}</th>
+                        <th>{{ 'max_adults'|trans([],'housing') }}</th>
+                        <th>{{ 'max_children'|trans([],'housing') }}</th>
+                        <th>{{ 'max_babies'|trans([],'housing') }}</th>
+                        <th>{{ 'color'|trans([],'housing') }}</th>
+                        <th>{{ 'ordering'|trans([],'housing') }}</th>
+                        <th>{{ 'min_stay'|trans([],'housing') }}</th>
+                        <th>{{ 'status'|trans([],'housing') }}</th>
+                        <th class="text-center">Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {% for housingtype in housingtypes %}
+                    <tr>
+                        <td><span class="badge badge-info">{{ housingtype.name }}</td>
+                        <td>{{ housingtype.maxclient }}</td>
+                        <td>{{ housingtype.maxadults }}</td>
+                        <td>{{ housingtype.maxchildren }}</td>
+                        <td>{{ housingtype.maxbabies }}</td>
+                        <td>{{ housingtype.color }}</td>
+                        <td>{{ housingtype.ordering }}</td>
+                        <td>{{ housingtype.minstay }}</td>
+                        <td>
+                            {% if housingtype.isenabled == 0 %}
+                            <span class="badge badge-danger">{{ 'is_not_enabled'|trans([],'housing') }}</span>
+                            {% else %}
+                            <span class="badge badge-primary badge-pill">{{ 'is_enabled'|trans([],'housing') }}</span>
+                            {% endif %}
+                        </td>
+                        <td class="text-center">
+                            <div class="list-icons">
+                                <a href="{{ path('housing_h-type_edit', {id:housingtype.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                <a href="{{ path('housing_h-type_delete', {id:housingtype.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+
+
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        </div>
+        <!-- /HTML sourced data -->
+    </div>
+</div>
+
+{% endblock %}
+
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

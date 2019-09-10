@@ -1,0 +1,208 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.log'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'log'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('log') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'log_list'|trans([],'transit')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="card">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+					<div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                        </div>
+                    </div>
+				</div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="row">
+                        <div class="col-md-6">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> Shipping details</legend> -->
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+											<label>{{ 'transit'|trans([],'transit') }}</label>
+											{{ form_widget(form.transit) }}
+										</div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>{{ 'log_number'|trans([],'transit') }}
+                                            <span class="text-danger">*</span></label>
+                                            {{ form_widget(form.reference) }}
+                                        </div>
+                                    </div>
+									<div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>{{ 'inter_log_number'|trans([],'transit') }}</label>
+                                            {{ form_widget(form.internum) }}
+                                        </div>
+                                    </div>
+                                </div>
+								<div class="row">
+                                    <div class="col-md-6">
+										<div class="form-group">
+                                            <label>{{ 'procurement_number'|trans([],'transit') }}</label>
+                                            {{ form_widget(form.logProcurement) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+											<label>{{ 'wood'|trans([],'transit') }}
+												<span class="text-danger">*</span></label>
+											{{ form_widget(form.wood) }}
+										</div>
+                                    </div>
+                                </div>
+                                
+                            </fieldset>
+                        </div>
+                        <div class="col-md-6">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Personal details</legend> -->
+
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>{{ 'dm'|trans([],'transit') }}</label>
+                                            {{ form_widget(form.dm) }}
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>{{ 'gb'|trans([],'transit') }}</label>
+                                            {{ form_widget(form.gb) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>{{ 'pb'|trans([],'transit') }}</label>
+                                            {{ form_widget(form.pb) }}
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'length'|trans([],'transit') }}</label>
+                                            {{ form_widget(form.length) }}
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'volume'|trans([],'transit') }}
+                                                <span class="text-danger">*</span></label>
+                                            {{ form_widget(form.volume) }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button type="reset" class="btn btn-light">
+                            {{ 'cancel'|trans([],'base')|upper }}
+                        </button>
+                        </button>
+						<div>
+							{{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+							<button class="btn btn-primary form-btn" type="submit">
+								{{ 'save'|trans([],'base')|upper }}
+								<i class="icon-paperplane ml-2"></i>
+							</button>
+						</div>
+                    </div>
+
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    {#
+        <div class="row">
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card form-header">
+				<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold"> {{ 'log_list'|trans([],'transit')|upper }}</span></h5>
+				</div>
+
+                <table class="table datatable-responsive table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>{{ 'wood'|trans([],'transit') }}</th>
+                            <th>{{ 'reference'|trans([],'transit') }}</th>
+                            <th>{{ 'log_length'|trans([],'transit') }}</th>
+                            <th>{{ 'gb'|trans([],'transit') }}</th>
+                            <th>{{ 'pb'|trans([],'transit') }}</th>
+                            <th>{{ 'dm'|trans([],'transit') }}</th>
+                            <th>{{ 'volume'|trans([],'transit') }}</th>
+                            <th class="text-center">{{ 'actions'|trans([],'base') }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for log in logs %}
+                            <tr>
+                                <td>{{ log.wood.name }}</td>
+                                <td>{{ log.reference }}</td>
+                                <td>{{ log.length }}</td>
+                                <td>{{ log.gb }}</td>
+                                <td>{{ log.pb }}</td>
+                                <td>{{ log.dm }}</td>
+                                <td>{{ log.volume }}</td>
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        <a href="{{ path('log_edit', {id:log.id}) }}" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body" class="list-icons-item form-icon text-primary-600">
+                                            <i class="icon-pencil7"></i>
+                                        </a>
+                                        <a href="{{ path('log_delete', {id:log.id}) }}" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')" class="list-icons-item text-danger-600">
+                                            <i class="icon-trash"></i>
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+    </div>
+    #}
+
+    
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+{% endblock %}

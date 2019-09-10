@@ -1,0 +1,101 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ 'page.title.group_role'|trans([],'admin') }}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Custom stylesheets -->
+    <link
+        href="{{ asset('assets/css/form_table.css') }}" rel="stylesheet" type="text/css">
+    <!-- /custom stylesheets -->
+    {% endblock %}
+    {% block body_class %}
+        navbar-top
+    {% endblock %}
+    {% block breadcrumb %}
+        <div class="page-header page-header-light" style="border-left: 1px solid #ddd; border-right: 1px solid #ddd; margin-bottom: 0;">
+            <div class="breadcrumb-line breadcrumb-line-light">
+                <div class="breadcrumb">
+                    <a href="{{ path('dashboard') }}" class="breadcrumb-item">
+                        <i class="icon-home2 mr-2"></i>
+                        {{ 'dashboard'|trans([],'admin') }}</a>
+                    <span class="breadcrumb-item active">
+                        {{ 'group_role'|trans([],'admin') }}</span>
+                </div>
+            </div>
+        </div>
+    {% endblock %}
+    {% block content %}
+        <div class="row">
+            <div
+                class="col-md-12">
+                <!-- Basic layout-->
+                {{ form_start(form) }}
+                <div class="card form-header">
+                    <div class="card-header bg-blue text-white header-elements-inline form-header-back">
+                        <h6 class="card-title">
+                            {{ 'group_menu'|trans([],'admin')|upper }}</h6>
+                    </div>
+                    <div class="card-body">
+					
+						<div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'group'|trans([],'admin') }}
+                                    </label>
+									<input type="text" class="form-control" value="{{ group.name }}" readonly value="read only">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'component'|trans([],'admin') }}
+                                    </label>
+                                    <input type="text" class="form-control" value="{{ component.name }}" readonly value="read only">
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'menu'|trans([],'admin') }}
+                                    </label>
+                                    <input type="text" class="form-control" value="{{ menu.title }}" readonly value="read only">
+                                </div>
+                            </div>
+							<div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'role'|trans([],'admin') }}
+                                    </label>
+                                    {{ form_widget(form.roles) }}
+                                </div>
+                            </div>
+                        </div>
+					
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-light" type="reset">
+                                {{ 'cancel'|trans([],'admin')|upper }}
+                            </button>
+                            <button class="btn btn-primary form-btn" type="submit">
+                                {{ 'save'|trans([],'admin')|upper }}
+                                <i class="icon-paperplane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                {{ form_end(form) }}
+                <!-- /basic layout -->
+            </div>
+      
+        </div>
+    {% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+		<script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/selects/bootstrap_multiselect.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/form_multiselect.js') }}"></script>
+    {% endblock %}

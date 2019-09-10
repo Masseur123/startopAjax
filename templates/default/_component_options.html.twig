@@ -1,0 +1,21 @@
+<li class="nav-item dropdown">
+	<a href="#" class="navbar-nav-link dropdown-toggle text-white" data-toggle="dropdown">
+		<i class="icon-make-group mr-2"></i>
+		{{ 'component'|trans([],'admin') }}
+	</a>
+
+	<div class="dropdown-menu dropdown-menu-right dropdown-content wmin-md-350">
+		<div class="dropdown-content-body p-2">
+			<div class="row no-gutters">
+			{% for component in components %}
+				<div class="col-12 col-sm-4">
+					<a href="{{ path(component.route, {id:component.id}) }}" class="d-block text-default text-center ripple-dark rounded p-3">
+						<i class="{{ component.icon }} icon-2x"></i>
+						<div class="font-size-sm font-weight-semibold text-uppercase mt-2">{{ component.name }}</div>
+					</a>
+				</div>
+			{% endfor %}
+			</div>
+		</div>
+	</div>
+</li>

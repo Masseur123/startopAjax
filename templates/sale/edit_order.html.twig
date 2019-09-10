@@ -1,0 +1,114 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'order_list'|trans([],'purchase') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'order'|trans([],'purchase') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('sale_order') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'order_list'|trans([],'purchase')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Basic layout-->
+            {{ form_start(form) }}
+            <div class="card">
+                <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                    <h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group" id="quot">
+                                <label>{{ 'quotation'|trans([],'purchase') }}</label>
+                                {{ form_widget(form.quotation) }}
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="form-group" id="prov">
+                                <label>{{ 'provider'|trans([],'purchase') }}</label>
+                                {{ form_widget(form.provider) }}
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label>{{ 'reference'|trans([],'purchase') }} <span class="text-danger">*</span></label>
+                                {{ form_widget(form.reference, {'attr':{'class':"form-control"}}) }}
+                            </div>
+
+                        </div>
+                        <div class="col">
+                            <div class="form-group">
+                                <label>{{ 'date'|trans([],'purchase') }} <span class="text-danger">*</span></label>
+                                <div>
+                                    <div class="input-group">
+                                <span class="input-group-prepend">
+                                    <span class="input-group-text"><i class="icon-calendar3"></i></span>
+                                </span>
+                                        {{ form_widget(form.date, {'attr':{'class':"form-control", 'id':"anytime-month-numeric"}}) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="d-flex justify-content-between align-items-center">
+                        <button class="btn btn-light" type="reset">
+                            {{ 'cancel'|trans([],'base')|upper }}
+                        </button>
+                        <div>
+                            {{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+                            <button class="btn btn-primary form-btn" type="submit">
+                                {{ 'save'|trans([],'base')|upper }}
+                                <i class="icon-paperplane ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <!-- /basic layout -->
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+
+    <script>
+        $(document).ready(function(){
+            $('#quot').on('change', function(){
+                if (this.value == 1)
+                {
+                    $('#prov').show();
+                }
+                else {
+                    $('#prov').hide();
+                }
+            });
+        });
+    </script>
+
+
+{% endblock %}

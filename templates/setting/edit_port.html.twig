@@ -1,0 +1,76 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'page.title.port'|trans([],'setting') }}
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="{{ path('home') }}" class="breadcrumb-item">
+                    <i class="icon-home2 mr-2"></i>
+                    {{ 'dashboard'|trans([],'setting') }}</a>
+                <span class="breadcrumb-item active">
+                    {{ 'port'|trans([],'setting') }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.form'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <label>{{ 'code'|trans([],'setting') }}
+                        </label>
+                        {{ form_widget(form.code) }}
+                        <span class="text-danger">{{ form_errors(form.code) }}</span>
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'name'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.name) }}
+                        <span class="text-danger">{{ form_errors(form.name) }}</span>
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'save'|trans([],'setting') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+
+            <!-- /basic layout -->
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+{% endblock %}

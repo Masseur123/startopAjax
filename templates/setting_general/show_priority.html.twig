@@ -1,0 +1,80 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.priority'|trans([],'setting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'priority'|trans([],'setting') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('priority_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-8">
+
+        <!-- HTML sourced data -->
+        <div class="card border-blue">
+            <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                <h5 class="card-title"><span class="font-weight-bold"> {{ 'priority_list'|trans([],'setting')|upper }}</span></h5>
+            </div>
+
+            <div class="card-body">
+                <table class="table upload table-bordered table-striped table-hover" id="priority">
+                    <thead>
+                    <tr>
+                        <th></th>
+                        <th>{{ 'code'|trans([],'setting') }}</th>
+                        <th>{{ 'level'|trans([],'setting') }}</th>
+                        <th>{{ 'description'|trans([],'setting') }}</th>
+                        <th></th>
+                        <th class="text-center">{{ 'actions'|trans([],'base') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for priority in priorities %}
+                        <tr>
+                            <td></td>
+                            <td>{{ priority.code }}</td>
+                            <td>{{ priority.level }}</td>
+                            <td>{{ priority.description }}</td>
+                            <td></td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('priority_edit', {id:priority.id}) }}" class="list-icons-item form-icon text-primary-600" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body">
+                                        <i class="icon-pencil7"></i>
+                                    </a>
+                                    <a href="{{ path('priority_delete', {id:priority.id}) }}" class="list-icons-item text-danger-600" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')">
+                                        <i class="icon-trash"></i>
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /HTML sourced data -->
+
+    </div>
+</div>
+
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

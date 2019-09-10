@@ -1,0 +1,112 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block mainbtn %}
+    <div class="text-center">
+        <a href="{{ path('tax') }}" class="btn btn-primary btn-labeled btn-labeled-left btn-lg">
+            <b>
+                <i class="icon-menu7"></i>
+            </b>
+            {{ 'a.tax_list'|trans([],'global') }}</a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+            {{ form_start(form) }}
+            <div class="card border-teal-400">
+                <div class="card-header bg-teal-400 text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'form'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    <div class="form-group">
+                        <label>{{ 'name'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.name, {'attr':{'placeholder':"Name" , 'class':"form-control"}}) }}
+                    </div>
+                    <div class="form-group">
+                        <label>{{ 'rate'|trans([],'setting') }}
+                        </label>
+                        {{ form_widget(form.rate) }}
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'account'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.account) }}
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'save'|trans([],'setting') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <!-- /basic layout -->
+        </div>
+
+        <div class="col-md-8">
+            <!-- HTML sourced data -->
+            <div class="card border-teal-400">
+                <div class="card-header bg-teal-400 text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'list_of_taxes'|trans([],'global') }}</h5>
+                </div>
+
+                <!-- <div class="card-body"></div> -->
+
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover" id="tax">
+                        <thead>
+                            <tr>
+                                <th>{{ '#'|trans([],'global') }}</th>
+                                <th>{{ 'name'|trans([],'global') }}</th>
+                                <th>{{ 'rate'|trans([],'global') }}</th>
+                                <th>{{ 'account'|trans([],'global') }}</th>
+                                <th></th>
+                                <th class="text-center">{{ 'actions'|trans([],'global') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for tax in taxes %}
+                                <tr>
+                                    <td>{{ tax.id }}</td>
+                                    <td>
+                                        <span class="badge badge-info">{{ tax.name }}</td>
+                                        <td>{{ tax.rate }}</td>
+                                        <td>{{ tax.account.title }}</td>
+                                        <td></td>
+                                        <td class="text-center">
+                                            <div class="list-icons">
+                                                <a href="{{ path('tax_edit', {id:tax.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600">
+                                                    <i class="icon-pencil7"></i>
+                                                </a>
+                                                <a href="{{ path('tax_delete', {id:tax.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600">
+                                                    <i class="icon-trash"></i>
+                                                </a>
+
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!-- /HTML sourced data -->
+            </div>
+
+        </div>
+
+    {% endblock %}
+
+    {% block javascripts %}
+        {{ parent() }}
+    {% endblock %}

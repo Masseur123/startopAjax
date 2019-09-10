@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="eJN_N0V" resname="container_routing">
+        <source>container_routing</source>
+        <target>Container Routing</target>
+      </trans-unit>
+      <trans-unit id="pC1RlxT" resname="container">
+        <source>container</source>
+        <target>Container</target>
+      </trans-unit>
+      <trans-unit id="gKY6q1K" resname="track_at">
+        <source>track_at</source>
+        <target>Track Date</target>
+      </trans-unit>
+      <trans-unit id="Qc9nlLp" resname="source">
+        <source>source</source>
+        <target>Source</target>
+      </trans-unit>
+      <trans-unit id="tcdVqqs" resname="destination">
+        <source>destination</source>
+        <target>Destination</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>SAVE</target>
+      </trans-unit>
+      <trans-unit id="qQ1gnnC" resname="log_routing">
+        <source>log_routing</source>
+        <target>Log Routing</target>
+      </trans-unit>
+      <trans-unit id="8FPpwOs" resname="upload_file">
+        <source>upload_file</source>
+        <target>Upload File</target>
+      </trans-unit>
+      <trans-unit id="Bot_bJf" resname="transit">
+        <source>transit</source>
+        <target>Transit</target>
+      </trans-unit>
+      <trans-unit id="Q8wj_lK" resname="document">
+        <source>document</source>
+        <target>Document</target>
+      </trans-unit>
+      <trans-unit id="5U7pDet" resname="file_upload">
+        <source>file_upload</source>
+        <target>File Upload</target>
+      </trans-unit>
+      <trans-unit id="3GM__Mq" resname="page.title.container_routing">
+        <source>page.title.container_routing</source>
+        <target>Container Routing</target>
+      </trans-unit>
+      <trans-unit id="TTlx3mI" resname="park">
+        <source>park</source>
+        <target>Park</target>
+      </trans-unit>
+      <trans-unit id="zSa4qtg" resname="page.title.log_routing">
+        <source>page.title.log_routing</source>
+        <target>Log Routing</target>
+      </trans-unit>
+      <trans-unit id="cb_Qk1." resname="Reference">
+        <source>Reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="GnswjY3" resname="quantity">
+        <source>quantity</source>
+        <target>Quantity</target>
+      </trans-unit>
+      <trans-unit id="YtemsSE" resname="volume">
+        <source>volume</source>
+        <target>Volume</target>
+      </trans-unit>
+      <trans-unit id="CHkEjCl" resname="routing_at">
+        <source>routing_at</source>
+        <target>Routing Date</target>
+      </trans-unit>
+      <trans-unit id="mfeFXre" resname="wood">
+        <source>wood</source>
+        <target>Wood</target>
+      </trans-unit>
+      <trans-unit id="u4117q1" resname="page.title.upload_file">
+        <source>page.title.upload_file</source>
+        <target>Upload file</target>
+      </trans-unit>
+      <trans-unit id="MGgaWp5" resname="consignment_note">
+        <source>consignment_note</source>
+        <target>Consignment note</target>
+      </trans-unit>
+      <trans-unit id="9nmQz2." resname="log_routing_list">
+        <source>log_routing_list</source>
+        <target>Log Routing List</target>
+      </trans-unit>
+      <trans-unit id="UjZ6ZiK" resname="reference">
+        <source>reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="Qsnupcy" resname="upload_file_list">
+        <source>upload_file_list</source>
+        <target>Upload file list</target>
+      </trans-unit>
+      <trans-unit id="6Hip2aF" resname="created_at">
+        <source>created_at</source>
+        <target>Creation Date</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>Do you confirm this action ?</target>
+      </trans-unit>
+      <trans-unit id=".0CFrRV" resname="upload">
+        <source>upload</source>
+        <target>Upload</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

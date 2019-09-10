@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>__dashboard</target>
+      </trans-unit>
+      <trans-unit id="2Uw3kmF" resname="user_management">
+        <source>user_management</source>
+        <target>__user_management</target>
+      </trans-unit>
+      <trans-unit id="MrTOFF_" resname="title.form">
+        <source>title.form</source>
+        <target>__title.form</target>
+      </trans-unit>
+      <trans-unit id="ckS0ZjJ" resname="fullname">
+        <source>fullname</source>
+        <target>__fullname</target>
+      </trans-unit>
+      <trans-unit id="giREF.l" resname="email">
+        <source>email</source>
+        <target>__email</target>
+      </trans-unit>
+      <trans-unit id="84x2TIq" resname="branch">
+        <source>branch</source>
+        <target>__branch</target>
+      </trans-unit>
+      <trans-unit id="FveKfWM" resname="username">
+        <source>username</source>
+        <target>__username</target>
+      </trans-unit>
+      <trans-unit id="TtN51Bi" resname="groups">
+        <source>groups</source>
+        <target>__groups</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>__save</target>
+      </trans-unit>
+      <trans-unit id="uTCQIEe" resname="title.user_list">
+        <source>title.user_list</source>
+        <target>__title.user_list</target>
+      </trans-unit>
+      <trans-unit id="qgUcKwH" resname="th.fullname">
+        <source>th.fullname</source>
+        <target>__th.fullname</target>
+      </trans-unit>
+      <trans-unit id="25sS4lE" resname="th.username">
+        <source>th.username</source>
+        <target>__th.username</target>
+      </trans-unit>
+      <trans-unit id="Qq9KOmo" resname="th.email">
+        <source>th.email</source>
+        <target>__th.email</target>
+      </trans-unit>
+      <trans-unit id="ua3Qeb1" resname="th.groups">
+        <source>th.groups</source>
+        <target>__th.groups</target>
+      </trans-unit>
+      <trans-unit id="Y5pSyc." resname="th.branch">
+        <source>th.branch</source>
+        <target>__th.branch</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>__th.actions</target>
+      </trans-unit>
+      <trans-unit id="ry_fGVb" resname="page.title.branch">
+        <source>page.title.branch</source>
+        <target>__page.title.branch</target>
+      </trans-unit>
+      <trans-unit id="gi.jZ5y" resname="institution">
+        <source>institution</source>
+        <target>__institution</target>
+      </trans-unit>
+      <trans-unit id="VpTQii5" resname="code">
+        <source>code</source>
+        <target>__code</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>__name</target>
+      </trans-unit>
+      <trans-unit id="5urqGOi" resname="location">
+        <source>location</source>
+        <target>__location</target>
+      </trans-unit>
+      <trans-unit id="RVadpX9" resname="phone">
+        <source>phone</source>
+        <target>__phone</target>
+      </trans-unit>
+      <trans-unit id="UKyB_XA" resname="town">
+        <source>town</source>
+        <target>__town</target>
+      </trans-unit>
+      <trans-unit id="UMLtdZ1" resname="branch_list">
+        <source>branch_list</source>
+        <target>__branch_list</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>__new</target>
+      </trans-unit>
+      <trans-unit id="dJ.8uxd" resname="th.code">
+        <source>th.code</source>
+        <target>__th.code</target>
+      </trans-unit>
+      <trans-unit id="kXYUbga" resname="th.name">
+        <source>th.name</source>
+        <target>__th.name</target>
+      </trans-unit>
+      <trans-unit id="IQm4BtP" resname="th.location">
+        <source>th.location</source>
+        <target>__th.location</target>
+      </trans-unit>
+      <trans-unit id="Xqwcpk9" resname="th.phone">
+        <source>th.phone</source>
+        <target>__th.phone</target>
+      </trans-unit>
+      <trans-unit id="ccDUhiq" resname="th.institution">
+        <source>th.institution</source>
+        <target>__th.institution</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>__modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>__delete</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>__please_confirm_your_action</target>
+      </trans-unit>
+      <trans-unit id="Qxy_nfQ" resname="page.title.institution">
+        <source>page.title.institution</source>
+        <target>__page.title.institution</target>
+      </trans-unit>
+      <trans-unit id=".JY_lRT" resname="business_type">
+        <source>business_type</source>
+        <target>__business_type</target>
+      </trans-unit>
+      <trans-unit id="VCqBCYJ" resname="cigle">
+        <source>cigle</source>
+        <target>__cigle</target>
+      </trans-unit>
+      <trans-unit id="2Ayb_RD" resname="address">
+        <source>address</source>
+        <target>__address</target>
+      </trans-unit>
+      <trans-unit id="aiFJAsZ" resname="po_box">
+        <source>po_box</source>
+        <target>__po_box</target>
+      </trans-unit>
+      <trans-unit id="F.3qKWR" resname="business_number">
+        <source>business_number</source>
+        <target>__business_number</target>
+      </trans-unit>
+      <trans-unit id="y5R_Z1Y" resname="tax_payer_number">
+        <source>tax_payer_number</source>
+        <target>__tax_payer_number</target>
+      </trans-unit>
+      <trans-unit id="NZjOb5Z" resname="logo">
+        <source>logo</source>
+        <target>__logo</target>
+      </trans-unit>
+      <trans-unit id="dHqPOYO" resname="website">
+        <source>website</source>
+        <target>__website</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>__cancel</target>
+      </trans-unit>
+      <trans-unit id="dG3e9Gp" resname="institution_list">
+        <source>institution_list</source>
+        <target>__institution_list</target>
+      </trans-unit>
+      <trans-unit id="tVFT0pM" resname="th.cigle">
+        <source>th.cigle</source>
+        <target>__th.cigle</target>
+      </trans-unit>
+      <trans-unit id="TD9XeBp" resname="th.address">
+        <source>th.address</source>
+        <target>__th.address</target>
+      </trans-unit>
+      <trans-unit id=".nNavOM" resname="th.town">
+        <source>th.town</source>
+        <target>__th.town</target>
+      </trans-unit>
+      <trans-unit id="X5BGmLb" resname="page.title.user_group">
+        <source>page.title.user_group</source>
+        <target>__page.title.user_group</target>
+      </trans-unit>
+      <trans-unit id="mSrp.RG" resname="user_group">
+        <source>user_group</source>
+        <target>__user_group</target>
+      </trans-unit>
+      <trans-unit id="5CtA2WD" resname="park_list">
+        <source>park_list</source>
+        <target>__park_list</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>__actions</target>
+      </trans-unit>
+      <trans-unit id="GRek96s" resname="group_menu">
+        <source>group_menu</source>
+        <target>__group_menu</target>
+      </trans-unit>
+      <trans-unit id="rZNvy_1" resname="group">
+        <source>group</source>
+        <target>__group</target>
+      </trans-unit>
+      <trans-unit id="aYXKH02" resname="component">
+        <source>component</source>
+        <target>__component</target>
+      </trans-unit>
+      <trans-unit id="OYmRAJ2" resname="menu">
+        <source>menu</source>
+        <target>__menu</target>
+      </trans-unit>
+      <trans-unit id="x4e6MEb" resname="page.title.group_role">
+        <source>page.title.group_role</source>
+        <target>__page.title.group_role</target>
+      </trans-unit>
+      <trans-unit id="Y2l4c0M" resname="group_role">
+        <source>group_role</source>
+        <target>__group_role</target>
+      </trans-unit>
+      <trans-unit id="SxaNiNy" resname="role">
+        <source>role</source>
+        <target>__role</target>
+      </trans-unit>
+      <trans-unit id="lSAtJiG" resname="page.title.assigned_menu">
+        <source>page.title.assigned_menu</source>
+        <target>__page.title.assigned_menu</target>
+      </trans-unit>
+      <trans-unit id="ST76IEU" resname="assigned_menu_list">
+        <source>assigned_menu_list</source>
+        <target>__assigned_menu_list</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

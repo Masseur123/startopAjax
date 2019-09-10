@@ -1,0 +1,180 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello !{% endblock %}
+
+
+{% block mainbtn %}
+    <div class="header-elements d-none">
+        <a href="{{ path('setting_hotel_new') }}" class="btn btn-labeled btn-labeled-right bg-primary">{{ 'new'|trans([],'setting') }} {{ 'hotel'|trans([],'setting') }} <b><i class="icon-menu7"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %} 
+    <div class="card">
+        <div class="card-header header-elements-inline">
+            <h5 class="card-title">Multiple columns</h5>
+            <div class="header-elements">
+                <div class="list-icons">
+                    <a class="list-icons-item" data-action="collapse"></a>
+                    <a class="list-icons-item" data-action="reload"></a>
+                    <a class="list-icons-item" data-action="remove"></a>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+        {{ form_start(form) }}
+            <div class="row">
+                <div class="col-md-4">
+                    
+                    <fieldset>
+                        <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> </legend>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'name'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.name, {'attr':{'placeholder':"Name" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'email'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.email, {'attr':{'placeholder':"Email" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'phone'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {{ form_widget(form.fixphone, {'attr':{'placeholder':"Fixe Phone" , 'class':"form-control"}}) }}
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        {{ form_widget(form.mobilephone, {'attr':{'placeholder':"Mobile Phone" , 'class':"form-control"}}) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'website'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.website, {'attr':{'placeholder':"website" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-4">
+                    
+                    <fieldset>
+                        <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> </legend>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">Location:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.country) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label"> </label>
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {{ form_widget(form.region) }}
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        {{ form_widget(form.division) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label"> </label>
+                            <div class="col-lg-9">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        {{ form_widget(form.subdivision) }}
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        {{ form_widget(form.city, {'attr':{'placeholder':"city" , 'class':"form-control"}}) }}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                        
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'address'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.address, {'attr':{'placeholder':"website" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+
+                <div class="col-md-4">
+                    <fieldset>
+                        <legend class="font-weight-semibold"><i class="icon-truck mr-2"></i> </legend>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'tax_payer_number'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.taxpayernumber, {'attr':{'placeholder':"tax payer number" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'businessnumber'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.businessnumber, {'attr':{'placeholder':"business number" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'logo'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.logo, {'attr':{'placeholder':"logo" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+
+                        <div class="form-group row">
+                            <label class="col-lg-3 col-form-label">{{ 'po_box'|trans([],'setting') }}:</label>
+                            <div class="col-lg-9">
+                                {{ form_widget(form.pobox, {'attr':{'placeholder':"po box" , 'class':"form-control"}}) }}
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            
+            </div>
+            <div class="text-right">
+                <button type="submit" class="btn btn-primary">Submit form <i class="icon-paperplane ml-2"></i></button>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+
+    
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+    
+{% endblock %}

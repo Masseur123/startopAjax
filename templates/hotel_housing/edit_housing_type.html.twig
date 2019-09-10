@@ -1,0 +1,275 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.housing.type'|trans([],'housing') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Custom stylesheets -->
+    <link href="{{ asset('assets/css/form_table.css') }}" rel="stylesheet" type="text/css">
+<!-- /custom stylesheets -->
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_breadcrumb %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3>
+            <i class="icon-arrow-left52 mr-2"></i>
+            <span class="font-weight-semibold">{{ 'housing_type_management'|trans([],'housing') }}</span>
+        </h3>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}{% endblock %}
+
+{% block main_sidebar_main_navigation %}
+    <!-- Main navigation -->
+    <div class="card card-sidebar-mobile">
+        <ul class="nav nav-sidebar" data-nav-type="accordion" style="color: #233647 !important;">
+
+            {% for menu in app.session.get('menu')|sort if app.user %}
+                <li class="nav-item nav-item-submenu">
+                    <a class="nav-link" href="#">
+                        <i class="{{ menu.icon }}"></i>
+                        <span>{{ menu.title }}</span>
+                    </a>
+
+                    <ul class="nav nav-group-sub" data-submenu-title="{{ menu.title }}">
+                        {% for role in app.session.get('role')|sort if role.menu.id == menu.id %}
+                            <li class="nav-item">
+                                <a href="{{ path(role.route) }}" class="nav-link">{{ role.title }}</a>
+                            </li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <!-- /main navigation -->
+{% endblock %}
+
+{% block content %}
+    
+	<div class="row">
+		<div class="col-md-12">
+			<!-- Basic layout-->
+			{{ form_start(form) }}
+			<div class="card form-header">
+				<div class="card-header bg-blue text-white header-elements-inline form-header-back">
+					<h6 class="card-title">
+						{{ 'housing_type_form'|trans([],'housing')|upper }}</h6>
+				</div>
+                <div class="card-body">
+                        {{ form_start(form) }}
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'name'|trans([],'housing') }}
+                                    </label>
+                                    {{ form_widget(form.name) }}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'color'|trans([],'housing') }}
+                                    </label>
+                                    {{ form_widget(form.color) }}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group mb-3 mb-md-2">
+                                    <label class="d-block font-weight-semibold"></label>
+                                    <div class="form-check form-check-inline form-check-right">
+                                        <label class="form-check-label">
+                                            {{ 'is_private'|trans([],'housing') }}
+                                            {{ form_widget(form.is_private) }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group mb-3 mb-md-2">
+                                    <label class="d-block font-weight-semibold"></label>
+                                    <div class="form-check form-check-inline form-check-right">
+                                        <label class="form-check-label">
+                                            {{ 'smoking'|trans([],'housing') }}
+                                            {{ form_widget(form.smoking) }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'max_client'|trans([],'housing') }}
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    {{ form_widget(form.maxclient) }}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'max_adults'|trans([],'housing') }}
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    {{ form_widget(form.max_adults) }}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'max_children'|trans([],'housing') }}
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    {{ form_widget(form.max_children) }}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'max_babies'|trans([],'housing') }}
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    {{ form_widget(form.max_babies) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-3">
+                                <div class="form-group mb-3 mb-md-2">
+                                    <label class="d-block font-weight-semibold"></label>
+                                    <div class="form-check form-check-inline form-check-right">
+                                        <label class="form-check-label">
+                                            {{ 'is enabled'|trans([],'housing') }}
+                                            {{ form_widget(form.is_enabled) }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                           <div class="col-md-3">
+                                <div class="form-group mb-3 mb-md-2">
+                                    <label class="d-block font-weight-semibold"></label>
+                                    <div class="form-check form-check-inline form-check-right">
+                                        <label class="form-check-label">
+                                            {{ 'state'|trans([],'housing') }}
+                                            {{ form_widget(form.state) }}
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'min_stay'|trans([],'housing') }}
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    {{ form_widget(form.min_stay) }}
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="form-group">
+                                    <label>
+                                        {{ 'ordering'|trans([],'housing') }}
+                                        <span class="text-danger">*</span>
+                                    </label>
+                                    {{ form_widget(form.ordering) }}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4"></div>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <button class="btn btn-light" type="reset">
+                                {{ 'cancel'|trans([],'housing')|upper }}
+                            </button>
+                            <button class="btn btn-primary form-btn" type="submit">
+                                {{ 'save'|trans([],'housing')|upper }}
+                                <i class="icon-paperplane ml-2"></i>
+                            </button>
+                        </div>
+                </div>
+			{{ form_end(form) }}
+			<!-- /basic layout -->
+		</div>
+		<div class="col-md-12">
+			<!-- HTML sourced data -->
+			<div class="card form-header">
+				<div class="card-header bg-blue text-white header-elements-inline form-header-back">
+					<h6 class="card-title">
+						{{ 'housing_type_list'|trans([],'housing')|upper }}</h6>
+				</div>
+				<div class="card-body">
+					<a href="{{ path('housing_type') }}" class="btn bg-blue">
+						{{ 'new'|trans([],'base')|upper }}
+						<i class="icon-pin-alt ml-2"></i>
+					</a>
+				</div>
+				<table class="table park table-bordered table-striped table-hover">
+					<thead class="bg-blue">
+						 <tr>
+                        <th>{{ 'branch'|trans([],'housing') }}</th>
+                        <th>{{ 'name'|trans([],'housing') }}</th>
+                        <th>{{ 'status'|trans([],'housing') }}</th>
+                        <th></th>
+                        <th></th>
+                        <th class="text-center">
+								{{ 'actions'|trans([],'base') }}</th>
+					</thead>
+					<tbody>
+						{% for housingtype in housingtypes %}
+                        <tr>
+                            <td>{{ housingtype.branch }}</td>
+                            <td>{{ housingtype.name }} <span class="badge badge-info">{{ housingtype.ordering }}</td>
+                            <td>
+                                {% if housingtype.isenabled == 0 %}
+                                    <span class="badge badge-danger">Is Not Enabled</span>
+                                {% else %}
+                                    <span class="badge badge-primary badge-pill">Is Enabled</span>
+                                {% endif %}
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('housing_type_edit', {id:housingtype.id}) }}" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                    <a href="{{ path('housing_type_delete', {id:housingtype.id}) }}"  onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+					</tbody>
+				</table>
+			</div>
+			<!-- /HTML sourced data -->
+		</div>
+	</div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+
+    
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+
+     <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+    
+{% endblock %}

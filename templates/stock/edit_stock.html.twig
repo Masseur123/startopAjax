@@ -1,0 +1,133 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} {% endblock %}
+
+{% block mainbtn %}
+    <div class="text-center">
+        <a href="{{ path('stock') }}" class="btn btn-primary btn-labeled btn-labeled-left btn-lg"><b><i class="icon-menu7"></i></b> {{ 'a.stock_list'|trans([],'mass') }}</a>
+    </div>
+{% endblock %}
+
+{% block breadcrumb %}
+    <div class="breadcrumb-line breadcrumb-line-light header-elements-md-inline">
+        <div class="d-flex">
+            <div class="breadcrumb">
+                <a href="{{ path('home') }}" class="breadcrumb-item"><i class="icon-home2 mr-2"></i> {{ 'dashboard'|trans([],'mass') }}</a>
+                <span class="breadcrumb-item active"> {{ 'stock'|trans([],'mass') }}</span>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+            {{ form_start(form) }}
+            <div class="card border-teal-400">
+                <div class="card-header bg-teal-400 text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.form'|trans([],'mass') }}</h5>
+                </div>
+
+                <div class="card-body">
+
+                    <div class="form-group">
+                        <label>{{ 'store'|trans([],'mass') }} <span class="text-danger">*</span></label>
+                            {{ form_widget(form.store) }}
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'article'|trans([],'mass') }} <span class="text-danger">*</span></label>
+                            {{ form_widget(form.article) }}
+                    </div>
+
+                    <div class="form-group">
+                        <label>{{ 'quantity'|trans([],'mass') }} <span class="text-danger">*</span></label>
+                            {{ form_widget(form.quantity) }}
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'btn.save'|trans([],'mass') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {{ form_end(form) }}
+            <!-- /basic layout -->
+        </div>
+
+        <div class="col-md-8">
+            <!-- HTML sourced data -->
+            <div class="card border-teal-400">
+                <div class="card-header bg-teal-400 text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.stock_list'|trans([],'mass') }}</h5>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                            <a href="{{ path('stock') }}" class="list-icons-item" data-action="reload"></a>
+                            <a class="list-icons-item" data-action="remove"></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <div class="card-body"></div> -->
+
+                <table class="table datatable-responsive-row-control">
+                    <thead>
+                    <tr>
+                        <th>{{ 'th.store'|trans([],'mass') }}</th>
+                        <th>{{ 'th.article'|trans([],'mass') }}</th>
+                        <th>{{ 'th.quantity'|trans([],'mass') }}</th>
+                        <th>{{ 'th.stockprice'|trans([],'mass') }}</th>
+                        <th>{{ 'th.stockAt'|trans([],'mass') }}</th>
+                        <th>{{ 'th.type'|trans([],'mass') }}</th>
+                        <th class="text-center">{{ 'th.actions'|trans([],'mass') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for stock in stocks %}
+                        <tr>
+                            <td>{{ stock.store is empty ? "" : stock.store.designation }}</td>
+                            <td>{{ stock.article.name }}</td>
+                            <td>{{ stock.quantity }}</td>
+                            <td>{{ stock.stockprice }}</td>
+                            <td>{{ stock.stockAt |date("m/d/Y") }}</td>
+                            <td>{{ stock.type }}</td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('stock_edit', {id:stock.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                    <a href="{{ path('stock_delete', {id:stock.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+
+{% endblock %}

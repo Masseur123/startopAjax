@@ -1,0 +1,174 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.customer'|trans([],'accounting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'customer'|trans([],'accounting') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('customer') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'customer_list'|trans([],'setting')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+
+    <div  class="row">
+        <div class="col-md-12">
+
+            <div class="card">
+                <div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+                    <h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+                    <div class="header-elements">
+                        <div class="list-icons">
+                            <a class="list-icons-item" data-action="collapse"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    {{ form_start(form) }}
+
+                    <div class="row">
+                        <div class="col-md-4">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Personal</legend> -->
+
+								<div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'code'|trans([],'partner') }}</label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.code) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'cigle'|trans([],'partner') }}</label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.cigle) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+								<div class="row">
+									<div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'mobile'|trans([],'partner') }} <span class="text-danger">*</span></label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.mobilephone) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'fix'|trans([],'partner') }}</label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.fixphone) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+							
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-4">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Contacts</legend> -->
+								
+								 <div class="form-group">
+                                    <label>{{ 'name'|trans([],'partner') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.name) }}
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'email'|trans([],'partner') }}</label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.email) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'po_box'|trans([],'partner') }}</label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.pobox) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+                            </fieldset>
+                        </div>
+
+                        <div class="col-md-4">
+                            <fieldset>
+                                <!-- <legend class="font-weight-semibold"><i class="icon-reading mr-2"></i> Localization</legend> -->
+								
+								<div class="form-group">
+                                    <label>{{ 'Type'|trans([],'partner') }} <span class="text-danger">*</span></label>
+                                    {{ form_widget(form.type) }}
+                                </div>
+								
+								<div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'address'|trans([],'partner') }}</label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.address) }}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label>{{ 'town'|trans([],'partner') }}</label>
+                                            <div class="col-lg-13">
+                                                {{ form_widget(form.town) }}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+								
+                            </fieldset>
+                        </div>
+                    </div>
+
+					<div class="d-flex justify-content-between align-items-center">
+						<button class="btn btn-light" type="reset">
+							{{ 'cancel'|trans([],'base')|upper }}
+						</button>
+                        <div>
+                            {{ form_widget(form.saveAndCreateNew, {label: 'SAVE AND NEW', attr: {class: ' btn btn-primary form-btn-sn '}}) }}
+                            <button class="btn btn-primary form-btn" type="submit">
+                                {{ 'save'|trans([],'base')|upper }}
+                                <i class="icon-paperplane ml-2"></i>
+                            </button>
+                        </div>
+					</div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

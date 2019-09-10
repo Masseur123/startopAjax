@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="aTK2Tty" resname="a.supply_request_list">
+        <source>a.supply_request_list</source>
+        <target>Supply request list</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="nezG1Gi" resname="supply_request_cart">
+        <source>supply_request_cart</source>
+        <target>supply request cart</target>
+      </trans-unit>
+      <trans-unit id="OMv3Ant" resname="title.form.supp">
+        <source>title.form.supp</source>
+        <target>Form</target>
+      </trans-unit>
+      <trans-unit id="hDk63Yx" resname="article">
+        <source>article</source>
+        <target>article</target>
+      </trans-unit>
+      <trans-unit id="GnswjY3" resname="quantity">
+        <source>quantity</source>
+        <target>quantity</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>save</target>
+      </trans-unit>
+      <trans-unit id="uIqyBwv" resname="title.supply_request_cart">
+        <source>title.supply_request_cart</source>
+        <target>Supply request cart</target>
+      </trans-unit>
+      <trans-unit id="M0NZuQ7" resname="#">
+        <source>#</source>
+        <target>#</target>
+      </trans-unit>
+      <trans-unit id="hJAC5V6" resname="th.reference">
+        <source>th.reference</source>
+        <target>reference</target>
+      </trans-unit>
+      <trans-unit id="_ebCh8y" resname="th.article">
+        <source>th.article</source>
+        <target>article</target>
+      </trans-unit>
+      <trans-unit id="7U3arK0" resname="th.quantity">
+        <source>th.quantity</source>
+        <target>quantity</target>
+      </trans-unit>
+      <trans-unit id="7XZO8Nj" resname="th.actions">
+        <source>th.actions</source>
+        <target>actions</target>
+      </trans-unit>
+      <trans-unit id="iuFTQcM" resname="supply_request">
+        <source>supply_request</source>
+        <target>Supply request</target>
+      </trans-unit>
+      <trans-unit id="DodjLNR" resname="date">
+        <source>date</source>
+        <target>date</target>
+      </trans-unit>
+      <trans-unit id="GB.dRvx" resname="origin">
+        <source>origin</source>
+        <target>origin</target>
+      </trans-unit>
+      <trans-unit id="O.Rhoe0" resname="btn.save">
+        <source>btn.save</source>
+        <target>save</target>
+      </trans-unit>
+      <trans-unit id="rda2q0L" resname="title.supply_request_list">
+        <source>title.supply_request_list</source>
+        <target>Supply request list</target>
+      </trans-unit>
+      <trans-unit id="jRohuP2" resname="th.date">
+        <source>th.date</source>
+        <target>date</target>
+      </trans-unit>
+      <trans-unit id="QM03.Gu" resname="is_valid">
+        <source>is_valid</source>
+        <target>is valid</target>
+      </trans-unit>
+      <trans-unit id="AXNPQSP" resname="in_progress">
+        <source>in_progress</source>
+        <target>in progress</target>
+      </trans-unit>
+      <trans-unit id="4_Suw3N" resname="validated">
+        <source>validated</source>
+        <target>validated</target>
+      </trans-unit>
+      <trans-unit id="IM2Tii6" resname="rejected">
+        <source>rejected</source>
+        <target>rejected</target>
+      </trans-unit>
+      <trans-unit id="thCCkCM" resname="supply request">
+        <source>supply request</source>
+        <target>Supply request</target>
+      </trans-unit>
+      <trans-unit id="8vxWjxw" resname="a.new_supply_request">
+        <source>a.new_supply_request</source>
+        <target>New supply request</target>
+      </trans-unit>
+      <trans-unit id="DSXz1c_" resname="span.well_done">
+        <source>span.well_done</source>
+        <target>well done</target>
+      </trans-unit>
+      <trans-unit id="MrTOFF_" resname="title.form">
+        <source>title.form</source>
+        <target>Form</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

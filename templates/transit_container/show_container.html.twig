@@ -1,0 +1,92 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.container'|trans([],'transit') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'container_list'|trans([],'transit') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+	<div class="header-elements d-none">
+		<a href="{{ path('container_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+		<a href="{{ path('batch') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'booking_list'|trans([],'transit')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+		<a href="{{ path('unfill_container') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'unfill_container_list'|trans([],'transit')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+	</div>
+{% endblock %}
+
+{% block content %}
+    
+    <div class="row">
+
+        <div class="col-md-12">
+            <!-- HTML sourced data -->
+            <div class="card">
+
+                <table class="table conrouting table-bordered table-striped table-hover">
+                    <thead class="bg-blue">
+                        <tr>
+                            <th></th>
+                            <th>{{ 'container_number'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'container_length'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'booking_number'|trans([],'transit')|upper }}</th>
+                            <th>{{ 'plumb_number'|trans([],'transit')|upper }}</th>
+                            <th class="text-center">{{ 'actions'|trans([],'base')|upper }}</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for container in containers %}
+                            <tr>
+                                <td></td>
+                                <td><span class="badge badge-flat border-success text-success">{{ container.reference }}</td>
+                                <td>{{ container.length.code }}</td>
+                                <td>{{ container.batch.reference }}</td>
+                                {% if container.iscertified %}
+                                    <td>
+                                        <span class="badge badge-flat border-success text-success-600">{{ container.plumb }}</span></td>
+                                {% else %}
+                                    <td>
+                                        <span class="badge badge-flat border-warning text-warning-600">{{ container.plumb }}</span></td>
+                                {% endif %}
+                                <td class="text-center">
+                                    <div class="list-icons">
+                                        {% if app.request.attributes.get('_route') != "container_to_track" %}
+                                            <a href="{{ path('container_edit', {id:container.id}) }}" data-popup="tooltip" title="{{ 'modify'|trans([],'base') }}" data-container="body" class="list-icons-item form-icon text-primary-600">
+                                                <i class="icon-pencil7"></i>
+                                            </a>
+                                            <a href="{{ path('container_delete', {id:container.id}) }}" data-popup="tooltip" title="{{ 'delete'|trans([],'base') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'base') }}')" class="list-icons-item text-danger-600">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        {% else %}
+                                            <a href="{{ path('container_tracking', {id:container.id}) }}" class="list-icons-item text-primary-600">
+                                                <i class="icon-move-horizontal"></i>
+                                            </a>
+                                        {% endif %}
+                                    </div>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+{% endblock %}
+

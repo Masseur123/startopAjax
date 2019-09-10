@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="E_M1i76" resname="langue.english">
+        <source>langue.english</source>
+        <target>__langue.english</target>
+      </trans-unit>
+      <trans-unit id="xWcOAdu" resname="langue.french">
+        <source>langue.french</source>
+        <target>__langue.french</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

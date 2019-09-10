@@ -1,0 +1,78 @@
+{% extends 'base.html.twig' %}
+{% block title %}
+    {{ 'page.title.assigned_menu'|trans([],'admin') }}
+{% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <!-- Custom stylesheets -->
+    <link
+        href="{{ asset('assets/css/form_table.css') }}" rel="stylesheet" type="text/css">
+    <!-- /custom stylesheets -->
+    {% endblock %}
+    {% block body_class %}
+        navbar-top
+    {% endblock %}
+    {% block content %}
+        <div class="row">
+            <div
+                class="col-md-8">
+                <!-- HTML sourced data -->
+                <div class="card form-header">
+                    <div class="card-header bg-blue text-white header-elements-inline form-header-back">
+                        <h6 class="card-title">
+                            {{ 'assigned_menu_list'|trans([],'admin')|upper }}</h6>
+                    </div>
+                    <div class="card-body">
+                        <a href="{{ path('usergroup') }}" class="btn bg-blue">
+                            {{ 'new'|trans([],'admin')|upper }}
+                            <i class="icon-pin-alt ml-2"></i>
+                        </a>
+                    </div>
+                    <table class="table upload table-bordered table-striped table-hover">
+                        <thead class="bg-blue">
+                            <tr>
+                                <th></th>
+                                <th>{{ 'group'|trans([],'admin') }}</th>
+                                <th>{{ 'component'|trans([],'admin') }}</th>
+                                <th>{{ 'menu'|trans([],'admin') }}</th>
+                                <th></th>
+                                <th class="text-center">
+                                    {{ 'actions'|trans([],'admin') }}</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for userMenuLine in userMenuLines %}
+                                <tr>
+                                    <td></td>
+                                    <td>{{ userMenuLine.usergroup.name }}</td>									
+                                    <td>{{ userMenuLine.component.name }}</td>
+									<td><a href="{{ path('group_role', {group:userMenuLine.usergroup.id, component:userMenuLine.component.id, menu:userMenuLine.menu.id}) }}" class="badge badge-warning"><i class="icon-pencil7"></i>{{ userMenuLine.menu.title }}</a></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                        <div class="list-icons">
+                                            <a href="{{ path('usergroup_edit', {id:userMenuLine.id}) }}" class="list-icons-item form-icon text-primary-600" data-popup="tooltip" title="{{ 'modify'|trans([],'admin') }}" data-container="body">
+                                                <i class="icon-pencil7"></i>
+                                            </a>
+                                            <a href="{{ path('usergroup_delete', {id:userMenuLine.id}) }}" class="list-icons-item text-danger-600" data-popup="tooltip" title="{{ 'delete'|trans([],'admin') }}" data-container="body" onclick="return confirm('{{ 'please_confirm_your_action'|trans([],'admin') }}')">
+                                                <i class="icon-trash"></i>
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /HTML sourced data -->
+            </div>
+        </div>
+    {% endblock %}
+    {% block javascripts %}
+        {{ parent() }}
+		<script src="{{ asset('global_assets/js/plugins/extensions/jquery_ui/interactions.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/form_checkboxes_radios.js') }}"></script>
+        <script src="{{ asset('global_assets/js/plugins/forms/selects/bootstrap_multiselect.js') }}"></script>
+        <script src="{{ asset('global_assets/js/demo_pages/form_multiselect.js') }}"></script>
+    {% endblock %}

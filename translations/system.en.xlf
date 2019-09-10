@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="en" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="zu0bc1D" resname="page.title.component">
+        <source>page.title.component</source>
+        <target>Component management</target>
+      </trans-unit>
+      <trans-unit id="Zs2WiKK" resname="dashboard">
+        <source>dashboard</source>
+        <target>Dashboard</target>
+      </trans-unit>
+      <trans-unit id="aYXKH02" resname="component">
+        <source>component</source>
+        <target>Component</target>
+      </trans-unit>
+      <trans-unit id="gqNTf.D" resname="name">
+        <source>name</source>
+        <target>Name</target>
+      </trans-unit>
+      <trans-unit id="WkUkWVA" resname="position">
+        <source>position</source>
+        <target>Position</target>
+      </trans-unit>
+      <trans-unit id="wtS0RqR" resname="icon">
+        <source>icon</source>
+        <target>Icon</target>
+      </trans-unit>
+      <trans-unit id="ioTkBsC" resname="route">
+        <source>route</source>
+        <target>Route</target>
+      </trans-unit>
+      <trans-unit id="_mEqU6V" resname="name_en">
+        <source>name_en</source>
+        <target>Name (en)</target>
+      </trans-unit>
+      <trans-unit id="sC8Lhfy" resname="name_fr">
+        <source>name_fr</source>
+        <target>Name (fr)</target>
+      </trans-unit>
+      <trans-unit id="FX3KkuQ" resname="save">
+        <source>save</source>
+        <target>Save</target>
+      </trans-unit>
+      <trans-unit id="5WNFqgC" resname="component_list">
+        <source>component_list</source>
+        <target>List of component</target>
+      </trans-unit>
+      <trans-unit id="Kw3N1AA" resname="actions">
+        <source>actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="G6VplKE" resname="page.title.menu">
+        <source>page.title.menu</source>
+        <target>Menu management</target>
+      </trans-unit>
+      <trans-unit id="OYmRAJ2" resname="menu">
+        <source>menu</source>
+        <target>Menu</target>
+      </trans-unit>
+      <trans-unit id="qvIyBkY" resname="title">
+        <source>title</source>
+        <target>Title</target>
+      </trans-unit>
+      <trans-unit id="X.Dg6Cq" resname="title_en">
+        <source>title_en</source>
+        <target>Title (en)</target>
+      </trans-unit>
+      <trans-unit id="3VOBMUf" resname="title_fr">
+        <source>title_fr</source>
+        <target>Title (fr)</target>
+      </trans-unit>
+      <trans-unit id="Y5XikkF" resname="menu_list">
+        <source>menu_list</source>
+        <target>List of menu</target>
+      </trans-unit>
+      <trans-unit id="kQGDxy_" resname="page.title.role">
+        <source>page.title.role</source>
+        <target>Role management</target>
+      </trans-unit>
+      <trans-unit id="SxaNiNy" resname="role">
+        <source>role</source>
+        <target>Role</target>
+      </trans-unit>
+      <trans-unit id="c545ZMW" resname="role_list">
+        <source>role_list</source>
+        <target>List of role</target>
+      </trans-unit>
+      <trans-unit id="cWD4aIA" resname="pos">
+        <source>pos</source>
+        <target>Pos.</target>
+      </trans-unit>
+      <trans-unit id="I3TZF5S" resname="cancel">
+        <source>cancel</source>
+        <target>Cancel</target>
+      </trans-unit>
+      <trans-unit id="EVB6Di9" resname="new">
+        <source>new</source>
+        <target>New</target>
+      </trans-unit>
+      <trans-unit id="kQbWISu" resname="modify">
+        <source>modify</source>
+        <target>Modify</target>
+      </trans-unit>
+      <trans-unit id="YZdZVQP" resname="delete">
+        <source>delete</source>
+        <target>Delete</target>
+      </trans-unit>
+      <trans-unit id="JkEAy0g" resname="please_confirm_your_action">
+        <source>please_confirm_your_action</source>
+        <target>Do you confirm your action ?</target>
+      </trans-unit>
+      <trans-unit id="6XFmtUU" resname="enable">
+        <source>enable</source>
+        <target>__enable</target>
+      </trans-unit>
+      <trans-unit id="SWrKgOT" resname="block">
+        <source>block</source>
+        <target>__block</target>
+      </trans-unit>
+      <trans-unit id="EwPAaws" resname="type">
+        <source>type</source>
+        <target>__type</target>
+      </trans-unit>
+      <trans-unit id="bz3oIuK" resname="page.title.component_loading">
+        <source>page.title.component_loading</source>
+        <target>__page.title.component_loading</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

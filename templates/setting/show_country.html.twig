@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.country'|trans([],'setting') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block main_sidebar_user_menu %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'country'|trans([],'global') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('country_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-8">
+        <!-- HTML sourced data -->
+        <div class="card border-blue">
+            <div class="card-header bg-blue text-white header-elements-inline">
+                <h5 class="card-title">{{ 'list_of_countries'|trans([],'global') }}</h5>
+                <div class="header-elements">
+                    <div class="list-icons">
+                        <a class="list-icons-item" data-action="collapse"></a>
+                        <a href="{{ path('country') }}" class="list-icons-item" data-action="reload"></a>
+                        <a class="list-icons-item" data-action="remove"></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="card-body"></div> -->
+
+            <div class="card-body">
+                <table class="table upload table-bordered table-striped table-hover" id="region">
+                    <thead>
+                    <tr>
+                        <th>{{ '#'|trans([],'global') }}</th>
+                        <th>{{ 'name'|trans([],'global') }}</th>
+                        <th>{{ 'code(2)'|trans([],'global') }}</th>
+                        <th>{{ 'code(3)'|trans([],'global') }}</th>
+                        <th></th>
+                        <th class="text-center">{{ 'actions'|trans([],'global') }}</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    {% for country in countries %}
+                        <tr>
+                            <td>{{ country.id }}</td>
+                            <td><span class="badge badge-info">{{ country.name }}</td>
+                            <td>{{ country.code2 }}</td>
+                            <td>{{ country.code3 }}</td>
+                            <td></td>
+                            <td class="text-center">
+                                <div class="list-icons">
+                                    <a href="{{ path('country_edit', {id:country.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                    <a href="{{ path('country_delete', {id:country.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                    {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <!-- /HTML sourced data -->
+    </div>
+</div>
+
+{% endblock %}
+
+
+{% block javascripts %}
+    {{ parent() }}
+
+{% endblock %}

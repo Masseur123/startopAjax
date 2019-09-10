@@ -1,0 +1,85 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'invoice_list'|trans([],'purchase') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'invoice_list'|trans([],'purchase') }}</span></h3>
+        <a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block page_header_content_header_elements_button %}
+    <div class="header-elements d-none">
+        <a href="{{ path('invoice_new') }}" class="btn btn-labeled btn-labeled-right bg-primary a-btn">{{ 'new'|trans([],'base')|upper }} <b><i class="icon-pin-alt ml-2"></i></b></a>
+    </div>
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-12">
+
+        <!-- HTML sourced data -->
+        <div class="card">
+            <table class="table datatable-responsive table-bordered table-striped table-hover">
+                <thead class="bg-blue">
+                <tr>
+                    <th>{{ 'delevery'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'order'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'numero'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'pay At'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'reduction'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'discount'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'amount TVA'|trans([],'purchase')|upper }}</th>
+                    <th>{{ 'delay'|trans([],'purchase')|upper }}</th>
+                    <th class="text-center">{{ 'th.actions'|trans([],'purchase') }}</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for invoice in invoices %}
+                    <tr>
+                        {#<td>{{ invoice.client is empty ? "" : invoice.client.person.name }}</td>#}
+                        <td>{{ invoice.delevery is empty ? "" : invoice.delevery.reference }}</td>
+                        <td>{{ invoice.ord is empty ? "" : invoice.ord.reference }}</td>
+                        {% if invoice.isLock == 1 %}
+                            <td><span class="badge badge-flat border-success text-success-600">{{ invoice.reference }}</span></td>
+                        {% else %}
+                            <td><span class="badge badge-flat border-warning text-warning-600">{{ invoice.reference }}</span></td>
+                        {% endif %}
+
+                        <td>{{ invoice.payAt is empty ? "" : invoice.payAt|date("m/d/Y") }}</td>
+                        <td>{{ invoice.reduction }}</td>
+                        <td>{{ invoice.discount }}</td>
+                        <td>{{ invoice.amountTva }}</td>
+                        <td>{{ invoice.paymentDelay }}</td>
+                        <td class="text-center">
+                            <div class="list-icons">
+                                {% if invoice.isLock == 1 %}
+                                    <a href="{{ path('invoice_edit', {id:invoice.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600"><i class="icon-pencil7"></i></a>
+                                    <a href="{{ path('invoice_delete', {id:invoice.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600"><i class="icon-trash"></i></a>
+                                    <a href="{{ path('invoice_lock', {id:invoice.id}) }}" data-popup="tooltip-custom" title="Lock" data-placement="bottom" onclick="return confirm('do you want to lock?')" class="col-1"> <i class="icon-lock5 text-warning-600"></i></a>
+                                    <a href="{{ path('invoice_settle', {id:invoice.id}) }}" data-popup="tooltip-custom" title="Settle" data-placement="left" id="left" class="col-lg-2"> <i class="icon-file-text text-success-600"></i></a>
+                                {% else %}
+                                    <a href="{{ path('invoice_unlock', {id:invoice.id}) }}" onclick="return confirm('do you want to valide?')" class="col-lg-2"> <i class="icon-checkmark4 text-success-600"></i></a>
+                                {% endif %}
+                            </div>
+                        </td>
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <!-- /HTML sourced data -->
+
+    </div>
+</div>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+{% endblock %}

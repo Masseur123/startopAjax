@@ -1,0 +1,111 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    {{ 'page.title.payment_method'|trans([],'setting') }}
+{% endblock %}
+
+{% block content %}
+
+    <div class="row">
+        <div class="col-md-4">
+            <!-- Basic layout-->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'title.form'|trans([],'setting') }}</h5>
+                </div>
+
+                <div class="card-body">
+                    {{ form_start(form) }}
+                    <div class="form-group">
+                        <label>{{ 'name'|trans([],'setting') }}
+                            <span class="text-danger">*</span></label>
+                        {{ form_widget(form.name) }}
+                        {<span class="text-danger">{{ form_errors(form.name) }}</span>
+                    </div>
+
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-primary">
+                            {{ 'save'|trans([],'setting') }}
+                            <i class="icon-paperplane ml-2"></i>
+                        </button>
+                    </div>
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <!-- /basic layout -->
+        </div>
+
+        <div class="col-md-8">
+            <!-- HTML sourced data -->
+            <div class="card border-blue">
+                <div class="card-header bg-blue text-white header-elements-inline">
+                    <h5 class="card-title">{{ 'list_of_Payment_method'|trans([],'setting') }}</h5>
+                </div>
+                <div class="card-body">
+                    <table class="table datatable-responsive table-bordered table-striped table-hover" id="paymentmethod">
+                        <thead>
+                            <tr>
+                                <th>{{ '#'|trans([],'setting') }}</th>
+                                <th>{{ 'name'|trans([],'setting') }}</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th class="text-center">Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for paymentmethod in paymentmethods %}
+                                <tr>
+                                    <td>{{ paymentmethod.id }}</td>
+                                    <td>{{ paymentmethod.name }}</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td class="text-center">
+                                        <div class="list-icons">
+                                            <a href="{{ path('payment_method_edit', {id:paymentmethod.id}) }}" data-popup="tooltip-custom" title="Modify" data-placement="left" id="left" class="list-icons-item text-primary-600">
+                                                <i class="icon-pencil7"></i>
+                                            </a>
+                                            <a href="{{ path('payment_method_delete', {id:paymentmethod.id}) }}" data-popup="tooltip-custom" title="Delete" data-placement="top" onclick="return confirm('are u sure?')" class="list-icons-item text-danger-600">
+                                                <i class="icon-trash"></i>
+                                            </a>
+
+                                        </div>
+                                    </td>
+                                </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- /HTML sourced data -->
+        </div>
+
+    </div>
+
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/uniform.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switchery.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/styling/switch.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_select2.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/form_layouts.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/datatables.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/plugins/forms/selects/select2.min.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/plugins/tables/datatables/extensions/responsive.min.js') }}"></script>
+    <script src="{{ asset('global_assets/js/demo_pages/datatables_responsive.js') }}"></script>
+
+    <script src="{{ asset('global_assets/js/demo_pages/components_popups.js') }}"></script>
+
+{% endblock %}

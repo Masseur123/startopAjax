@@ -1,0 +1,147 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{ 'page.title.update_user_profile'|trans([],'security') }}{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
+{% block user %}{% endblock %}
+
+{% block page_header_content_page_title %}
+    <div class="page-title d-flex">
+        <h3><i class="icon-arrow-left52 mr-2"></i> <span class="font-weight-bold">{{ 'user_profile'|trans([],'security') }}</span></h3>
+		<a href="#" class="header-elements-toggle text-default d-md-none"><i class="icon-more"></i></a>
+    </div>
+{% endblock %}
+
+{% block main_sidebar_main_navigation %}
+    <!-- Main navigation -->
+    <div class="card card-sidebar-mobile">
+        <ul class="nav nav-sidebar" data-nav-type="accordion" style="color: #233647 !important;">
+
+            <!-- Main -->
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('user_profile_update') }}">
+                    <i class="icon-user-plus"></i>
+                    <span>{{ 'update_profile'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('user_password_update') }}">
+                    <i class="icon-lock2"></i>
+                    <span>{{ 'update_password'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="{{ path('account_setting') }}">
+                    <i class="icon-cog5"></i>
+                    <span>{{ 'account_setting'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="{{ path('starTop_logout') }}" class="nav-link">
+                    <i class="icon-switch2"></i>
+                    <span>{{ 'logout'|trans([],'base') }}</span>
+                </a>
+            </li>
+            <!-- /main -->
+
+        </ul>
+    </div>
+    <!-- /main navigation -->
+{% endblock %}
+
+{% block content %}
+	<div class="row">
+		<div class="col-md-8">
+			
+			<!-- Profile info -->
+			<div class="card">
+				<!--<div class="card-header bg-ligth text-dark header-elements-inline main-div-header">
+					<h5 class="card-title"><span class="font-weight-bold">{{ 'form'|trans([],'base')|upper }}</span></h5>
+					<div class="header-elements">
+						<div class="list-icons">
+							<a class="list-icons-item" data-action="collapse"></a>
+							<a class="list-icons-item" data-action="reload"></a>
+							<a class="list-icons-item" data-action="remove"></a>
+						</div>
+					</div>
+				</div>-->
+				{{ form_start(form) }}
+				<div class="card-body">
+					<form action="#">
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-6">
+									<label>{{ 'username'|trans([],'security') }} <span class="text-danger">*</span></label>
+									{{ form_widget(form.username) }}
+								</div>
+								<div class="col-md-6">
+									<label>{{ 'fullname'|trans([],'security') }} <span class="text-danger">*</span></label>
+									{{ form_widget(form.fullname) }}
+								</div>
+							</div>
+						</div>
+
+						<div class="form-group">
+							<div class="row">
+								<!--<div class="col-md-6">
+									<label>Email</label>
+									<input type="text" readonly="readonly" value="eugene@kopyov.com" class="form-control">
+								</div>-->
+								<div class="col-md-6">
+									<label>{{ 'email'|trans([],'security') }} <span class="text-danger">*</span></label>
+									{{ form_widget(form.email) }}
+								</div>
+								<div class="col-md-6">
+									<label>{{ 'phone'|trans([],'security') }} </label>
+									{{ form_widget(form.phone) }}
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-6">
+									<label>{{ 'branch'|trans([],'security') }}</label>
+									<input type="text" readonly="readonly" value="{{ app.user.branch.name }}" class="form-control text-danger font-weight-bold">
+								</div>
+								<div class="col-md-6">
+									<label>{{ 'status'|trans([],'security') }} </label>
+									<input type="text" readonly="readonly" value="{{ 'enable'|trans([],'security') }}" class="form-control text-success font-weight-bold">
+								</div>
+							</div>
+						</div>
+						
+						<div class="form-group">
+							<div class="row">
+								<div class="col-md-12">
+									<label>{{ 'group'|trans([],'security') }} </label>
+									{% if not app.user.usergroups.empty %}
+										{% for usergroup in app.user.usergroups %}
+											<input type="text" readonly="readonly" value="{{ usergroup.name }}" class="form-control text-danger font-weight-bold">
+											{% if not loop.last %} {% endif %}
+										{% endfor %}
+									{% endif %}
+								</div>
+							</div>
+						</div>
+
+						<!-- <div class="text-right">
+							<button type="submit" class="btn btn-primary form-btn">{{ 'save_changes'|trans([],'base')|upper }} <i class="icon-paperplane ml-2"></i></button>
+						</div> -->
+					</form>
+				</div>
+				{{ form_end(form) }}
+			</div>
+			<!-- /profile info -->
+			
+		</div>
+	</div>
+
+{% endblock %}
+
+{% block javascripts %}
+	{{ parent() }}
+{% endblock %}
